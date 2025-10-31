@@ -11,25 +11,27 @@ Dokumentasi ringkas data sampel dan file referensi pada `resource/bpjs_data`. Se
 - Jumlah baris: 2,407,300
 - Jumlah kolom: 18
 - Kolom identitas umum (prefix PSTV): PSTV01, PSTV02, PSTV03, PSTV04, PSTV05, PSTV06, PSTV07, PSTV08, PSTV09, PSTV10, PSTV11, PSTV12, PSTV13, PSTV14, PSTV15, PSTV16, PSTV17, PSTV18
-- Tipe kolom:
-  - `PSTV01`: int32
-  - `PSTV02`: int32
-  - `PSTV03`: datetime64[ns]
-  - `PSTV04`: int8
-  - `PSTV05`: int8
-  - `PSTV06`: int8
-  - `PSTV07`: int8
-  - `PSTV08`: int8
-  - `PSTV09`: int8
-  - `PSTV10`: int16
-  - `PSTV11`: int8
-  - `PSTV12`: int8
-  - `PSTV13`: int8
-  - `PSTV14`: int16
-  - `PSTV15`: float32
-  - `PSTV16`: int16
-  - `PSTV17`: int8
-  - `PSTV18`: float64
+| Kolom      | Tipe Data      | Definisi Kemungkinan                                                                                                |
+| :--------- | :------------- | :------------------------------------------------------------------------------------------------------------------ |
+| **PSTV01** | int32          | **Nomor klaim / ID kunjungan** — kode unik setiap pelayanan atau transaksi peserta di fasilitas kesehatan (Faskes). |
+| **PSTV02** | int32          | **Nomor peserta / ID peserta BPJS** — identitas unik peserta (bisa NIK, nomor kartu, atau ID anonim).               |
+| **PSTV03** | datetime64[ns] | **Tanggal pelayanan / kunjungan** — waktu ketika peserta mendapatkan layanan kesehatan.                             |
+| **PSTV04** | int8           | **Kode jenis pelayanan** — misalnya rawat jalan, rawat inap, rujukan, atau farmasi.                                 |
+| **PSTV05** | int8           | **Kode faskes asal** — tingkat fasilitas kesehatan (Faskes 1, Faskes 2, atau RS Rujukan).                           |
+| **PSTV06** | int8           | **Kode diagnosa utama** — kategori penyakit utama (biasanya dikodekan menurut ICD-10).                              |
+| **PSTV07** | int8           | **Kode diagnosa tambahan** — penyakit penyerta atau komorbiditas.                                                   |
+| **PSTV08** | int8           | **Kode tindakan medis** — tindakan atau prosedur yang dilakukan (misalnya operasi, pemeriksaan, terapi).            |
+| **PSTV09** | int8           | **Kode obat / resep** — menandakan ada/tidaknya resep atau jenis obat yang diresepkan.                              |
+| **PSTV10** | int16          | **Lama rawat / durasi perawatan (hari)** — jumlah hari pasien dirawat (khusus rawat inap).                          |
+| **PSTV11** | int8           | **Status rujukan** — apakah pasien dirujuk, kembali ke faskes awal, atau selesai pengobatan.                        |
+| **PSTV12** | int8           | **Status kepesertaan** — aktif, tidak aktif, atau pindah segmen (misalnya PBI, Mandiri, ASN, dll).                  |
+| **PSTV13** | int8           | **Kode jenis kelamin** — 1 untuk laki-laki, 2 untuk perempuan.                                                      |
+| **PSTV14** | int16          | **Usia peserta (tahun)** — umur saat mendapatkan pelayanan.                                                         |
+| **PSTV15** | float32        | **Biaya pelayanan (klaim)** — nilai total biaya pelayanan yang diklaim ke BPJS.                                     |
+| **PSTV16** | int16          | **Kode wilayah / cabang BPJS** — identifikasi daerah tempat pelayanan diberikan.                                    |
+| **PSTV17** | int8           | **Status validasi klaim** — misalnya klaim diterima, ditolak, atau sedang diverifikasi.                             |
+| **PSTV18** | float64        | **Nilai klaim disetujui** — jumlah biaya yang disetujui/dibayar BPJS setelah verifikasi.                            |
+
 - Contoh 5 baris pertama:
 
 ```text
