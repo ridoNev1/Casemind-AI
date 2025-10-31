@@ -14,6 +14,7 @@ PIC: Codex (assistant) + Ridho Maulana (user)
 - `ml/training/pipelines/baseline_training.py`: scaffold training; memuat data, pilih fitur, tampilkan head/descriptive stats.
 - Struktur folder `ml/common`, `ml/training/{config,notebooks,pipelines}`, `ml/inference`.
 - README root ditambah bagian **ML Skeleton**.
+- `ml/inference/scorer.py`: contoh modul inference memuat artefak Isolation Forest dan menghasilkan `ml_score`.
 
 ## Cara Menggunakan
 1. Pastikan ETL `claims_normalized` sudah dijalankan (tabel + Parquet tersedia).

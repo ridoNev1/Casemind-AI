@@ -65,6 +65,7 @@ duckdb instance/analytics.duckdb "SELECT province_name, COUNT(*) FROM claims_nor
 - `ml/training/config/features.yaml`: daftar fitur baseline
 - `ml/training/pipelines/baseline_training.py`: scaffold training, saat ini memuat data & menampilkan sample/summary
 - `ml/training/colab_guidelines.md`: panduan training model di Google Colab (Isolation Forest, artefak yang harus dihasilkan)
+- `ml/inference/scorer.py`: contoh modul inference yang memuat artefak dan menghasilkan `ml_score`
 
 Jalankan contoh pipeline:
 ```bash
