@@ -1,0 +1,7 @@
+/resource/private_bpjs_data/raw_cleaned
+.venv/
+__pycache__/
+*.pyc
+instance/
+.env
+.flaskenv
