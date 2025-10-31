@@ -11,6 +11,7 @@ Dokumentasi ringkas data sampel dan file referensi pada `resource/bpjs_data`. Se
 - Jumlah baris: 2,407,300
 - Jumlah kolom: 18
 - Kolom identitas umum (prefix PSTV): PSTV01, PSTV02, PSTV03, PSTV04, PSTV05, PSTV06, PSTV07, PSTV08, PSTV09, PSTV10, PSTV11, PSTV12, PSTV13, PSTV14, PSTV15, PSTV16, PSTV17, PSTV18
+
 | Kolom      | Tipe Data      | Definisi Kemungkinan                                                                                                |
 | :--------- | :------------- | :------------------------------------------------------------------------------------------------------------------ |
 | **PSTV01** | int32          | **Nomor klaim / ID kunjungan** — kode unik setiap pelayanan atau transaksi peserta di fasilitas kesehatan (Faskes). |
