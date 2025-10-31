@@ -40,6 +40,9 @@ df = pd.read_parquet('claims_normalized.parquet')
 print(df.head())
 print(df.shape)
 
+# inspeksi missing values (opsional tapi disarankan)
+print(df.isna().sum().sort_values(ascending=False).head(10))
+
 numeric_features = [
     "los", "amount_claimed", "amount_paid", "amount_gap",
     "comorbidity_count", "peer_mean", "peer_p90", "cost_zscore",
@@ -111,6 +114,7 @@ files.download("model_meta.json")
 - Distribusi skor: `df['ml_score'].describe()`.
 - Korelasi dengan rule-based flags jika tersedia (`rule_short_stay`, etc.).
 - Visualisasi: histogram skor, scatter vs `cost_zscore`, heatmap provinsi/RS.
+- Catat kolom dengan nilai hilang signifikan (gunakan `df.isna().sum()`), dokumentasikan di checkpoint jika perlu.
 - Simpan sample klaim high-score (untuk review auditor).
 
 ## 6. Export Artefak (wajib dibawa pulang)
