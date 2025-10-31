@@ -1,0 +1,17 @@
+---
+duckdb_path: instance/analytics.duckdb
+ruleset_version: RULESET_v1
+sources:
+  fkrtl: resource/private_bpjs_data/raw_cleaned/202203_fkrtl.csv
+  diagnosa_sekunder: resource/private_bpjs_data/raw_cleaned/202205_diagnosissekunder.csv
+  kepesertaan: resource/private_bpjs_data/raw_cleaned/2015202201_kepesertaan.csv
+  fktp_kapitasi: resource/private_bpjs_data/raw_cleaned/202202_fktpkapitasi.csv
+  non_kap: resource/private_bpjs_data/raw_cleaned/202204_nonkapitasi.csv
+references:
+  icd10: resource/public_data_resources/[PUBLIC] ICD-10 e-klaim.xlsx
+  icd9cm: resource/public_data_resources/[PUBLIC] ICD-9CM e-klaim.xlsx
+  hospital_master: resource/public_data_resources/Hospital_Indonesia_datasets.csv
+  region_master: resource/private_bpjs_data/raw_cleaned/2023_metadata_data_sampel_bpjs_kesehatan_kode_wilayah.csv
+output:
+  parquet_dir: instance/data
+  table_name: claims_normalized

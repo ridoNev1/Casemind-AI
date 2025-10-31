@@ -2,8 +2,8 @@ import os
 
 
 def resolve_database_uri() -> str:
-    """Ensure SQLAlchemy gets a psycopg-compatible connection string."""
-    default_uri = "postgresql://postgres:mQrDJUuyIfnGaOLoZAIBdSZCiSbezSmf@postgres.railway.internal:5432/railway"
+    """Ensure SQLAlchemy gets a usable connection string without hard-coded credentials."""
+    default_uri = "sqlite:///instance/app.db"
     raw_uri = os.getenv("DATABASE_URL", default_uri)
     if raw_uri.startswith("postgresql://"):
         return raw_uri.replace("postgresql://", "postgresql+psycopg://", 1)

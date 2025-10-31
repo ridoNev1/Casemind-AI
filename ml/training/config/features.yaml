@@ -1,0 +1,18 @@
+numeric_features:
+  - los
+  - amount_claimed
+  - amount_paid
+  - amount_gap
+  - comorbidity_count
+  - peer_mean
+  - peer_p90
+  - cost_zscore
+categorical_features:
+  - severity_group
+  - facility_class
+  - province_name
+  - service_type
+target: null  # placeholder (unsupervised initially)
+notes: |
+  Baseline feature configuration for rules + unsupervised anomaly scoring.
+  Extend/override per experiment as needed.
