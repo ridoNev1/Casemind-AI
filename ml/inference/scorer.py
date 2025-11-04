@@ -60,20 +60,36 @@ class MLScorer:
             "service_type",
         ]
 
+        if self.model_meta is not None:
+            self.numeric_features = self.model_meta.get("numeric_features", self.numeric_features)
+            self.categorical_features = self.model_meta.get("categorical_features", self.categorical_features)
+
     def _prepare_features(self, df: pd.DataFrame) -> pd.DataFrame:
+        missing_numeric = [col for col in self.numeric_features if col not in df.columns]
+        if missing_numeric:
+            raise KeyError(f"Kolom numerik hilang pada dataframe inference: {missing_numeric}")
+
         X_num = df[self.numeric_features].fillna(0)
+        X_num_scaled = pd.DataFrame(
+            self.scaler.transform(X_num),
+            columns=self.numeric_features,
+            index=df.index,
+        )
 
         if self.categorical_features:
             X_cat = pd.get_dummies(df[self.categorical_features].fillna("UNK"))
-            X = pd.concat([X_num, X_cat], axis=1)
+            X = pd.concat([X_num_scaled, X_cat], axis=1)
         else:
-            X = X_num
+            X = X_num_scaled
 
         if self.feature_columns:
             # Pastikan kolom sesuai training (tambahkan kolom kosong jika hilang)
             for col in self.feature_columns:
                 if col not in X.columns:
                     X[col] = 0
+            unexpected_cols = [col for col in X.columns if col not in self.feature_columns]
+            if unexpected_cols:
+                X = X.drop(columns=unexpected_cols)
             X = X[self.feature_columns]
 
         return X
@@ -82,15 +98,29 @@ class MLScorer:
         loader = DataLoader()
         df = loader.load_claims_normalized(limit=limit)
 
-        X = self._prepare_features(df)
-        X_scaled = self.scaler.transform(X)
+        return self.score_dataframe(df)
 
-        scores = -self.model.decision_function(X_scaled)
+    def score_dataframe(self, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Score klaim menggunakan dataframe yang sudah dimuat di luar DataLoader.
+
+        Args:
+            df: DataFrame dengan kolom sesuai numeric_features/categorical_features.
+
+        Returns:
+            DataFrame kolom: claim_id, ml_score, ml_score_normalized, model_version.
+        """
+        if df.empty:
+            return pd.DataFrame(columns=["claim_id", "ml_score", "ml_score_normalized", "model_version"])
+
+        X = self._prepare_features(df)
+        scores = -self.model.decision_function(X)
         df_scores = pd.DataFrame(
             {
-                "claim_id": df["claim_id"],
+                "claim_id": df["claim_id"].values,
                 "ml_score": scores,
-            }
+            },
+            index=df.index,
         )
 
         min_score, max_score = df_scores["ml_score"].min(), df_scores["ml_score"].max()

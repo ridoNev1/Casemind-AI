@@ -16,7 +16,7 @@ PIC: Rido Maulana (user)
 - `pipelines/claims_normalized/sql/staging.sql`: SQL untuk load data mentah ke staging DuckDB.
 - `pipelines/claims_normalized/sql/transform.sql`: SQL transform yang menambahkan label fasilitas/wilayah, peer stats, lookup provinsi, dan membuat `claims_scored`.
 - `pipelines/claims_normalized/build_claims_normalized.py`: Runner script untuk eksekusi ETL.
-- `dev_checkpoint/checkpoint_1_claims_normalized.md`: dokumen ini.
+- `docs/dev_checkpoint/checkpoint_1_claims_normalized.md`: dokumen ini.
 
 ## Cara Menggunakan
 
