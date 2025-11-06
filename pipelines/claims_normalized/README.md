@@ -4,7 +4,7 @@ Tujuan ETL ini adalah membangun tabel `claims_normalized` sebagai sumber tunggal
 
 1. `Stage` data mentah dari `resource/private_bpjs_data` (FKRTL, diagnosa sekunder, non-kap, kepesertaan).
 2. `Enrich` dengan referensi publik dari `resource/public_data_resources` (ICD-10/9, master faskes/wilayah).
-3. `Feature` untuk menghitung metrik penting seperti LOS, peer stats (`peer_mean`, `peer_p90`, `peer_std`), `cost_zscore`, flag dasar (LOS pendek, severity mismatch).
+3. `Feature` untuk menghitung metrik penting seperti LOS, peer stats (`peer_mean`, `peer_p90`, `peer_std`), `cost_zscore`, hashing `patient_key`/`family_key`, serta flag dasar (LOS pendek, severity mismatch, duplicate pattern).
 4. `Persist` hasil akhir ke file DuckDB (`instance/analytics.duckdb`) dan Parquet untuk konsumsi ML.
 
 ## Struktur Folder
@@ -31,8 +31,8 @@ configs/
 
 1. Jalankan `python pipelines/claims_normalized/build_claims_normalized.py` (sementara manual, ke depan bisa dijadwalkan).
 2. Script memuat konfigurasi, mengeksekusi `staging.sql` untuk membuat tabel staging di DuckDB.
-3. `transform.sql` membentuk `claims_normalized`, menambahkan label fasilitas/wilayah/severity serta peer stats (termasuk lookup provinsi bawaan), lalu menulis ke Parquet di `instance/data/`.
-4. Logging hasil (jumlah baris, timestamp, ruleset version) ke tabel `etl_runs`.
+3. `transform.sql` membentuk `claims_normalized`, menambahkan label fasilitas/wilayah/severity, mengisi ulang deskripsi ICD primer yang kosong via referensi resmi, casemix group (`dx_primary_group`), daftar label diagnosis sekunder (`dx_secondary_labels`), serta menyematkan ID faskes (`facility_id`), nama faskes (`facility_name`), status kecocokan join (`facility_match_quality`) dan agregasi nama fasilitas per provinsi/kabupaten (`region_facility_names`), peer stats, hashing key, dan flag `duplicate_pattern`, lalu menulis ke Parquet di `instance/data/`.
+4. Logging hasil (jumlah baris, timestamp, ruleset version) otomatis tercatat ke tabel `etl_runs`, sedangkan refresh ML menulis ringkasan QC + Top-K insight ke `ml_model_versions` (kolom `top_k_snapshot`).
 
 ## Kebutuhan Data
 
@@ -43,4 +43,4 @@ configs/
 
 - Python 3.10+, DuckDB (via `duckdb` package), Pandas (jika perlu). Sudah ditambahkan `duckdb>=0.9` di `requirements.txt`.
 
-Dokumen ini akan diperbarui setelah pipeline selesai diimplementasikan (mis. penambahan join ICD, hashing `patient_key`, logging ETL runs).
+Dokumen ini akan diperbarui setelah pipeline selesai diimplementasikan (mis. penambahan join ICD tambahan, audit trail lanjutan).

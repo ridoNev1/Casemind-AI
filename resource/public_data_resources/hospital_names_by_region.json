@@ -1,0 +1,2557 @@
+[
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "ACEH BARAT",
+    "facility_names": "RS Tk. IV IM 07.02; RS Umum Daerah Cut Nyak Dhien; RS Umum Harapan Sehat; RS Umum Montella"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "ACEH BARAT DAYA",
+    "facility_names": "RS Umum Daerah Teungku Peukan"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "ACEH BESAR",
+    "facility_names": "RS Hermina Aceh; RS Umum Daerah Kabupaten Aceh Besar; RS Umum Ibnu Sina"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "ACEH JAYA",
+    "facility_names": "RS Umum Daerah Teuku Umar Kabupaten Aceh Jaya"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "ACEH SELATAN",
+    "facility_names": "RS Cahaya Sehat; RS Umum Daerah Dr. H. Yulidin Away; RS Umum Daerah Type D Pratama T. Cut Ali"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "ACEH SINGKIL",
+    "facility_names": "RS Umum Daerah Aceh Singkil"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "ACEH TAMIANG",
+    "facility_names": "RS Umum Daerah Muda Sedia Kabupaten Aceh Tamiang; RS Umum Pertamina Rantau"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "ACEH TENGAH",
+    "facility_names": "RS Gayo Medical Centre; RS Umum Daerah Datu Beru Takengon; RS Umum Fandika"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "ACEH TENGGARA",
+    "facility_names": "RS Ibu dan Anak Keluarga Desa; RS Umum Daerah H. Sahudin Kutacane; RS Umum Nurul Hasanah"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "ACEH TIMUR",
+    "facility_names": "RS Umum Daerah Sultan Abdul Aziz Syah Peureulak; RS Umum Daerah dr. Zubir Mahmud; RS Umum Graha Bunda"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "ACEH UTARA",
+    "facility_names": "RS Umum Daerah dr. Muchtar Hasbi; RS Umum Prima Inti Medika; RS Zahra"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "BENER MERIAH",
+    "facility_names": "RS Ibu dan Anak Azalia; RS Umum Daerah Muyang Kute Redelong Bener Meriah"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "BIREUEN",
+    "facility_names": "RS Umum Avicenna; RS Umum Bireuen Medical Center; RS Umum Daerah Dr. Fauziah Bireun; RS Umum Jeumpa Hospital; RS Umum Malahayati; RS Umum Telaga Bunda"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "GAYO LUES",
+    "facility_names": "RS Tanoh Gayo; RS Umum Muhammad Ali Kasim"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "KOTA BANDA ACEH",
+    "facility_names": "RS Bhayangkara Banda Aceh; RS Gigi Mulut Universitas Syiah Kuala; RS Ibu dan Anak Cempaka Az Zahra Banda Aceh; RS Ibu dan Anak Pemerintah Aceh; RS Jiwa Aceh; RS Pendidikan Universitas Syiah Kuala; RS Tk. II Iskandar Muda Banda Aceh; RS Umum Cempaka Lima; RS Umum Daerah  Dr. Zainoel Abidin; RS Umum Daerah Meuraxa; RS Umum Harapan Bunda Banda Aceh; RS Umum Malahayati; RS Umum Meutia; RS Umum Pertamedika Ummi Rosnati; RS Umum Teungku Fakinah"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "KOTA LANGSA",
+    "facility_names": "RS Cut Nyak Dhien Langsa; RS Umum Cut Meutia; RS Umum Daerah Langsa; RS Umum Ummi Langsa"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "KOTA LHOKSEUMAWE",
+    "facility_names": "RS Arun Lhokseumawe; RS Ibu dan Anak ABBY; RS Tk. IV Lhokseumawe Aceh Utara; RS Umum Az-Zuhra; RS Umum Bunda; RS Umum Bunga Melati; RS Umum Cut Meutia Kab. Aceh Utara; RS Umum Kasih Ibu Lhokseumawe; RS Umum Metro Medical Center; RS Umum PMI Cabang Aceh Utara; RS Umum Sakinah"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "KOTA SABANG",
+    "facility_names": "RS AL Sabang; RS Umum Daerah Sabang"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "KOTA SUBULUSSALAM",
+    "facility_names": "RS Umum Daerah Kota Subulussalam"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "NAGAN RAYA",
+    "facility_names": "RS Umum Daerah Sultan Iskandar Muda Nagan Raya"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "PIDIE",
+    "facility_names": "RS Islam Ibnu Sina Sigli; RS Umum Citra Husada; RS Umum Daerah TGK Chik Ditiro Sigli; RS Umum Daerah TGK. Abdullah Syafii Beureuneun; RS Umum Harapan Ibu; RS Umum Mufid"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "PIDIE JAYA",
+    "facility_names": "RS Umum Daerah Pidie Jaya"
+  },
+  {
+    "province_upper": "ACEH",
+    "kab_upper": "SIMEULUE",
+    "facility_names": "RS Umum Daerah Simeulue"
+  },
+  {
+    "province_upper": "BALI",
+    "kab_upper": "BADUNG",
+    "facility_names": "RS Bali Jimbaran; RS Daerah Mangusada; RS Khusus Bedah BIMC; RS Khusus Bedah BIMC Nusa Dua; RS Umum Garba Med; RS Umum Kasih Ibu Kedonganan; RS Umum Murni Teguh Tuban Bali; RS Umum Siloam Bali; RS Umum Surya Husadha Nusa Dua; RS Universitas Udayana; RS Windu Husada"
+  },
+  {
+    "province_upper": "BALI",
+    "kab_upper": "BANGLI",
+    "facility_names": "RS Jiwa Provinsi Bali; RS Umum Bangli Medika Canti; RS Umum Daerah Bangli"
+  },
+  {
+    "province_upper": "BALI",
+    "kab_upper": "BULELENG",
+    "facility_names": "RS Balimed Buleleng; RS Ibu dan Anak Puri Bunda Singaraja; RS Tk. IV Singaraja; RS Umum Daerah Giri Emas; RS Umum Daerah Kab. Buleleng; RS Umum Daerah Tangguwisia; RS Umum Kertha Usadha; RS Umum Parama Sidhi; RS Umum Shanti Graha; RS umum Karya Dharma Husada"
+  },
+  {
+    "province_upper": "BALI",
+    "kab_upper": "GIANYAR",
+    "facility_names": "RS Kenak Medika; RS Umum Ari Canti; RS Umum Daerah Sanjiwani Gianyar; RS Umum Famili Husada; RS Umum Ganesha; RS Umum Kasih Ibu Saba; RS Umum Payangan; RS Umum Premagana"
+  },
+  {
+    "province_upper": "BALI",
+    "kab_upper": "JEMBRANA",
+    "facility_names": "RS Umum Balimed Negara; RS Umum Bunda; RS Umum Daerah Negara; RS Umum Kertayasa"
+  },
+  {
+    "province_upper": "BALI",
+    "kab_upper": "KARANGASEM",
+    "facility_names": "RS Kasna Medika; RS Pratama Kubu; RS Umum Balimed Karangasem; RS Umum Daerah Karangasem"
+  },
+  {
+    "province_upper": "BALI",
+    "kab_upper": "KLUNGKUNG",
+    "facility_names": "RS Umum Bintang; RS Umum Daerah Gema Santi Nusa Penida; RS Umum Daerah Klungkung; RS Umum Grha Bhakti Medika; RS Umum Permata Hati"
+  },
+  {
+    "province_upper": "BALI",
+    "kab_upper": "KOTA DENPASAR",
+    "facility_names": "RS Bhayangkara Denpasar; RS Gigi dan Mulut Saraswati Denpasar; RS Ibu dan Anak Bali Royal (Bros Ina); RS Ibu dan Anak Bunda Denpasar; RS Ibu dan Anak Harapan Bunda; RS Ibu dan Anak Puri Bunda; RS Khusus Bedah Dharma Usadha Sidhi; RS Khusus Ibu dan Anak Pucuk Permata Hati; RS Khusus Mata Bali Mandara; RS Khusus Mata Ramata; RS TK. II Udayana; RS Umum Bali Royal; RS Umum Balimed; RS Umum Bhakti Rahayu; RS Umum Daerah Bali Mandara Provinsi Bali; RS Umum Daerah Wangaya; RS Umum Dharma Yadnya; RS Umum Kasih Ibu; RS Umum Manuaba; RS Umum Prima Medika; RS Umum Puri Raharja; RS Umum Surya Husadha; RSUP Prof. Dr. I.G.N.G. Ngoerah"
+  },
+  {
+    "province_upper": "BALI",
+    "kab_upper": "TABANAN",
+    "facility_names": "RS Ibu dan Anak Cahaya Bunda; RS Ibu dan Anak Puri Bunda Tabanan; RS Umum Bali Holistik; RS Umum Bhakti Rahayu Tabanan; RS Umum Daerah Singasana; RS Umum Daerah Tabanan; RS Umum Dharma Kerti; RS Umum Kasih Ibu Tabanan; RS Umum Semara Ratih; RS Umum Wisma Prashanti"
+  },
+  {
+    "province_upper": "BANTEN",
+    "kab_upper": "KOTA CILEGON",
+    "facility_names": "RS Citra sundari; RS Ibu dan Anak Mutiara Bunda; RS Krakatau Medika; RS Kurnia; RS Umum Daerah Kota Cilegon; RS Umum Hermina Cilegon"
+  },
+  {
+    "province_upper": "BANTEN",
+    "kab_upper": "KOTA SERANG",
+    "facility_names": "RS Andalucia; RS Benggala; RS Bhayangkara Tk. IV Biddokkes Polda Banten; RS Budiasih; RS Citra Arafiq Serang; RS Fatimah; RS Ibu dan Anak Puri Garcia; RS Jannah; RS Mata Achmad Wardi BWI-DD; RS Sari Asih Serang; RS Tk. IV Kencana Serang; RS Umum Daerah Banten; RS Umum Daerah Kota Serang; RS Umum Ibunda"
+  },
+  {
+    "province_upper": "BANTEN",
+    "kab_upper": "KOTA TANGERANG",
+    "facility_names": "Brawijaya Hospital Tangerang; RS An-Nisa; RS Aqidah; RS Bunda Sejati; RS Daan Mogot Kesdam Jaya; RS Dinda; RS EMC Tangerang; RS Hermina Ciledug; RS Hermina Periuk Tangerang; RS Ibu dan Anak Assyifa; RS Ibu dan Anak Gebang Medika; RS Ibu dan Anak Karunia Bunda; RS Ibu dan Anak Makiyah; RS Ibu dan Anak PKU Muhammadiyah Cipondoh; RS Ibu dan Anak Pratiwi; RS Islam Sari Asih Ar-rahmah; RS Karang Tengah Medika; RS Mandaya Royal Puri; RS Mayapada; RS Medika Lestari; RS Melati; RS Metro Hospitals M. Toha; RS Mulya; RS Murni Teguh Ciledug; RS Primaya; RS Sari Asih Ciledug; RS Sari Asih Cipondoh; RS Sari Asih Karawaci; RS Sari Asih Sangiang; RS Tiara; RS Umum Bhakti Asih; RS Umum Daerah Benda; RS Umum Daerah Kota Tangerang; RS Umum Hermina Tangerang; RSUP Dr. Sitanala Tangerang"
+  },
+  {
+    "province_upper": "BANTEN",
+    "kab_upper": "KOTA TANGERANG SELATAN",
+    "facility_names": "RS Buah Hati Ciputat; RS Cinta Kasih; RS Columbia Asia BSD; RS EMC Alam Sutera; RS Eka; RS Hermina Ciputat; RS Hermina Serpong; RS Ibu dan Anak Bina Medika; RS Ibu dan Anak Buah Hati Pamulang; RS Ibu dan Anak Bunda Ciputat; RS Ibu dan Anak Dhia; RS Ibu dan Anak Permata Dalima; RS Ibu dan Anak Permata Sarana Husada; RS Ibu dan Anak Vitalaya; RS Ichsan Medical Center; RS Insan Permata; RS Khusus Bedah Via Medika; RS Khusus Jiwa Dharma Graha; RS Khusus THT-Bedah KL Proklamasi BSD; RS Mitra Keluarga Bintaro; RS Permata Pamulang; RS Pondok Indah Bintaro Jaya; RS Premier Bintaro; RS Rumah Indonesia Sehat; RS Sari Asih Ciputat; RS Syarif Hidayatullah; RS Umum Daerah Kota Tangerang Selatan; RS Umum Daerah Pondok Aren; RS Umum Daerah Serpong Utara; RS. Mitra Keluarga Pamulang"
+  },
+  {
+    "province_upper": "BANTEN",
+    "kab_upper": "LEBAK",
+    "facility_names": "RS Kartini; RS Misi Lebak; RS Umum Daerah Dr. Adjidarmo; RS Umum Daerah Malingping"
+  },
+  {
+    "province_upper": "BANTEN",
+    "kab_upper": "PANDEGLANG",
+    "facility_names": "RS Alinda Husada; RS Ibu dan Anak Permata Ibunda; RS SHL; RS Umum Aulia Pandeglang; RS Umum Daerah Berkah Pandeglang"
+  },
+  {
+    "province_upper": "BANTEN",
+    "kab_upper": "SERANG",
+    "facility_names": "RS Bethsaida Hospital Serang; RS Hermina Ciruas; RS Kurnia Serang; RS Otika Medika; RS Permata Serdang; RS Tonggak Husada; RS Umum Daerah dr. Drajat Prawiranegara"
+  },
+  {
+    "province_upper": "BANTEN",
+    "kab_upper": "TANGERANG",
+    "facility_names": "Metro Hospitals Cikupa; RS Bethsaida; RS Ciputra; RS Ibu dan Anak Bunda Sejahtera; RS Ibu dan Anak Harapan Mulia; RS Ibu dan Anak Ilanur; RS Ibu dan Anak Selaras; RS Ibu dan Anak Tiara; RS Mentari; RS Mitra Husada; RS Mitra Keluarga Gading Serpong; RS Permata Hati; RS Qadr; RS Selaras; RS Siloam Hospitals Kelapa Dua; RS Siloam Hospitals Lippo Village; RS St. Carolus Summarecon Serpong; RS Suci Paramita; RS Umum BUN; RS Umum Daerah Balaraja; RS Umum Daerah Kabupaten Tangerang; RS Umum Daerah Pakuhaji; RS Umum Daerah Tigaraksa; RS Umum Hermina Bitung; RS Umum Keluarga Kita; RS Umum Murni Asih; RS Umum Primaya Pasar Kemis; RS UniMedika Sepatan"
+  },
+  {
+    "province_upper": "BENGKULU",
+    "kab_upper": "BENGKULU SELATAN",
+    "facility_names": "RS As-syifa; RS Umum Daerah Hasanuddin Damrah Manna"
+  },
+  {
+    "province_upper": "BENGKULU",
+    "kab_upper": "BENGKULU TENGAH",
+    "facility_names": "RS Umum Daerah Bengkulu Tengah"
+  },
+  {
+    "province_upper": "BENGKULU",
+    "kab_upper": "BENGKULU UTARA",
+    "facility_names": "Charitas Hospital Arga Makmur; RS Bergerak Enggano; RS Umum Daerah Arga Makmur; RS Umum Daerah Lagita"
+  },
+  {
+    "province_upper": "BENGKULU",
+    "kab_upper": "KAUR",
+    "facility_names": "RS Umum Daerah Kaur"
+  },
+  {
+    "province_upper": "BENGKULU",
+    "kab_upper": "KEPAHIANG",
+    "facility_names": "RS Umum Daerah Kepahiang"
+  },
+  {
+    "province_upper": "BENGKULU",
+    "kab_upper": "KOTA BENGKULU",
+    "facility_names": "RS Bhayangkara Jitra Kota Bengkulu; RS Gading Medika; RS Ibu dan Anak Tino Galo Kota Bengkulu; RS Jiwa Soeprapto Provinsi Bengkulu; RS Rafflesia Bengkulu; RS Tiara Sella; RS Tk. IV Bengkulu; RS Umum Daerah Dr. M. Yunus Bengkulu; RS Umum Daerah Harapan dan Doa; RS Umum Ummi Bengkulu"
+  },
+  {
+    "province_upper": "BENGKULU",
+    "kab_upper": "LEBONG",
+    "facility_names": "RS Umum Daerah Lebong"
+  },
+  {
+    "province_upper": "BENGKULU",
+    "kab_upper": "MUKO MUKO",
+    "facility_names": "RS Ibu dan Anak AL-Barra; RS Umum Daerah Mukomuko"
+  },
+  {
+    "province_upper": "BENGKULU",
+    "kab_upper": "REJANG LEBONG",
+    "facility_names": "RS An-Nissa; RS Assalam; RS Umum Daerah Kabupaten Rejang Lebong"
+  },
+  {
+    "province_upper": "BENGKULU",
+    "kab_upper": "SELUMA",
+    "facility_names": "RS Umum Daerah Tais Kabupaten Seluma"
+  },
+  {
+    "province_upper": "DKI JAKARTA",
+    "kab_upper": "KEPULAUAN SERIBU",
+    "facility_names": "RS Umum Daerah Kepulauan Seribu"
+  },
+  {
+    "province_upper": "DKI JAKARTA",
+    "kab_upper": "KOTA JAKARTA BARAT",
+    "facility_names": "RS Anak dan Bunda Harapan Kita; RS Gigi dan Mulut FKG Universitas Trisakti; RS Ibu dan Anak Metro Hospitals Kebon Jeruk; RS Jantung dan Pembuluh Darah Harapan Kita; RS Jiwa Dr. Soeharto Heerdjan; RS Kanker Dharmais; RS Kapal Nusa Waluya II; RS Khusus Mata Jakarta Eye Center Kedoya; RS Pondok Indah Puri Indah; RS Ukrida; RS Umum  Royal Taruma; RS Umum Anggrek Mas; RS Umum Bhakti Mulia; RS Umum Cinta Kasih Tzu Chi; RS Umum Ciputra Hospital Citragarden City; RS Umum Daerah  Kembangan; RS Umum Daerah Cengkareng; RS Umum Daerah Kalideres; RS Umum Daerah Taman Sari; RS Umum Eka Permata Hijau; RS Umum Grha Kedoya; RS Umum Hermina Daan Mogot; RS Umum Mitra Keluarga Kalideres; RS Umum Patria IKKT; RS Umum Pelni Petamburan; RS Umum Siloam Hospitals Kebon Jeruk; RS Umum Sumber Waras; RS Umum dr Abdul Radjak Cengkareng"
+  },
+  {
+    "province_upper": "DKI JAKARTA",
+    "kab_upper": "KOTA JAKARTA PUSAT",
+    "facility_names": "RS Gigi Dan Mulut YARSI; RS Gigi dan Mulut FKG Univ. Indonesia; RS Ibu dan Anak Tambak; RS Islam Jakarta Cempaka Putih; RS Khusus Bedah Bina Estetika; RS Khusus Ibu Anak Bunda Jakarta; RS Khusus JEC @Menteng; RS Khusus THT Bedah KL Proklamasi; RS Khusus THT Prof Nizar; RS Khusus THT SS Medika; RS Menteng Mitra Afia; RS Primaya PGI Cikini; RS Siloam Agora; RS Umum AL Dr. Mintoharjo; RS Umum Abdi Waluyo; RS Umum Budi Kemuliaan; RS Umum Bunda Jakarta; RS Umum Daerah Cempaka Putih; RS Umum Daerah Johar Baru; RS Umum Daerah Kemayoran; RS Umum Daerah Sawah Besar; RS Umum Daerah Tanah Abang; RS Umum Daerah Tarakan; RS Umum Hermina Kemayoran; RS Umum Husada; RS Umum Kramat 128; RS Umum Mitra Kemayoran; RS Umum Murni Teguh Sudirman Jakarta; RS Umum PAD Gatot Soebroto; RS Umum Pertamina Jaya; RS Umum Primaya Evasari Hospital; RS Umum Sint Carolus; RS Umum YPK Mandiri; RS Umum Yarsi; RS Umum dr. Abdul Radjak Salemba; RSGM LADOKGI R.E MARTADINATA; RSUPN Dr. Cipto Mangunkusumo"
+  },
+  {
+    "province_upper": "DKI JAKARTA",
+    "kab_upper": "KOTA JAKARTA SELATAN",
+    "facility_names": "Mayapada Hospital Kuningan; RS Bedah Siloam Asri; RS Brawijaya Saharjo; RS Gigi dan Mulut Univ. Prof. Moestopo; RS Ibu dan Anak Brawijaya Durentiga; RS Ibu dan Anak JWCC Asih; RS Ibu dan Anak Kemang Medical Care; RS Ibu dan Anak SamMarie Wijaya; RS Jantung dan Pembuluh Darah Heartology; RS Jiwa Dharmawangsa; RS Khusus Bedah Halimun; RS Khusus Ibu dan Anak Brawijaya; RS Khusus Kanker MRCCC Siloam Semanggi; RS Khusus Mata Nusantara; RS Muhammadiyah Taman Puring; RS Orthopedi Siaga Raya; RS Umum AL Cilandak; RS Umum Agung; RS Umum Ali Sibroh Malisi; RS Umum Andhika; RS Umum Aulia; RS Umum Bhayangkara Lemdiklat Polri; RS Umum Daerah Jagakarsa; RS Umum Daerah Jati Padang; RS Umum Daerah Kebayoran Baru; RS Umum Daerah Kebayoran Lama; RS Umum Daerah Mampang Prapatan; RS Umum Daerah Pasar Minggu; RS Umum Daerah Pesanggrahan; RS Umum Daerah Tebet; RS Umum Dr. Suyoto Kemhan; RS Umum Gandaria; RS Umum Jakarta; RS Umum Jakarta Medical Center (JMC); RS Umum Kartini; RS Umum MMC; RS Umum Mayapada; RS Umum Medistra; RS Umum Petukangan; RS Umum Pondok Indah; RS Umum Prikasih; RS Umum Pusat Pertamina; RS Umum Setia Mitra; RS Umum Siloam Mampang; RS Umum Siloam TB Simatupang; RS Umum Tebet; RS Umum Tria Dipa; RS Umum Zahirah; RS Yadika Kebayoran Lama; RSUP Fatmawati"
+  },
+  {
+    "province_upper": "DKI JAKARTA",
+    "kab_upper": "KOTA JAKARTA TIMUR",
+    "facility_names": "RS Angkatan Udara dr. Esnawan Antariksa; RS EMC Pulomas; RS Gigi Dan Mulut Angkatan Udara; RS Ibu dan Anak AL-Fauzan; RS Ibu dan Anak Resti Mulya; RS Ibu dan Anak SamMarie Basra; RS Ibu dan Anak Sayyidah; RS Islam Jakarta Pondok Kopi; RS Jantung Binawaluya; RS Jantung Jakarta; RS Jiwa Islam Klender; RS Ketergantungan Obat; RS Khusus Bedah Columbia Asia Pulomas; RS Khusus Bedah Rawamangun; RS Khusus Daerah Duren Sawit; RS Pusat Otak Nasional Prof DR. dr. Mahar Mardjono; RS Pusdikkes; RS Tk. II M. Ridwan Meuraksa; RS Tk. IV Cijantung; RS Umum  Dr. EUIS; RS Umum Adhyaksa; RS Umum Alia Hospital; RS Umum Antam Medika; RS Umum Bhayangkara Tk. I R.Said Sukanto; RS Umum Daerah Budhi Asih; RS Umum Daerah Cipayung; RS Umum Daerah Ciracas; RS Umum Daerah Kramat Jati; RS Umum Daerah Matraman; RS Umum Daerah Pasar Rebo; RS Umum Dharma Nugraha; RS Umum Haji Jakarta; RS Umum Harapan Bunda; RS Umum Harapan Jayakarta; RS Umum Harum; RS Umum Hermina Jatinegara; RS Umum Kartika Pulo Mas; RS Umum Olahraga Nasional; RS Umum Pengayoman Cipinang; RS Umum Premier Jatinegara; RS Umum Restu Kasih; RS Umum Universitas Kristen Indonesia; RS Umum Yadika; RSUP Persahabatan"
+  },
+  {
+    "province_upper": "DKI JAKARTA",
+    "kab_upper": "KOTA JAKARTA UTARA",
+    "facility_names": "RS Ibu dan Anak St. Yusuf; RS Islam Jakarta Sukapura; RS Khusus Ibu dan Anak Eka Family; RS Khusus Ibu dan Anak Eka Grand Family; RS Mata JEC Primasana @Tanjung Priok; RS Penyakit Infeksi Prof. Dr. Sulianti Saroso; RS Umum  Pelabuhan Tanjung Priok; RS Umum  Satya Negara; RS Umum Akademik Atma Jaya; RS Umum Daerah  Pademangan; RS Umum Daerah  Tanjung Priok; RS Umum Daerah Cilincing; RS Umum Daerah Koja; RS Umum Daerah Tugu Koja; RS Umum Duta Indah; RS Umum Firdaus; RS Umum Gading Pluit; RS Umum Hermina Podomoro; RS Umum Mitra Keluarga Kelapa Gading; RS Umum Mulyasari; RS Umum Pantai Indah Kapuk; RS Umum Pekerja; RS Umum Pluit; RS Umum Port Medical Center; RS Umum Puri Medika; RS Umum Royal Progress; RS Umum Sukmul; RS Umum Tzu Chi Hospital"
+  },
+  {
+    "province_upper": "GORONTALO",
+    "kab_upper": "BOALEMO",
+    "facility_names": "RS Umum Daerah DR. Ir. Iwan Bokings Kab. Boalemo; RS Umum Daerah Tani dan Nelayan"
+  },
+  {
+    "province_upper": "GORONTALO",
+    "kab_upper": "BONE BOLANGO",
+    "facility_names": "RS Umum Daerah Tombulilato; RS Umum Daerah Toto Kabila"
+  },
+  {
+    "province_upper": "GORONTALO",
+    "kab_upper": "GORONTALO",
+    "facility_names": "RS Bhayangkara Gorontalo; RS Umum Daerah Boliyohuto; RS Umum Daerah dr. Hasri Ainun Habibie; RS Umum Daerah dr. M. Mohammad Dunda; Rumkit Tk.IV dr. Eddy Kounang Gorontalo"
+  },
+  {
+    "province_upper": "GORONTALO",
+    "kab_upper": "GORONTALO UTARA",
+    "facility_names": "RS Umum Daerah Tolinggula Melayani; RS Umum Daerah dr. Zainal Umar Sidiki"
+  },
+  {
+    "province_upper": "GORONTALO",
+    "kab_upper": "KOTA GORONTALO",
+    "facility_names": "RS Bunda; RS Ibu dan Anak Siti Khadidjah; RS Islam; RS Multazam; RS Umum Daerah Otanaha; RS Umum Daerah Prof Dr. H. Aloei Saboe"
+  },
+  {
+    "province_upper": "GORONTALO",
+    "kab_upper": "POHUWATO",
+    "facility_names": "RS Pratama Kab. Pohuwatu; RS Umum Daerah Bumi Panua"
+  },
+  {
+    "province_upper": "JAMBI",
+    "kab_upper": "BATANG HARI",
+    "facility_names": "RS Mitra Medika Batang Hari; RS Umum Daerah Haji Abdoel Madjid Batoe"
+  },
+  {
+    "province_upper": "JAMBI",
+    "kab_upper": "BUNGO",
+    "facility_names": "RS Ibu dan Anak Moelia; RS Jabal Rahmah Medika; RS Kuamang Kuning; RS Umum Daerah H. Hanafie; RS Umum Daerah Rantau Ikil; RS Umum Permata Hati"
+  },
+  {
+    "province_upper": "JAMBI",
+    "kab_upper": "KOTA JAMBI",
+    "facility_names": "RS Bhayangkara Jambi; RS Ibu dan Anak Annisa; RS Islam Arafah; RS Jiwa Daerah Provinsi Jambi; RS Mitra; RS Rapha Theresia; RS Royal Prima; RS Siloam Jambi; RS Tk. III 02.06.01  dr. Bratanata; RS Umum Baiturahim Jambi; RS Umum Daerah H. Abdul Manap; RS Umum Daerah H. Abdurrahman Sayoeti; RS Umum Daerah Raden Mattaher Jambi; RS Umum Erni Medika; RS Umum Kambang; RS Umum Rimbo Medika; RS Umum Santa Theresia"
+  },
+  {
+    "province_upper": "JAMBI",
+    "kab_upper": "KOTA SUNGAI PENUH",
+    "facility_names": "RS Umum Daerah Mayjen H. A. Thalib; RS Umum Melati"
+  },
+  {
+    "province_upper": "JAMBI",
+    "kab_upper": "MERANGIN",
+    "facility_names": "RS Andimas; RS Merangin Medical Centre; RS Raudhah; RS Umum Daerah Kolonel Abundjani/Bangko"
+  },
+  {
+    "province_upper": "JAMBI",
+    "kab_upper": "MUARO JAMBI",
+    "facility_names": "RS Umum Daerah Ahmad Ripin; RS Umum Daerah Sungai Bahar; RS Umum Daerah Sungai Gelam"
+  },
+  {
+    "province_upper": "JAMBI",
+    "kab_upper": "SAROLANGUN",
+    "facility_names": "RS Langit Golden Medika; RS Umum Daerah Prof. Dr. H.  Chatib Quzwain"
+  },
+  {
+    "province_upper": "JAMBI",
+    "kab_upper": "TANJUNG JABUNG BARAT",
+    "facility_names": "RS Umum Daerah KH. Daud Arif; RS Umum Daerah Suryah Khairuddin"
+  },
+  {
+    "province_upper": "JAMBI",
+    "kab_upper": "TANJUNG JABUNG TIMUR",
+    "facility_names": "RS Umum Daerah Nurdin Hamzah; RS Umum Daerah Rantau Rasau"
+  },
+  {
+    "province_upper": "JAMBI",
+    "kab_upper": "TEBO",
+    "facility_names": "RS Umum Daerah Sultan Thaha Saifuddin; RS Umum Setia Budi"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "BANDUNG",
+    "facility_names": "RS AMC; RS Hermina Soreang; RS Muhammadiyah Bandung Selatan; RS Oetomo; RS Umum Bina Sehat; RS Umum Daerah Al Ihsan Provinsi Jawa Barat; RS Umum Daerah Bedas Arjasari; RS Umum Daerah Bedas Cimaung; RS Umum Daerah Bedas Kertasari; RS Umum Daerah Bedas Tegalluar; RS Umum Daerah Cicalengka; RS Umum Daerah Kesehatan Kerja; RS Umum Daerah Majalaya; RS Umum Daerah Oto Iskandar Di Nata; RS Umum Karya Pangalengan Bhakti Sehat; RS Umum TNI AU Lanud Sulaiman; RS Unggul Karsa Medika"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "BANDUNG BARAT",
+    "facility_names": "RS Ibu dan Anak Anugrah ALZ; RS Ibu dan Anak Buah Hati; RS Ibu dan Anak Graha Medika Padalarang; RS Ibu dan Anak Kartini; RS Ibu dan Anak Parahyangan; RS Jiwa Provinsi Jawa Barat; RS Karisma Cimareme; RS Umum Cahya Kawaluyan; RS Umum Daerah Cikalongwetan; RS Umum Daerah Cililin; RS Umum Daerah Lembang"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "BEKASI",
+    "facility_names": "Altius Hospitals; RS Amanda Cikarang Selatan; RS Ananda Babelan; RS Ananda Tambun Selatan; RS Cahaya Medika; RS Cenka; RS DKH Cikarang Barat; RS DKH Kedungwaringin; RS DKH Sukatani; RS EMC Cibitung; RS EMC Cikarang; RS Eka Bekasi; RS Hermina Metland Cibitung; RS Ibu dan Anak Gizar; RS Ibu dan Anak Nurul Annisa; RS Ibu dan Anak Viola; RS Mitra Keluarga Deltamas; RS Mitra Keluarga Grand Wisata; RS Mitra Plumbon Cibitung; RS Permata Bunda; RS Umum Amanda; RS Umum Annisa; RS Umum Asri Medika; RS Umum Bhakti Husada; RS Umum Budi Asih; RS Umum Bunda Mulia; RS Umum Cikarang Medika; RS Umum Daerah Cabangbungin; RS Umum Daerah Kab.Bekasi; RS Umum Dokter Adam Talib; RS Umum Dr. Iqbali Taufan; RS Umum Harapan Mulia; RS Umum Hermina Grand Wisata; RS Umum Hosana Medica; RS Umum Kartika Husada; RS Umum Kartika Husada Setu; RS Umum Karya Medika; RS Umum Karya Medika II; RS Umum Medirossa 2; RS Umum Medirossa Cikarang; RS Umum Metro Hospitals; RS Umum Mitra Keluarga Cikarang; RS Umum Permata Keluarga Jababeka; RS Umum Permata Keluarga Lippo Cikarang; RS Umum Pinna; RS Umum Puspa Husada; RS Umum Ridhoka Salma; RS Umum Sentra Medika; RS Umum Tarumajaya; RS Umum Tiara; RS Umum dr. Abdul Radjak Cibitung; RS Uni Medika Setu Bekasi; RS dr. Abdul Radjak Jababeka; Siloam Hospitals Lippo Cikarang"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "BOGOR",
+    "facility_names": "RS Asysyifaa; RS EMC Sentul; RS Eka Hospital; RS Harapan Sehati; RS Helsa Citeureup; RS Hermina Ciawi; RS Ibu dan Anak Assalam; RS Ibu dan Anak Citra Insani; RS Ibu dan Anak Kenari Graha Medika; RS Islam Aysha; RS Paragon; RS Paru Dr. M. Goenawan Partowidigdo; RS Pena 98; RS Sentosa; RS Umum Annisa; RS Umum Bina Husada; RS Umum Citama; RS Umum Daerah Ciawi; RS Umum Daerah Cibinong; RS Umum Daerah Cileungsi; RS Umum Daerah Leuwiliang; RS Umum Family Medical Center; RS Umum Hermina Mekarsari; RS Umum Karya Bhakti Pratiwi; RS Umum Mary Cileungsi Hijau; RS Umum Permata Jonggol; RS Umum Rumah Sehat Terpadu Dompet Dhuafa; RS Umum Sentra Medika Cibinong; RS Umum Trimitra; RS dr. Abdul Radjak Cileungsi; RSAU Dr. M. Hassan Toto"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "CIAMIS",
+    "facility_names": "RS Khusus Orthopedi RSOP Ciamis; RS Umum Al-Arif; RS Umum Dadi Keluarga Ciamis; RS Umum Daerah Kab. Ciamis; RS Umum Daerah Kawali; RS Umum Permata Bunda"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "CIANJUR",
+    "facility_names": "RS Bhayangkara Cianjur; RS Edelweiss Bentang Salapan; RS Umum Daerah Cimacan; RS Umum Daerah Pagelaran; RS Umum Daerah Sayang; RS Umum Daerah Sindangbarang; RS Umum Dr. Hafiz"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "CIREBON",
+    "facility_names": "RS Jantung Hasna Medika; RS Paru Provinsi Jawa Barat; RS Pasar Minggu Cirebon; RS Pertamina Cirebon; RS Umum Daerah Arjawinangun; RS Umum Daerah Waled; RS Umum Khalishah; RS Umum Mitra Plumbon; RS Umum Permata Cirebon; RS Umum Sumber Hurip; RS Umum Sumber Waras; RS Umum Universitas Muhammadiyah Cirebon; Sentra Medika Hospital Gempol"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "GARUT",
+    "facility_names": "RS Medina; RS Umum Annisa Queen; RS Umum Daerah Malangbong; RS Umum Daerah Pameungpeuk Prov. Jabar; RS Umum Daerah dr. Slamet Garut; RS Umum Intan Husada; RS Umum Nurhayati Cikajang; RS Umum Nurhayati Garut; RS Umum Tk. IV Guntur"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "INDRAMAYU",
+    "facility_names": "RS Ibu dan Anak Irhamna Indramayu; RS Islam Zam-Zam Muhammadiyah Jatibarang; RS Mitra Plumbon Indramayu; RS Mitra Plumbon Patrol; RS Sentra Medika Langut; RS Syahid Al Irsyad; RS Umum Bhayangkara Indramayu; RS Umum Daerah Kab. Indramayu; RS Umum Daerah M. A. Sentot Patrol; RS Umum Daerah Mursid Ibnu Syafiuddin; RS Umum MM Indramayu; RS Umum Pertamina Balongan Indramayu"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "KARAWANG",
+    "facility_names": "RS Hastien; RS Hermina Karawang; RS Ibu dan Anak Dr. Djoko Pramono; RS Permata Keluarga Karawang; RS Primaya Karawang; RS Umum Amanda Mitra Keluarga; RS Umum Bayukarta; RS Umum Citra Sari Husada; RS Umum Daerah Jatisari Kabupaten Karawang; RS Umum Daerah Karawang; RS Umum Delima Asih Sisma Medika; RS Umum Dewi Sri; RS Umum Fikri Medika; RS Umum Helsa; RS Umum Islam Karawang; RS Umum Izza; RS Umum Karya Husada; RS Umum Lira Medika; RS Umum Mandaya; RS Umum Mitra Family; RS Umum Proklamasi; RS Umum Puri Asih; RS Umum Rosela; RS Umum SAN Medical Center; RS Umum Saraswati; RS Umum Sentral Medika"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "KOTA BANDUNG",
+    "facility_names": "RS Edelweiss; RS Gigi dan Mulut Maranatha; RS Ibu dan Anak Al Islam; RS Ibu dan Anak Grha Bunda; RS Ibu dan Anak Harapan Bunda Bandung; RS Ibu dan Anak Limijati; RS Ibu dan Anak Melinda; RS Jantung dan Pembuluh Darah Paramarta; RS Kartini; RS Khusus Bedah Halmahera Siaga; RS Khusus Gigi dan Mulut Kota Bandung; RS Khusus Gigi dan Mulut UNPAD; RS Khusus Ginjal Ny. R. A. Habibie; RS Khusus Jantung dan Pembuluh Darah Melinda Cardio Vascular Center; RS Khusus Mata Cicendo; RS Mata Bandung Eye Center; RS Murni Teguh Naripan Bandung; RS Paru Dr. H. A. Rotinsulu; RS Pasundan; RS Umum Advent Bandung; RS Umum Al-Islam Bandung; RS Umum Bungsu; RS Umum Daerah Bandung Kiwari; RS Umum Daerah Kota Bandung; RS Umum Hermina Arcamanik; RS Umum Hermina Pasteur; RS Umum Humana Prima; RS Umum Immanuel Bandung; RS Umum Kebonjati; RS Umum Mayapada Hospital Bandung; RS Umum Melinda 2; RS Umum Muhammadiyah; RS Umum Pindad; RS Umum Pusat Dr. Hasan Sadikin; RS Umum Rajawali; RS Umum Santo Borromeus; RS Umum Santo Yusup; RS Umum Santosa Hospital Bandung Central; RS Umum Santosa Hospital Bandung Kopo; RS Umum Tk. IV 03.07.03 Sariningsih; RSAU dr. M. Salamun; RSU Bhayangkara Tk. II Sartika Asih"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "KOTA BANJAR",
+    "facility_names": "RS Umum Banjar Patroman; RS Umum Daerah Asih Husada Langensari; RS Umum Daerah Banjar; RS Umum Mitra Idaman"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "KOTA BEKASI",
+    "facility_names": "RS CItra Arafiq Bekasi; RS Dokter Adam Talib Cikunir; RS EMC Pekayon; RS Emhaka; RS Helsa; RS Ibu dan Anak Rinova Intan; RS Ibu dan Anak Selasih Medika; RS Karunia Kasih; RS Mekar Sari; RS Mitra Keluarga Pratama; RS Mustika Medika Bekasi; RS Paramedika; RS Primaya; RS Primaya Bekasi Barat; RS Primaya Bekasi Utara; RS Seto Hasbadi; RS Siloam Bekasi Sepanjang Jaya; RS Siloam Bekasi Timur; RS Siloam Sentosa; RS Umum Ananda; RS Umum Anna; RS Umum Anna Medika; RS Umum Bella; RS Umum Bhakti Kartini; RS Umum Citra Harapan; RS Umum Daerah Bantar Gebang; RS Umum Daerah Jatisampurna; RS Umum Daerah Pondokgede; RS Umum Daerah dr. Chasbullah Abdulmadjid; RS Umum Graha Juanda; RS Umum Hermina Bekasi; RS Umum Hermina Galaxy; RS Umum Islam dr. Subki Abdulkadir; RS Umum Jati Sampurna; RS Umum Juwita; RS Umum Kartika Husada; RS Umum Karya Medika Bantar Gebang; RS Umum Masmitra; RS Umum Mitra Keluarga Bekasi; RS Umum Mitra Keluarga Bekasi Timur; RS Umum Mitra Keluarga Cibubur; RS Umum Permata Bekasi; RS Umum Permata Cibubur; RS Umum Rawa Lumbu; RS Umum Satria Medika; RS Umum St. Elisabeth; RS Umum Taman Harapan Baru; RS umum Daerah Teluk Pucung"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "KOTA BOGOR",
+    "facility_names": "Bogor Senior Hospital; Mayapada Hospital Bogor; RS Graha Medika Bogor; RS Ibu dan Anak Bunda Suryatni; RS Ibu dan Anak Pasutri; RS Ibu dan Anak Sawojajar; RS Jiwa dr. H. Marzoeki Mahdi; RS Umum Azra; RS Umum Bhayangkara Tk. IV Bogor; RS Umum Daerah Kota Bogor; RS Umum Hermina Bogor; RS Umum Islam Bogor; RS Umum Juliana; RS Umum Medika Dramaga; RS Umum Melania; RS Umum Mulia Pajajaran; RS Umum Nuraida; RS Umum PMI Bogor; RS Umum Salak; RS Umum Siloam Hospitals Bogor; RS Umum Ummi; RS Umum Vania"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "KOTA CIMAHI",
+    "facility_names": "RS Gigi dan Mulut Pendidikan Unjani; RS Umum Avisena; RS Umum Baros; RS Umum Daerah Cibabat; RS Umum Kasih Bunda; RS Umum Mitra Anugrah Lestari; RS Umum Mitra Kasih; RS Umum Tk. II Dustira"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "KOTA CIREBON",
+    "facility_names": "RS Ibu dan Anak Cahaya Bunda; RS Umum Budi Asta; RS Umum Daerah Gunung Jati; RS Umum Medimas; RS Umum Muhammadiyah; RS Umum Panti Abdi Dharma; RS Umum Pelabuhan Cirebon; RS Umum Putera Bahagia; RS Umum Sumber Kasih; RS Umum Tk. III Ciremai"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "KOTA DEPOK",
+    "facility_names": "RS Ibu dan Anak Asyifa Depok; RS Ibu dan Anak Setya Bhakti; RS Ibu dan Anak Tumbuh Kembang; RS Jantung Diagram; RS Primaya Depok; RS Umum Alia Hospital; RS Umum Anak Negeri Hospital; RS Umum Bhakti Yudha; RS Umum Bhayangkara Brimob; RS Umum Brawijaya Bojongsari; RS Umum Bunda Margonda; RS Umum Citra Arafiq; RS Umum Citra Arafiq Sawangan; RS Umum Citra Medika Depok; RS Umum Daerah Anugerah Sehat Afiat; RS Umum Daerah Khidmat Sehat Afiat Kota Depok; RS Umum Grha Permata Ibu; RS Umum Hasanah Graha Afiah; RS Umum Hermina Depok; RS Umum Meilia; RS Umum Mitra Keluarga Depok; RS Umum Permata Depok; RS Umum Puri Cinere; RS Umum Sentra Medika; RS Umum Simpangan Depok; RS Umum Tugu Ibu; RS Universitas Indonesia"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "KOTA SUKABUMI",
+    "facility_names": "RS Umum Assyifa Sukabumi; RS Umum Bhayangkara Setukpa Lemdikpol; RS Umum Daerah Al-Mulk; RS Umum Daerah R. Syamsudin, SH; RS Umum Kartika Kasih; RS Umum Ridogalih"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "KOTA TASIKMALAYA",
+    "facility_names": "RS Hermina Tasikmalaya; RS Ibu dan Anak Bunda Aisyah; RS Ibu dan Anak Sayang Bunda; RS Ibu dan Anak Ummi; RS Ibu dan Anak Widaningsih; RS Ibu dan Anak dr. Hj. Karmini EH; RS Jantung dan Pembuluh Darah Tasikmalaya; RS Umum Daerah dr. Soekardjo; RS Umum Islam Hj. Siti Muniroh; RS Umum Jasa Kartini; RS Umum Permata Bunda; RS Umum Prasetya Bunda; RS Umum Syifa Medina; RS Umum Tasik Medika Citratama (TMC); Rumah Sakit Umum Daerah Dewi Sartika"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "KUNINGAN",
+    "facility_names": "RS Jantung Hasna Medika Kuningan; RS Permata Kuningan; RS Pradipa Medika; RS Umum Daerah 45 Kuningan; RS Umum Daerah Linggajati Kuningan; RS Umum El-Syifa; RS Umum Juanda; RS Umum KMC Luragung; RS Umum Kuningan Medical Center; RS Umum Sekar Kamulyan; RS Umum Wijaya Kusumah"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "MAJALENGKA",
+    "facility_names": "RS Bedah Budi Kasih; RS Mitra Plumbon Majalengka; RS Umum Daerah Cideres; RS Umum Daerah Majalengka; RS Umum Daerah Talaga; RS Umum Livasya"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "PANGANDARAN",
+    "facility_names": "RS Umum Daerah Pandega Pangandaran"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "PURWAKARTA",
+    "facility_names": "RS Ibu dan Anak Dian; RS Umum Amira; RS Umum Asri Purwakarta; RS Umum Bhakti Husada II Purwakarta; RS Umum Daerah Bayu Asih; RS Umum Holistic Purwakarta; RS Umum Karina Medika; RS Umum Rama Hadi; RS Umum Siloam Purwakarta; RS Umum dr. Abdul Radjak Purwakarta"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "SUBANG",
+    "facility_names": "RS Hamori; RS Khusus Ibu dan Anak Grha Mutiara; RS Rayhan; RS Umum Daerah Subang; RS Umum Haji Syaiful Anwar; RS Umum Mutiara Hati; RS Umum PTPN VIII; RS Umum Pamanukan Medical Center (PMC); RSAU dr. Hoediyono Lanud Suryadarma"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "SUKABUMI",
+    "facility_names": "RS Primaya Sukabumi; RS Umum Betha Medika; RS Umum Bhakti Medicare; RS Umum Daerah Jampang Kulon; RS Umum Daerah Palabuhanratu; RS Umum Daerah Sagaranten; RS Umum Daerah Sekarwangi; RS Umum Hermina Sukabumi; Rumah Sakit DKH Cibadak"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "SUMEDANG",
+    "facility_names": "RS Cimalaka; RS Umum Daerah Sumedang; RS Umum Harapan Keluarga; RS Umum Pakuwon; RS Universitas Padjadjaran"
+  },
+  {
+    "province_upper": "JAWA BARAT",
+    "kab_upper": "TASIKMALAYA",
+    "facility_names": "RS Ibu dan Anak Respati; RS Umum Daerah Singaparna Medika Citrautama"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "BANJARNEGARA",
+    "facility_names": "RS Umum Daerah Hj. Anna Lasmanah Banjarnegara; RS Umum Emmanuel; RS Umum Islam Banjarnegara; RS Umum PKU Muhammadiyah Banjarnegara"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "BANYUMAS",
+    "facility_names": "RS Hermina Purwokerto; RS Ibu dan Anak Budhi Asih; RS Ibu dan Anak Bunda Arif Purwokerto; RS JIH Purwokerto; RS Khusus Bedah Jatiwinangun; RS Khusus Bedah Mitra Ariva; RS Khusus Gigi dan Mulut Univ. Jenderal Soedirman; RS Khusus Mata Purwokerto; RS Khusus Orthopaedi Purwokerto; RS Umum Amanah; RS Umum An Ni'mah; RS Umum Ananda Purwokerto; RS Umum Bunda; RS Umum Dadi Keluarga; RS Umum Daerah Ajibarang; RS Umum Daerah Prof Dr. Margono Soekarjo; RS Umum Hidayah Purwokerto; RS Umum Islam Purwokerto; RS Umum Medika Lestari Banyumas; RS Umum Santa Elisabeth Purwokerto; RS Umum Siaga Medika Banyumas; RS Umum Sinar Kasih; RS Umum Tk. III Wijayakusuma; RS Umum Wiradadi Husada; RS umum Daerah Banyumas"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "BATANG",
+    "facility_names": "RS Umum Daerah Batang; RS Umum Daerah Limpung; RS Umum Qim"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "BLORA",
+    "facility_names": "RS Bhayangkara Blora; RS Ibu dan Anak Annisa Blora; RS Ibu dan Anak NU Cakra Medika; RS Umum Bantuan Blora; RS Umum Daerah Dr. R. Soeprapto Cepu; RS Umum Daerah Dr. R. Soetijono Blora; RS Umum Daerah Samin Surosentiko Randublatung; RS Umum PKU Muhammadiyah Blora; RS Umum PKU Muhammadiyah Cepu; RS Umum Permata Blora"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "BOYOLALI",
+    "facility_names": "RS Indriati Boyolali; RS Umum  Karanggede Sisma Medika; RS Umum Asy-Syifa Sambi; RS Umum Daerah Pandan Arang Boyolali; RS Umum Daerah Simo; RS Umum Daerah Waras Wiris; RS Umum Hidayah Boyolali; RS Umum Islam Banyubening Boyolali; RS Umum Islam Boyolali; RS Umum Natalia; RS Umum PKU Aisyiyah Boyolali; RS Umum PKU dr. Soemowidagdo Boyolali; RS Umum Umi Barokah"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "BREBES",
+    "facility_names": "RS Harapan Sehat Bumiayu; RS Harapan Sehat Jatibarang; RS Ibu dan Anak Nuzula; RS Ibu dan Anak Permata Insani; RS Umum Allam Medica Bumiayu; RS Umum Amanah Mahmudah; RS Umum Bhakti Asih Brebes; RS Umum Bhakti Asih Jatibarang; RS Umum Daerah Brebes; RS Umum Daerah Bumiayu; RS Umum Daerah Ir. Soekarno Kab. Brebes; RS Umum Dedy Jaya; RS Umum Dera As-Syifa; RS Umum Islami Mutiara Bunda; RS Umum Muhammadiyah Siti Aminah; RS Umum Siti Asiyah"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "CILACAP",
+    "facility_names": "RS Ibu dan Anak Annisa; RS Priscilla Medical Center; RS Umum Afdila Cilacap; RS Umum Aghisna Medika Kroya; RS Umum Aghisna Medika Sidareja; RS Umum Aprillia; RS Umum Daerah Cilacap; RS Umum Daerah Majenang; RS Umum Duta Mulya; RS Umum Islam Fatimah; RS Umum Pertamina Cilacap; RS Umum Raffa Majenang; RS Umum Santa Maria Cilacap"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "DEMAK",
+    "facility_names": "Charlie Hospital Demak; RS Hj. Fatimah Sulhan PKU Muhammadiyah Demak; RS Umum Daerah Sultan Fatah Karangawen Demak; RS Umum Daerah Sunan Kalijaga; RS Umum Islam NU Demak; RS Umum Pelita Anugerah"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "GROBOGAN",
+    "facility_names": "RS Marganingsih; RS Ortopedi Siaga Utama; RS Permata Bunda; RS Sekar Laras; RS Umum Daerah Dr. R.Soedjati Soemodiardjo; RS Umum Daerah Ki Ageng Getas Pendowo Gubug; RS Umum Habibullah; RS Umum Islam Purwodadi; RS Umum PKU Muhammadiyah Gubug; RS Umum Panti Rahayu; RS Umum Trimedika Ketapang"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "JEPARA",
+    "facility_names": "RS Graha Husada Jepara; RS PKU Aisyiyah Jepara; RS Umum Daerah R. A. Kartini; RS Umum Daerah dr. Rehatta Provinsi Jawa Tengah; RS Umum PKU Muhammadiyah Mayong; RS Umum Sultan Hadlirin Jepara"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "KARANGANYAR",
+    "facility_names": "RS Ibu dan Anak Dian Pertiwi; RS Mangesti Rahayu; RS PKU Muhammadiyah Karanganyar; RS Umum Daerah Kartini Karanganyar; RS Umum Indo Sehat Karanganyar; RS Umum Jafar Medika Karanganyar; RS Umum Jati Husada Karanganyar; RSAU dr. Siswanto Lanud Adi Soemarmo"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "KEBUMEN",
+    "facility_names": "RS Umum Daerah Prembun; RS Umum Daerah dr. Soedirman Kabupaten Kebumen; RS Umum PKU Muhamadiyah Gombong; RS Umum PKU Muhammadiyah Kutowinangun; RS Umum PKU Muhammadiyah Petanahan Kebumen; RS Umum PKU Muhammadiyah Sruweng; RS Umum Palang Biru Gombong; RS Umum Permata Medika Kebumen; RS Umum Purbowangi; RS Umum Purwogondo; RS Umum Wijayakusuma"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "KENDAL",
+    "facility_names": "RS PKU Aisyiyah Kendal; RS PKU Muhammadiyah Boja; RS Umum Baitul Hikmah; RS Umum Charlie Hospital; RS Umum Daerah  Dr. H. Soewondo Kendal; RS Umum Islam Kendal; RS Umum Muhammadiyah Darul Istiqomah Kendal"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "KLATEN",
+    "facility_names": "RS Jiwa Daerah Dr. RM. Soedjarwadi; RS PKU Muhammadiyah Prambanan; RS Umum 'Aisyiyah Klaten; RS Umum Cakra Husada; RS Umum Daerah Bagas Waras; RS Umum Diponegoro Dua Satu Klaten; RS Umum Islam Cawas Klaten; RS Umum Islam Klaten; RS Umum Mitra Pedan; RS Umum PKU Muhammadiyah Delanggu; RS Umum PKU Muhammadiyah Jatinom; RS Umum PKU Muhammadiyah Pedan; RS Umum Pusat Dr. Soeradji Tirtonegoro"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "KOTA MAGELANG",
+    "facility_names": "RS Ibu dan Anak Gladiool; RS Jiwa Prof. Dr. Soerojo; RS Umum Daerah Budi Rahayu; RS Umum Daerah Tidar; RS Umum Harapan; RS Umum Islam Magelang; RS Umum Lestari Raharja; RS Umum Tk. II Dr. Soedjono"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "KOTA PEKALONGAN",
+    "facility_names": "RS Umum  ARO; RS Umum Anugerah Pekalongan; RS Umum Budi Rahayu; RS Umum Daerah Bendan Kota Pekalongan; RS Umum H. A. Zaky Djunaid; RS Umum Hermina Pekalongan; RS Umum Karomah Holistic; RS Umum Siti Khodijah"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "KOTA SALATIGA",
+    "facility_names": "RS Ibu dan Anak Hermina Mutiara Bunda; RS Islam Tunas Harapan; RS Paru Dr. Ario Wirawan; RS Umum Daerah Kota Salatiga; RS Umum Puri Asih; RS Umum Tk. IV 04.07.03 dr. Asmir"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "KOTA SEMARANG",
+    "facility_names": "RS Cepoko; RS Daerah KRMT Wongsonegoro; RS Gigi dan Mulut Unimus; RS Ibu dan Anak Ananda Pasar Ace; RS Ibu dan Anak Anugerah; RS Ibu dan Anak Bunda Semarang; RS Ibu dan Anak Gunung Sawo; RS Ibu dan Anak Kusuma Pradja; RS Ibu dan Anak Plamongan Indah; RS Ibu dan Anak Siloam Semarang; RS Islam Gigi dan Mulut Sultan Agung; RS Jiwa Daerah  Dr. Amino Gondohutomo; RS Keluarga Sehat III Semarang; RS Khusus Bedah Columbia Asia Semarang; RS Mata JEC-Candi Semarang; RS Panti Wilasa \"Dr. Cipto\" Semarang; RS Roemani Muhammadiyah Semarang; RS Samsoe Hidajat; RS Umum Banyumanik; RS Umum Banyumanik 2; RS Umum Bhayangkara Akpol Semarang; RS Umum Bhayangkara Semarang; RS Umum Daerah Mijen; RS Umum Daerah dr. Adhyatma, MPH; RS Umum Hermina Banyumanik Semarang; RS Umum Hermina Pandanaran; RS Umum Nasional Diponegoro; RS Umum Panti Wilasa Citarum; RS Umum Permata Medika; RS Umum Pusat Dr. Kariadi; RS Umum St. Elisabeth Semarang; RS Umum Sultan Agung Semarang; RS Umum Telogorejo Semarang; RS Umum Tk.III Bhakti Wira Tamtama Smg; RS Umum William Booth; RS Unimus"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "KOTA SURAKARTA",
+    "facility_names": "RS Bhayangkara Surakarta; RS Gigi dan Mulut Soelastri; RS JIH Solo; RS Jiwa Daerah Dr. Arif Zainudin Provinsi Jawa Tengah; RS Khusus Mata Solo; RS Onkologi Solo; RS PKU Muhammadiyah Sampangan Surakarta; RS PKU Muhammadiyah Surakarta; RS Umum Brayat Minulya; RS Umum Daerah Bung Karno Kota Surakarta; RS Umum Daerah Dr. Moewardi Surakarta; RS Umum Daerah Ibu Fatmawati Soekarno; RS Umum Dr. Oen; RS Umum Hermina Solo; RS Umum Islam Kustati; RS Umum Kasih Ibu; RS Umum Panti Waluyo; RS Umum Pusat Surakarta; RS Umum Tk III Slamet Riyadi Surakarta; RS Umum Triharsi"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "KOTA TEGAL",
+    "facility_names": "RS Ibu dan Anak Kasih Ibu Tegal; RS Umum Daerah Kardinah; RS Umum Islam Harapan Anda; RS Umum Mitra Keluarga Tegal"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "KUDUS",
+    "facility_names": "RS Aisyiyah Kudus; RS Ibu dan Anak Harapan Bunda; RS Ibu dan Anak Miriam; RS Ibu dan Anak Permata Hati; RS Sarkies 'Aisyiyah Kudus; RS Umum  Islam Sunan Kudus; RS Umum  Nurussyifa; RS Umum Daerah dr. Loekmono Hadi; RS Umum Kumala Siwimijen Kudus; RS Umum Mardi Rahayu; Rumkitban 04.08.04 Kartika Husada Kudus"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "MAGELANG",
+    "facility_names": "RS Umum Aisyiyah Muntilan; RS Umum Daerah Bukit Menoreh; RS Umum Daerah Candi Umbul; RS Umum Daerah Merah Putih; RS Umum Daerah Muntilan Kab. Magelang; RS Umum N-21 Gemilang; RS Umum Syubbanul Wathon"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "PATI",
+    "facility_names": "RS Ibu dan Anak Ultima; RS Keluarga Sehat Tayu; RS Umum  Budi Agung Pati; RS Umum As-Suyuthiyyah; RS Umum Daerah Kayen Pati; RS Umum Daerah RAA Soewondo; RS Umum Fastabiq Sehat PKU Muhammadiyah Pati; RS Umum Islam Pati; RS Umum Keluarga Sehat; RS Umum Mitra Bangsa Pati; RS Umum Sebening Kasih"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "PEKALONGAN",
+    "facility_names": "RS Ibu dan Anak Aisyiyah Pekajangan Pekalongan; RS Islam PKU Muhammadiyah Pekajangan; RS Prima Sehat Pekalongan; RS Umum Daerah Kajen Kab. Pekalongan; RS Umum Daerah Kesesi Pekalongan; RS Umum Daerah Kraton Kab. Pekalongan"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "PEMALANG",
+    "facility_names": "RS Harapan Sehat Pemalang; RS Muhammadiyah Rodliyah Achid; RS Umum Comal Baru; RS Umum Daerah Dr. M. Ashari Pemalang; RS Umum Islam Al-Ikhlas; RS Umum Muhammadiyah Mardhatillah; RS Umum Prima Medika; RS Umum Santa Maria Pemalang; RS Umum Siaga Medika Pemalang"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "PURBALINGGA",
+    "facility_names": "RS Ibu dan Anak MPH Purbalingga; RS Ibu dan Anak Ummu Hani; RS Islam At-Tin Husada Purbalingga; RS Umum Daerah Panti Nugroho; RS Umum Daerah dr. R. Goeteng Taroenadibrata; RS Umum Harapan Ibu; RS Umum Nirmala; RS Umum PKU Muhammadiyah Purbalingga; RS Umum Siaga Medika Purbalingga"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "PURWOREJO",
+    "facility_names": "RS Amanah Umat Purworejo; RS Ibu dan Anak Permata; RS Umum  Aisyiyah; RS Umum Ananda Purworejo; RS Umum Budi Sehat Purworejo; RS Umum Daerah Dr. Tjitrowardojo Purworejo; RS Umum Daerah R.A.A Tjokronegoro; RS Umum Islam Purworejo; RS Umum Kasih Ibu Purworejo; RS Umum Palang Biru Kutoarjo; RS Umum Panti Waluyo Yakkum Purworejo; RS Umum Purwa Husada"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "REMBANG",
+    "facility_names": "RS Bhina Bhakti Husada; RS PKU Muhammadiyah Pamotan; RS Umum Daerah dr. R. Soetrasno Rembang; RS Umum Islam Arafah"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "SEMARANG",
+    "facility_names": "At-Tin Hospital; RS Umum Bina Kasih; RS Umum Daerah dr. Gondo Suwarno; RS Umum Daerah dr. Gunawan Mangunkusumo; RS Umum Ken Saras; RS Umum Kusuma Ungaran"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "SRAGEN",
+    "facility_names": "RS Ibu dan Anak Restu Ibu; RS Umum Assalam; RS Umum Daerah Sukowati Tangen; RS Umum Daerah dr. Soehadi Prijonegoro; RS Umum Daerah dr. Soeratno Gemolong; RS Umum Islam Amal Sehat Sragen; RS Umum Islam Yakssi Gemolong; RS Umum Mardi Lestari Sragen; RS Umum PKU Muhammadiyah Sragen; RS Umum Rizky Amalia; RS Umum Saras Ibnu Sina Sukowati; RS Umum Sarila Husada; Rumah Sakit Umum Hastuti"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "SUKOHARJO",
+    "facility_names": "RS Islam Surakarta YARSIS; RS Khusus Orthopedi Karima Utama; RS Orthopedi Prof. Dr. R. Soeharso; RS PKU Muhammadiyah Kartasura; RS Umum Daerah Ir. Soekarno Kabupaten Sukoharjo; RS Umum Dr. Oen Solo Baru; RS Umum Indriati; RS Umum Nirmala Suri; RS Umum PKU Muhammadiyah Sukoharjo; RS Umum Universitas Sebelas Maret"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "TEGAL",
+    "facility_names": "RS Harapan Sehat Slawi; RS Hawari Essa; RS Ibu dan Anak Pala Raya; RS Mitra Keluarga Slawi; RS Mitra Siaga Tarub; RS Umum  Mitra Siaga; RS Umum Adella; RS Umum Daerah Suradadi; RS Umum Daerah dr. Soeselo Slawi Kabupaten Tegal; RS Umum Tk. IV Tegal; RSI PKU Muhammadiyah Tegal"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "TEMANGGUNG",
+    "facility_names": "RS PKU Muhammadiyah Temanggung; RS Umum Daerah Kabupaten Temanggung; RS Umum Gunung Sawo Kab. Temanggung; RS Umum Ngesti Waluyo"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "WONOGIRI",
+    "facility_names": "RS Fitri Candra; RS Hermina Wonogiri; RS PKU Muhammadiyah Wonogiri; RS Umum  Amal Sehat; RS Umum Astrini; RS Umum Daerah Dr. Soediran Mangun Sumarso Wonogi; RS Umum Maguan Husada; RS Umum Muhammadiyah Selogiri; RS Umum Mulia Hati Wonogiri"
+  },
+  {
+    "province_upper": "JAWA TENGAH",
+    "kab_upper": "WONOSOBO",
+    "facility_names": "RS Ibu dan Anak Adina; RS Umum  PKU Muhammadiyah Wonosobo; RS Umum AISs Wonosobo; RS Umum Islam Wonosobo; RS Umum Setjonegoro Wonosobo"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "BANGKALAN",
+    "facility_names": "RS Ibu Dan Anak Hikmah Sawi; RS Ibu dan Anak Aisyiyah; RS Ibu dan Anak Glamour Husada Kebun; RS Khusus Bedah Al Ishaqiy; RS Khusus Bedah Heart and Surgery; RS Umum Anna Medika Madura; RS Umum Daerah Syarifah Ambami Rato Ebu; RS Umum Lukas"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "BANYUWANGI",
+    "facility_names": "RS Al Huda; RS Al-Rohmah Banyuwangi; RS Graha Medika; RS Islam Fatimah; RS Nahdlatul Ulama Banyuwangi; RS Umum Abdhi Famili; RS Umum Bakti Mulia Banyuwangi; RS Umum Bhakti Husada; RS Umum Daerah Blambangan; RS Umum Daerah Genteng; RS Umum PKU Muhammadiyah Rogojampi; RS Umum Rahayu Medika; RS Yasmin"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "BLITAR",
+    "facility_names": "RS Umum Al-Ittihad; RS Umum An-Nisaa; RS Umum Ananda; RS Umum Aulia Blitar; RS Umum Daerah Ngudi Waluyo Wlingi; RS Umum Daerah Srengat Kab. Blitar; RS Umum Medika Utama; RS Umum Wava Husada Kesamben"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "BOJONEGORO",
+    "facility_names": "RS Bhayangkara Wahyu Tutuko Bojonegoro; RS Ibu dan Anak Fatma; RS Muslimat NU Muna Anggita Bojonegoro; RS Umum Aisyiyah Bojonegoro; RS Umum Daerah Dr. R. Sosodoro Djatikoesoemo; RS Umum Daerah Kepohbaru; RS Umum Daerah Sumberrejo; RS Umum Ibnu Sina Bojonegoro; RS Umum Muhamadiyah Sumberejo; RS Umum Muhammadiyah Kalitidu; RS umum Daerah Padangan"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "BONDOWOSO",
+    "facility_names": "RS Bhayangkara Bondowoso; RS Cahya Medika; RS Mitra Medika Bondowoso; RS Umum dr. H.Koesnadi Bondowoso"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "GRESIK",
+    "facility_names": "RS Denisa; RS Fathma Medika; RS Grha Husada Gresik; RS Ibu dan Anak Khodijah; RS Muhammadiyah Gresik; RS PKU Muhammadiyah Sekapuk; RS Petrokimia Gresik; RS Petrokimia Gresik Driyorejo; RS Semen Gresik; RS Surya Medika; RS Umum Daerah Ibnu Sina Kab. Gresik; RS Umum Daerah Umar Mas'ud Bawean; RS Umum Islam Cahaya Giri Gresik; RS Umum Mabarrot MWC NU; RS Umum Nyai Ageng Pinatih Gresik; RS Umum Rachmi Dewi; RS Umum Randegansari Husada; RS Umum Wali Songo I; RS Umum Wates Husada"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "JEMBER",
+    "facility_names": "RS Bina Sehat Jember; RS Daerah Balung Jember; RS Daerah Kalisat Jember; RS Gigi dan Mulut Universitas Jember; RS Kaliwates Jember; RS Paru Jember; RS Perkebunan PTPN X (Persero) Jember; RS Siloam Jember; RS Tk. III Baladhika Husada Jember; RS Umum Citra Husada Jember; RS Umum Daerah Dr. Soebandi Jember; RS Umum Srikandi IBI Jember; RS Umum Universitas Muhammadiyah Jember; RS Utama Husada Jember"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "JOMBANG",
+    "facility_names": "RS Airlangga Jombang; RS Al-Aziz; RS Bedah Surya Dharma Husada; RS Hasyim Asy'ari; RS Ibu dan Anak Muslimat Jombang; RS Kristen Mojowarno; RS Muhammadiyah Jombang; RS Umum Daerah Kab. Jombang; RS Umum Daerah Ploso; RS Umum Islam Jombang; RS Umum Nadhlatul Ulama Jombang; RS Umum PKU Muhammadiyah Mojoagung; RS Umum Pelengkap Medical Center; RS Umum dr. Moedjito Dwidjosiswojo; RS Unipdu Medika Jombang"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "KEDIRI",
+    "facility_names": "RS Ibu dan Anak Kasih Bunda; RS Ibu dan Anak Permata Hati Pare Kediri; RS Muhammadiyah Siti Khodijah; RS Toeloengredjo; RS Umum  Aura Syifa; RS Umum  Wilujeng; RS Umum Amelia; RS Umum Arga Husada; RS Umum Daerah Kabupaten Kediri; RS Umum Daerah Simpang Lima Gumul Kediri; RS Umum Muhammadiyah Surya Melati"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "KOTA BATU",
+    "facility_names": "RS Baptis Batu; RS Bhayangkara Hasta Brata Batu; RS Ibu dan Anak Haji; RS Punten; RS Umum Karsa Husada Kota Batu; RS Umum dr. Etty Asharto Batu"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "KOTA BLITAR",
+    "facility_names": "RS Ibu dan Anak Tanjungsari; RS Islam Aminah; RS Katolik Budi Rahayu; RS Umum Aminah Blitar; RS Umum Daerah Mardi Waluyo; RS Umum Syuhada Haji"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "KOTA KEDIRI",
+    "facility_names": "RS Baptis Kediri; RS Gigi Mulut IIK Bhakti Wiyata; RS Ibu dan Anak Citra Keluarga; RS Ibu dan Anak Melinda; RS Ibu dan Anak Nirmala Kediri; RS Muhammadiyah Ahmad Dahlan; RS TK. IV 05.07.02 Kediri; RS Umum Bhayangkara Kediri; RS Umum Daerah Gambiran; RS Umum Daerah Kilisuci; RS Umum Daha Husada; RS Umum Lirboyo; RS Umum Ratih"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "KOTA MADIUN",
+    "facility_names": "RS Hermina Madiun; RS Ibu dan Anak Al Hasanah; RS Paru Manguharjo Madiun; RS Umum Daerah Dr. Soedono Madiun; RS Umum Daerah Kota Madiun; RS Umum Darmayu Madiun; RS Umum Griya Husada Madiun; RS Umum Islam Siti Aisyah; RS Umum Santa Clara; RS Umum TNI AD Tk. IV 05.04.01 Kota Madiun"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "KOTA MALANG",
+    "facility_names": "RS Bhirawa Bhakti; RS Ibu dan Anak Galeri Candra Malang; RS Ibu dan Anak Husada Bunda; RS Ibu dan Anak Mardi Waloeja Kauman Malang; RS Ibu dan Anak Mardi Waloeja Rampal Malang; RS Ibu dan Anak Melati Children Hospital; RS Ibu dan Anak Mitra Mulia; RS Ibu dan Anak Muhammadiyah Malang; RS Ibu dan Anak Mutiara Bunda; RS Ibu dan Anak Permata Hati; RS Ibu dan Anak Puri; RS Ibu dan Anak Puri Bunda; RS Ibu dan Anak Refa husada; RS Islam Malang; RS Tk. II Dr. Soepraoen; RS Umum BRI Medika Malang; RS Umum Daerah Dr. Saiful Anwar; RS Umum Daerah Kota Malang; RS Umum Hermina Tangkubanprahu; RS Umum Islam Aisyiyah Malang; RS Umum Lavalette Malang; RS Umum Panti Nirmala; RS Umum Panti Waluya Sawahan Malang; RS Umum Permata Bunda; RS Umum Persada Hospital; RS Universitas Brawijaya"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "KOTA MOJOKERTO",
+    "facility_names": "RS Emma; RS Gatoel; RS Islam Hasanah Muhammadiyah; RS Kamar Medika; RS Reksa Waluya; RSUD dr. Wahidin Sudiro Husodo Kota Mojokerto"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "KOTA PASURUAN",
+    "facility_names": "RS Graha Sehat Medika; RS Umum Daerah Dr. R. Soedarsono Kota Pasuruan"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "KOTA PROBOLINGGO",
+    "facility_names": "RS Ibu dan Anak Amanah; RS Ibu dan Anak Muhammadiyah Kota Probolinggo; RS Umum Daerah Ar Rozy; RS Umum Daerah dr. Mohamad Saleh Kota Probolinggo; RS Umum Dharma Husada"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "KOTA SURABAYA",
+    "facility_names": "Mayapada Hospital Surabaya; RS Adi Husada Undaan; RS Al Irsyad Surabaya; RS Bhakti Rahayu; RS Bhayangkara TK II HS. Samsoeri Mertojoso; RS Bunda; RS Darmo; RS Gigi dan Mulut FKG Universitas Airlangga; RS Gigi dan Mulut Nala Husada; RS Gotong Royong; RS Husada Utama Surabaya; RS Ibu dan Anak Adi Guna; RS Ibu dan Anak Bantuan 05.08.05 Surabaya; RS Ibu dan Anak Cempaka Putih Permata; RS Ibu dan Anak Ferina; RS Ibu dan Anak Graha Medika; RS Ibu dan Anak IBI Surabaya; RS Ibu dan Anak Idaf Husada; RS Ibu dan Anak Kendangsari Merr; RS Ibu dan Anak Kendangsari Surabaya; RS Ibu dan Anak Lombok Dua Dua; RS Ibu dan Anak Lombok Dua Dua Lontar; RS Ibu dan Anak Nur Ummi Numbi; RS Ibu dan Anak Perdana Medica; RS Ibu dan Anak Pura Raharja; RS Ibu dan Anak Pusura Tegalsari; RS Ibu dan Anak Putri Surabaya; RS Islam Darus Syifa; RS Islam Surabaya; RS Jiwa Menur; RS Katolik St. Vincentius a Paulo; RS Manyar Medical Centre; RS Marinir Ewa Pangalila Gunungsari; RS Mata Masyarakat Jawa Timur; RS Mata Undaan; RS Mitra Keluarga Kenjeran; RS Muji Rahayu; RS National Hospital; RS Onkologi; RS Orthopedi dan Traumatologi Surabaya; RS PKU Muhammadiyah Surabaya; RS Premier Surabaya; RS Primasatya Husada Citra (PHC) Surabaya; RS Soemitro Lanud Moeljono Surabaya; RS Surabaya Medical Service; RS TNI AL Dr. Oepomo; RS Ubaya; RS Umum  Mitra Keluarga Surabaya; RS Umum Adi Husada Kapasari; RS Umum Daerah Bhakti Dharma Husada; RS Umum Daerah Dr. Soetomo; RS Umum Daerah Haji Provinsi Jawa Timur; RS Umum Daerah Husada Prima; RS Umum Daerah dr. Mohamad Soewandhie; RS Umum Islam Surabaya Jemursari; RS Umum Pusat Surabaya; RS Umum Royal Surabaya; RS Umum Siloam Hospitals Surabaya; RS Umum Tk. III Brawijaya; RS Universitas Airlangga; RS Wijaya Surabaya; RS William Booth Surabaya; RS Wiyung Sejahtera; RSPAL dr. Ramelan"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "LAMONGAN",
+    "facility_names": "RS Abdurrahman Syamsuri (Arsy); RS An-Noor Medika Lamongan; RS Bedah Mitra Sehat; RS Islam Nashrul Ummah; RS Mata KMU Lamongan; RS Muhammadiyah Babat; RS Muhammadiyah Kalikapas Lamongan; RS Nahdlatul Ulama Babat; RS Permata Hati Lamongan; RS Umum Citra Medika Lamongan; RS Umum Daerah Dr. Soegiri Lamongan; RS Umum Daerah Karangkembang; RS Umum Daerah Ngimbang; RS Umum Fatimah Lamongan; RS Umum Intan Medika; RS Umum Muhammadiyah Babat; RS Umum Muhammadiyah Lamongan; RS Umum Permata Bunda; RS Umum dr. Suyudi"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "LUMAJANG",
+    "facility_names": "RS Bhayangkara Lumajang; RS Daerah Dr. Haryoto Kabupaten Lumajang; RS Djatiroto; RS Islam Lumajang; RS NU Permata; RS Umum Daerah Pasirian Kabupaten Lumajang; RS Umum Muhammadiyah Lumajang; RS Wijaya Kusuma"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "MADIUN",
+    "facility_names": "RS Umum Daerah Caruban; RS Umum Daerah Dolopo; RS Umum Daerah Dungus"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "MAGETAN",
+    "facility_names": "RS Angkatan Udara dr. Efram Harsana; RS Ibu dan Anak Melati Magetan; RS Ibu dan Anak Samudra Husada; RS Ibu dan Anak Sekar Wangi; RS Umum Bhakti Persada; RS Umum Daerah dr. Sayidiman Magetan"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "MALANG",
+    "facility_names": "RS AU dr. Mohammad Moenir; RS Angkatan Udara dr. Munir Lanud Abdulrachman Saleh; RS Bala Keselamatan Bokor; RS Bantuan 05.08.04 Lawang; RS Bedah Hasta Husada; RS Ben Mari; RS Enggal Dangan; RS Jiwa Dr. Radjiman Wediodiningrat Lawang; RS Lawang Medika; RS Marsudi Waluyo; RS Mitra Delima; RS Prasetya Husada; RS Prima Husada; RS Siti Miriam; RS Sumber Sentosa; RS Umum Cahaya Medika; RS Umum Daerah Kanjuruhan Kepanjen Kab. Malang; RS Umum Daerah Lawang; RS Umum Daerah Ngantang; RS Umum Islam Gondang Legi; RS Umum Islam Madinah Kasembon; RS Umum Pindad; RS Umum Salsabila Husada; RS Umum Universitas Muhammadiyah Malang; RS Umum Wajak Husada; RS Umum Wava Husada"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "MOJOKERTO",
+    "facility_names": "RS Dharma Husada; RS Islam Arofah; RS Islam Sakinah; RS Mawaddah Medika; RS Mutiara Hati Mojokerto; RS Sido Waras; RS Umum Daerah Prof. Dr. Soekandar; RS Umum Daerah Raden Achmad Basoeni; RS Umum Daerah Sumberglagah; RS Umum Dian Husada; RS Umum Kartini"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "NGANJUK",
+    "facility_names": "RS Daerah Kertosono; RS Islam Aisyiyah Nganjuk; RS Umum Bhayangkara Tk. III Nganjuk; RS Umum Daerah Nganjuk"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "NGAWI",
+    "facility_names": "RS Umum At-Tin Husada; RS Umum Daerah Dr. Soeroto Ngawi; RS Umum Daerah Geneng; RS Umum Daerah Mantingan; RS Umum Widodo"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "PACITAN",
+    "facility_names": "RS Umum Daerah  dr. Darsono; RS Umum Medical Mandiri Pacitan; RSU Agung Mulia"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "PAMEKASAN",
+    "facility_names": "RS Ibu dan Anak Mukti Husada; RS Ibu dan Anak Puri Bunda Madura; RS Ibu dan Anak Siti Aisyah Pamekasan; RS Umum Asyifa Husada Pamekasan; RS Umum Daerah Dr. H. Slamet Martodirdjo Pamekasan; RS Umum Daerah Mohammad Noer Pamekasan; RS Umum Daerah Waru Pamekasan; RS Umum Kusuma Hospital; RS Umum Larasati Pamekasan"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "PASURUAN",
+    "facility_names": "RS Asih Abyakta; RS Hermina Pasuruan; RS Islam Masyithoh Bangil; RS Mata Pasuruan; RS Mitra Sehat Medika; RS Prima Husada; RS Sahabat; RS Umum Bhayangkara Pusdik Brimob; RS Umum Daerah Bangil; RS Umum Daerah Grati"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "PONOROGO",
+    "facility_names": "RS Griya Waluya; RS Umum Aisyiyah Ponorogo; RS Umum Daerah Bantarangin; RS Umum Daerah Dr. Harjono S. Kabupaten Ponorogo; RS Umum Darmayu Ponorogo; RS Umum Muhammadiyah Ponorogo; RS Umum Muslimat Ponorogo; RS Yasyfin Darussalam Gontor"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "PROBOLINGGO",
+    "facility_names": "RS Graha Sehat; RS Ibu dan Anak Fatimah Kraksaan; RS Rizani; RS Umum  Wonolangan; RS Umum Daerah Tongas; RS Umum Daerah Waluyo Jati Kraksaan"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "SAMPANG",
+    "facility_names": "RS Nindhita; RS Qona'ah; RS Sukma Wijaya; RS Umum Daerah Ketapang; RS Umum Daerah dr. Mohammad Zyn Kab. Sampang"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "SIDOARJO",
+    "facility_names": "RS Arafah Anwar Medika Sukodono; RS Bantuan 05.08.03 Sidoarjo; RS Ibu dan Anak Buah Delima; RS Ibu dan Anak Kirana; RS Ibu dan Anak Metro Hospitals Sidoarjo; RS Ibu dan Anak Pondok Jati; RS Ibu dan Anak Pondok Tjandra; RS Ibu dan Anak Soerya; RS Islam Siti Hajar Sidoarjo; RS Mata Fatma; RS Mitra Keluarga Pondok Tjandra; RS Pusura Candi; RS Sheila Medika; RS Umum  Pusdik Polri Porong; RS Umum Aisyiyah Siti Fatimah; RS Umum Al-Islam H. M. Mawardi; RS Umum Aminah; RS Umum Anwar Medika; RS Umum Assakinah Medika; RS Umum Bunda; RS Umum Citra Medika; RS Umum Daerah R. T. Notopuro Sidoarjo; RS Umum Daerah Sidoarjo Barat; RS Umum Delta Surya; RS Umum Jasem; RS Umum Mitra Keluarga Waru; RS Umum Mitra Sehat Mandiri Sidoarjo; RS Umum Prima Husada; RS Umum Rahman Rahim; RS Umum Siti Khodijah Muhammadiyah Cabang Sepanjan; RS Umum Usada"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "SITUBONDO",
+    "facility_names": "RS Elizabeth; RS Ibu dan Anak Jatimed; RS Ibu dan Anak Karinda Husada; RS Mata Situbondo; RS Umum Daerah Asembagus Kabupaten Situbondo; RS Umum Daerah Besuki Kabupaten Situbondo; RS Umum Daerah dr. Abdoer Rahem Situbondo; RS Umum Mitra Sehat Kabupaten Situbondo; RS Umum Mulia Medical Center"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "SUMENEP",
+    "facility_names": "RS Ibu dan Anak Esto Ebhu; RS Islam Garam Kalianget; RS Umum Daerah Abuya Kangean; RS Umum Daerah dr. H. Moh. Anwar; RS Umum Sumekar"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "TRENGGALEK",
+    "facility_names": "RS Ibu dan Anak HST; RS Umum Budi Asih Trenggalek; RS Umum Daerah Panggul; RS Umum Daerah dr. Soedomo Trenggalek"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "TUBAN",
+    "facility_names": "RS Graha Husada; RS Medika Mulia Tuban; RS Muhammadiyah Tuban; RS Nahdlatul Ulama Tuban; RS Umum Daerah Dr. R. Koesma Tuban; RS Umum Daerah R. Ali Manshur"
+  },
+  {
+    "province_upper": "JAWA TIMUR",
+    "kab_upper": "TULUNGAGUNG",
+    "facility_names": "RS Ibu dan Anak Amanda; RS Ibu dan Anak Fauziah; RS Ibu dan Anak Trisna Medika; RS Putra Waspada Tulungagung; RS Umum Bhayangkara Tulungagung; RS Umum Daerah Campurdarat; RS Umum Daerah Dr. Iskak Tulungagung; RS Umum Era Medika; RS Umum Islam  Madinah; RS Umum Islam Orpeha; RS Umum Muhammadiyah Bandung; RS Umum Prima Medika; RS Umum Satiti Prima Husada"
+  },
+  {
+    "province_upper": "KALIMANTAN BARAT",
+    "kab_upper": "BENGKAYANG",
+    "facility_names": "RS Umum Bethesda Serukam; RS Umum Daerah Drs. Jacobus Luna, M.Si Kabupaten Bengkayang"
+  },
+  {
+    "province_upper": "KALIMANTAN BARAT",
+    "kab_upper": "KAPUAS HULU",
+    "facility_names": "RS Umum Daerah Badau; RS Umum Daerah Semitau; RS Umum Daerah dr. Achmad Diponegoro Putussibau"
+  },
+  {
+    "province_upper": "KALIMANTAN BARAT",
+    "kab_upper": "KAYONG UTARA",
+    "facility_names": "RS Umum Daerah Sultan Muhammad Jamaludin I"
+  },
+  {
+    "province_upper": "KALIMANTAN BARAT",
+    "kab_upper": "KETAPANG",
+    "facility_names": "RS Fatima Ketapang; RS Ibu dan Anak Permata Bunda; RS Umum Daerah Dr. Agoesdjam Ketapang"
+  },
+  {
+    "province_upper": "KALIMANTAN BARAT",
+    "kab_upper": "KOTA PONTIANAK",
+    "facility_names": "RS Anugerah Bunda Khatulistiwa; RS Bersalin Jeumpa; RS Bhayangkara Pontianak; RS Ibu dan Anak Nabasa Pontianak; RS Islam Yarsi Pontianak; RS Mitra Medika Pontianak; RS Pro Medika Pontianak; RS Umum Daerah Dr. Soedarso Pontianak; RS Umum Daerah Pontianak Utara; RS Umum Daerah Sultan Syarif  Mohammad Alkadrie; RS Umum Kharitas Bhakti; RS Umum Medika Djaya; RS Umum St. Antonius Pontianak; RS Universitas Tanjungpura"
+  },
+  {
+    "province_upper": "KALIMANTAN BARAT",
+    "kab_upper": "KOTA SINGKAWANG",
+    "facility_names": "RS Ibu dan Anak Wempe Singkawang; RS Jiwa Provinsi Kalimantan Barat; RS Tk. IV 12.07.01 Singkawang; RS Umum Daerah Dr. Abdul Aziz Singkawang; RS Umum Harapan Bersama Singkawang; RS Umum Sa'adah; RS Umum Santo Vincentius Singkawang"
+  },
+  {
+    "province_upper": "KALIMANTAN BARAT",
+    "kab_upper": "KUBU RAYA",
+    "facility_names": "RS Angkatan Udara dr. Mohammad Sutomo; RS Ibu dan Anak Anugrah; RS Tk. II Kartika Husada Kes.Dam XII Tanjungpura; RS Umum Daerah Kabupaten Kubu Raya"
+  },
+  {
+    "province_upper": "KALIMANTAN BARAT",
+    "kab_upper": "LANDAK",
+    "facility_names": "RS Pratama Kabupaten Landak; RS Umum Daerah Kabupaten Landak"
+  },
+  {
+    "province_upper": "KALIMANTAN BARAT",
+    "kab_upper": "MELAWI",
+    "facility_names": "RS Umum Citra Husada Nanga Pinoh; RS Umum Daerah Belimbing; RS Umum Daerah Kabupaten Melawi; RS Umum Kasih Bunda Jaya Nanga Pinoh"
+  },
+  {
+    "province_upper": "KALIMANTAN BARAT",
+    "kab_upper": "MEMPAWAH",
+    "facility_names": "RS Umum Daerah Dr. Rubini Mempawah"
+  },
+  {
+    "province_upper": "KALIMANTAN BARAT",
+    "kab_upper": "SAMBAS",
+    "facility_names": "RS Santa Elisabeth; RS Umum Daerah Pemangkat; RS Umum Daerah Sambas; RS Umum Daerah Teluk Keramat"
+  },
+  {
+    "province_upper": "KALIMANTAN BARAT",
+    "kab_upper": "SANGGAU",
+    "facility_names": "RS Parindu; RS Umum Daerah M. Th. Djaman Sanggau; RS Umum Daerah Temenggung Gergaji; RS Umum Sentra Medika Sanggau"
+  },
+  {
+    "province_upper": "KALIMANTAN BARAT",
+    "kab_upper": "SEKADAU",
+    "facility_names": "RS Pratama Tamongokng Naga Lantai; RS Umum Daerah Sekadau"
+  },
+  {
+    "province_upper": "KALIMANTAN BARAT",
+    "kab_upper": "SINTANG",
+    "facility_names": "RS Ibu dan Anak Bujang Dara Sintang; RS Jiwa Sudiyanto; RS Tk. IV 12.07.02 Sintang; RS Umum Anugrah Bunda Jaya Sintang; RS Umum Daerah Ade Muhammad Djoen Sintang; RS Umum Daerah Serawai; RS Umum Sayang Ibu Sintang"
+  },
+  {
+    "province_upper": "KALIMANTAN SELATAN",
+    "kab_upper": "BALANGAN",
+    "facility_names": "RS Umum Daerah Datu Kandang Haji"
+  },
+  {
+    "province_upper": "KALIMANTAN SELATAN",
+    "kab_upper": "BANJAR",
+    "facility_names": "RS Ibu dan Anak Mutiara Bunda; RS Jiwa Sambang Lihum; RS Umum Aveciena Medika; RS Umum Ciputra Mitra Hospital; RS Umum Daerah Ratu Zalecha; RS Umum Pelita Insani"
+  },
+  {
+    "province_upper": "KALIMANTAN SELATAN",
+    "kab_upper": "BARITO KUALA",
+    "facility_names": "RS Umum Daerah  H. Abdul Aziz Marabahan"
+  },
+  {
+    "province_upper": "KALIMANTAN SELATAN",
+    "kab_upper": "HULU SUNGAI SELATAN",
+    "facility_names": "RS Ibu dan Anak Permata Bunda; RS Sumber Jaya Sehat; RS Umum Ceria; RS Umum Daerah Brigjed H. Hasan Basry Kandangan; RS Umum Daerah Daha Sejahtera"
+  },
+  {
+    "province_upper": "KALIMANTAN SELATAN",
+    "kab_upper": "HULU SUNGAI TENGAH",
+    "facility_names": "RS Umum Daerah  H Damanhuri Barabai"
+  },
+  {
+    "province_upper": "KALIMANTAN SELATAN",
+    "kab_upper": "HULU SUNGAI UTARA",
+    "facility_names": "RS Mulia Amuntai; RS Umum Daerah Pambalah Batung"
+  },
+  {
+    "province_upper": "KALIMANTAN SELATAN",
+    "kab_upper": "KOTA BANJAR BARU",
+    "facility_names": "RS Islam Sultan Agung Banjarbaru; RS TNI AU Sjamsudin Noor; RS Tk. IV Guntung Payung; RS Umum Almansyur Medika Banjarbaru; RS Umum Mawar; RS Umum Permata Husada Banjarbaru; RS Umum Syifa Medika; RSD Idaman Kota Banjarbaru"
+  },
+  {
+    "province_upper": "KALIMANTAN SELATAN",
+    "kab_upper": "KOTA BANJARMASIN",
+    "facility_names": "RS Bhayangkara Tk. III Banjarmasin; RS Ibu dan Anak Annisa; RS Ibu dan Anak Mahkota Bunda; RS Islam Banjarmasin; RS Khusus Bedah Banjarmasin Siaga; RS Khusus Gigi dan Mulut Gusti Hasan Aman; RS Siloam Banjarmasin; RS Tk. III Dr. R. Soeharsono; RS Umum Daerah Dr. H. Moch. Ansari Saleh; RS Umum Daerah Sultan Suriansyah Banjarmasin; RS Umum Daerah Ulin Banjarmasin; RS Umum Sari Mulia; RS Umum Suaka Insan"
+  },
+  {
+    "province_upper": "KALIMANTAN SELATAN",
+    "kab_upper": "KOTA BARU",
+    "facility_names": "RS Umum Daerah Pangeran Jaya Sumitra; RS Umum Daerah Sengayam"
+  },
+  {
+    "province_upper": "KALIMANTAN SELATAN",
+    "kab_upper": "TABALONG",
+    "facility_names": "RS Umum Daerah H. Badaruddin Kasim; RS Umum Pertamina Tanjung"
+  },
+  {
+    "province_upper": "KALIMANTAN SELATAN",
+    "kab_upper": "TANAH BUMBU",
+    "facility_names": "RS Ibu dan Anak Paradise; RS Marina Permata; RS Umum Daerah dr. H. Andi Abdurrahman Noor"
+  },
+  {
+    "province_upper": "KALIMANTAN SELATAN",
+    "kab_upper": "TANAH LAUT",
+    "facility_names": "RS Borneo Citra Medika; RS Ibu dan Anak Ibunda; RS Umum Daerah H. Boejasin Pelaihari; RS Umum Daerah KH. Mansyur"
+  },
+  {
+    "province_upper": "KALIMANTAN SELATAN",
+    "kab_upper": "TAPIN",
+    "facility_names": "RS Umum Daerah Datu Sanggul Rantau; RS Umum Handayati"
+  },
+  {
+    "province_upper": "KALIMANTAN TENGAH",
+    "kab_upper": "BARITO SELATAN",
+    "facility_names": "RS Umum Daerah Jaraga Sasameh"
+  },
+  {
+    "province_upper": "KALIMANTAN TENGAH",
+    "kab_upper": "BARITO TIMUR",
+    "facility_names": "RS Umum Daerah Tamiang Layang"
+  },
+  {
+    "province_upper": "KALIMANTAN TENGAH",
+    "kab_upper": "BARITO UTARA",
+    "facility_names": "RS Umum Daerah Muara Teweh"
+  },
+  {
+    "province_upper": "KALIMANTAN TENGAH",
+    "kab_upper": "GUNUNG MAS",
+    "facility_names": "RS Pratama Tumbang Talaken; RS Umum Daerah Kuala Kurun"
+  },
+  {
+    "province_upper": "KALIMANTAN TENGAH",
+    "kab_upper": "KAPUAS",
+    "facility_names": "RS Umum Daerah Dr. H. Soemarno Sosroaatmojo"
+  },
+  {
+    "province_upper": "KALIMANTAN TENGAH",
+    "kab_upper": "KATINGAN",
+    "facility_names": "RS Pratama Tumbang Samba; RS Umum Daerah  Mas Amsyar Kasongan"
+  },
+  {
+    "province_upper": "KALIMANTAN TENGAH",
+    "kab_upper": "KOTA PALANGKA RAYA",
+    "facility_names": "RS Advent Palangkaraya; RS Bhayangkara Palangka Raya; RS Ibu dan Anak Bunda Palangkaraya; RS Ibu dan Anak Yasmin Palangka Raya; RS Islam PKU Muhammadiyah Palangka Raya; RS Permata Hati; RS Primaya Betang Pambelum; RS Siloam Palangka Raya; RS Tk. IV Palangkaraya; RS Umum Daerah Dr. Doris Sylvanus Palangka Raya; RS Umum Daerah Palangka Raya"
+  },
+  {
+    "province_upper": "KALIMANTAN TENGAH",
+    "kab_upper": "KOTAWARINGIN BARAT",
+    "facility_names": "RS Citra Husada Pangkalan Bun; RS Umum Daerah Kutaringin; RS Umum Daerah Sultan Imanuddin; RS Umum Harapan Insani"
+  },
+  {
+    "province_upper": "KALIMANTAN TENGAH",
+    "kab_upper": "KOTAWARINGIN TIMUR",
+    "facility_names": "RS Kelas D Pratama Parenggean; RS Umum Daerah Dr Murjani Sampit"
+  },
+  {
+    "province_upper": "KALIMANTAN TENGAH",
+    "kab_upper": "LAMANDAU",
+    "facility_names": "RS Umum Daerah Kabupaten Lamandau"
+  },
+  {
+    "province_upper": "KALIMANTAN TENGAH",
+    "kab_upper": "MURUNG RAYA",
+    "facility_names": "RS Umum Daerah Puruk Cahu"
+  },
+  {
+    "province_upper": "KALIMANTAN TENGAH",
+    "kab_upper": "PULANG PISAU",
+    "facility_names": "RS Jiwa Kalawa Atei; RS Umum Daerah Pulang Pisau"
+  },
+  {
+    "province_upper": "KALIMANTAN TENGAH",
+    "kab_upper": "SERUYAN",
+    "facility_names": "RS Umum Daerah Hanau; RS Umum Daerah Kuala Pembuang"
+  },
+  {
+    "province_upper": "KALIMANTAN TENGAH",
+    "kab_upper": "SUKAMARA",
+    "facility_names": "RS Umum Daerah Sukamara"
+  },
+  {
+    "province_upper": "KALIMANTAN TIMUR",
+    "kab_upper": "BERAU",
+    "facility_names": "RS Umum Daerah Dr. Abdul Rivai; RS Umum Daerah Talisayan"
+  },
+  {
+    "province_upper": "KALIMANTAN TIMUR",
+    "kab_upper": "KOTA BALIKPAPAN",
+    "facility_names": "RS Bhayangkara Balikpapan; RS Hermina Balikpapan; RS Ibu Anak Asih  Balikpapan; RS Ibu dan Anak Sayang Ibu; RS Khusus Mata SMEC Balikpapan; RS Medika Utama Manggar; RS Medika Utama Permata; RS Pertamina Balikpapan; RS Restu Ibu; RS Siloam Hospitals Balikpapan; RS Tk. II Dr. R. Hardjanto; RS Umum Balikpapan Baru; RS Umum Daerah Beriman; RS Umum Daerah Dr. Kanujoso Djatiwibowo; RS Umum Tk. IV  Lanud Balikpapan"
+  },
+  {
+    "province_upper": "KALIMANTAN TIMUR",
+    "kab_upper": "KOTA BONTANG",
+    "facility_names": "RS Amalia Bontang; RS Islam Bontang; RS LNG Badak; RS Pupuk Kaltim; RS Umum Daerah Taman Husada Bontang"
+  },
+  {
+    "province_upper": "KALIMANTAN TIMUR",
+    "kab_upper": "KOTA SAMARINDA",
+    "facility_names": "RS Hermina Samarinda; RS Ibu dan Anak  Aisyiyah Samarinda; RS Ibu dan Anak Jimmy Medika Borneo; RS Jiwa Atma Husada Mahakam; RS Khusus Ibu dan Anak Qurrata A'yun; RS Mata Provinsi Kalimantan Timur; RS Samarinda Medika Citra; RS Siaga Al-Munawwarah Samarinda; RS Umum Bhakti Nugraha; RS Umum Daerah Abdul Wahab Sjahranie; RS Umum Daerah Inche Abdoel Moeis; RS Umum Daerah KORPRI Provinsi Kalimantan Timur; RS Umum Dirgahayu; RS Umum Haji Darjad; RS Umum Tk. IV Samarinda"
+  },
+  {
+    "province_upper": "KALIMANTAN TIMUR",
+    "kab_upper": "KUTAI BARAT",
+    "facility_names": "RS Santa Familia; RS Umum Daerah Harapan Insan Sendawar; RS Umum Daerah Pratama Sendawar"
+  },
+  {
+    "province_upper": "KALIMANTAN TIMUR",
+    "kab_upper": "KUTAI KARTANEGARA",
+    "facility_names": "RS Umum Daerah Aji Batara Agung Dewa Sakti; RS Umum Daerah Aji Muhammad Parikesit; RS Umum Daerah Dayaku Raja"
+  },
+  {
+    "province_upper": "KALIMANTAN TIMUR",
+    "kab_upper": "KUTAI TIMUR",
+    "facility_names": "RS Ibu Anak Asy Syifa; RS Ibu Anak Cahaya Sangatta; RS Pelita Kasih; RS Pupuk Kaltim Prima Sangata; RS Santa Elisabeth Bengalon; RS Umum Daerah Kudungga; RS Umum Daerah Muara Bengkal; RS Umum Daerah Sangkulirang; RS Umum Medika Sangatta; RS Umum Meloy"
+  },
+  {
+    "province_upper": "KALIMANTAN TIMUR",
+    "kab_upper": "MAHAKAM HULU",
+    "facility_names": "RS Gerbang Sehat Mahulu"
+  },
+  {
+    "province_upper": "KALIMANTAN TIMUR",
+    "kab_upper": "PASER",
+    "facility_names": "RS Umum Daerah Panglima Sebaya"
+  },
+  {
+    "province_upper": "KALIMANTAN TIMUR",
+    "kab_upper": "PENAJAM PASER UTARA",
+    "facility_names": "RS Hermina Nusantara; RS Umum Daerah Ratu Aji Putri Botung; RS Umum Daerah Sepaku Tipe D"
+  },
+  {
+    "province_upper": "KALIMANTAN UTARA",
+    "kab_upper": "BULUNGAN",
+    "facility_names": "RS Umum Daerah Tanjung Selor; RST Tk. IV Abdul Rais Fatah Tanjung Selor"
+  },
+  {
+    "province_upper": "KALIMANTAN UTARA",
+    "kab_upper": "KOTA TARAKAN",
+    "facility_names": "RS AL Ilyas Tarakan; RS Bhayangkara Tarakan; RS Pertamina Tarakan; RS Umum Carsa Tarakan; RS Umum Daerah dr.H. Jusuf SK; RS Umum Kota Tarakan"
+  },
+  {
+    "province_upper": "KALIMANTAN UTARA",
+    "kab_upper": "MALINAU",
+    "facility_names": "RS Pratama Langap; RS Pratama Long Ampung; RS Umum Daerah Kabupaten Malinau"
+  },
+  {
+    "province_upper": "KALIMANTAN UTARA",
+    "kab_upper": "NUNUKAN",
+    "facility_names": "RS Pratama Krayan; RS Pratama Sebatik; RS Pratama Sebuku; RS Umum Daerah Kabupaten Nunukan"
+  },
+  {
+    "province_upper": "KALIMANTAN UTARA",
+    "kab_upper": "TANA TIDUNG",
+    "facility_names": "RS Kelas D Pratama Tanjung Keramat; RS Umum Daerah Akhmad Berahim"
+  },
+  {
+    "province_upper": "KEPULAUAN BANGKA BELITUNG",
+    "kab_upper": "BANGKA",
+    "facility_names": "RS Bakti Timah Sungailiat; RS Jiwa Daerah dr. Samsi Jacobalis; RS Umum Arsani; RS Umum Daerah DR. Eko Maulana Ali; RS Umum Daerah Depati Bahrin; RS Umum Daerah Dr. (HC) Ir. Soekarno; RS Umum Daerah Sjafrie Rachman Puding Besar"
+  },
+  {
+    "province_upper": "KEPULAUAN BANGKA BELITUNG",
+    "kab_upper": "BANGKA BARAT",
+    "facility_names": "RS Gunung Manik; RS Umum Bakti Timah Muntok; RS Umum Daerah Sejiran Setason"
+  },
+  {
+    "province_upper": "KEPULAUAN BANGKA BELITUNG",
+    "kab_upper": "BANGKA SELATAN",
+    "facility_names": "RS Umum Daerah Junjung Besaoh; RS Umum Daerah Kriopanting Payung"
+  },
+  {
+    "province_upper": "KEPULAUAN BANGKA BELITUNG",
+    "kab_upper": "BANGKA TENGAH",
+    "facility_names": "RS Bhayangkara Polda Kep. Bangka Belitung; RS Siloam Bangka; RS Umum Daerah Dr. Ir. H. Ibnu Saleh, MM; RS Umum Daerah Drs. H. Abu Hanifah"
+  },
+  {
+    "province_upper": "KEPULAUAN BANGKA BELITUNG",
+    "kab_upper": "BELITUNG",
+    "facility_names": "RS Umum Almah; RS Umum Daerah dr. H. Marsidi Judono; RS Utama"
+  },
+  {
+    "province_upper": "KEPULAUAN BANGKA BELITUNG",
+    "kab_upper": "BELITUNG TIMUR",
+    "facility_names": "RS Umum Daerah  Muhammad Zein"
+  },
+  {
+    "province_upper": "KEPULAUAN BANGKA BELITUNG",
+    "kab_upper": "KOTA PANGKAL PINANG",
+    "facility_names": "RS Bakti Timah Pangkalpinang; RS Ibu dan Anak Dzakirah; RS Ibu dan Anak Muhaya; RS Ibu dan Anak Rona; RS Kalbu Intan Medika; RS Primaya Bhakti Wara; RS Tk. IV Batin Tikal; RS Umum Daerah Depati Hamzah"
+  },
+  {
+    "province_upper": "KEPULAUAN RIAU",
+    "kab_upper": "BINTAN",
+    "facility_names": "RS Jiwa dan Ketergantungan Obat Engku Haji Daud; RS Umum Daerah  Kabupaten Bintan"
+  },
+  {
+    "province_upper": "KEPULAUAN RIAU",
+    "kab_upper": "KARIMUN",
+    "facility_names": "RS Umum Bhakti Timah; RS Umum Daerah Muhammad Sani Kabupaten Karimun; RS Umum Daerah Tanjung Batu Kundur"
+  },
+  {
+    "province_upper": "KEPULAUAN RIAU",
+    "kab_upper": "KEPULAUAN ANAMBAS",
+    "facility_names": "RS Umum Daerah Bergerak Jemaja; RS Umum Daerah Palmatak; RS Umum Daerah Tarempa"
+  },
+  {
+    "province_upper": "KEPULAUAN RIAU",
+    "kab_upper": "KOTA BATAM",
+    "facility_names": "RS Awal Bros Botania; RS Badan Pengusahaan Batam; RS Bhayangkara Batam Polda Kepri; RS Hj. Bunda Halimah Batam; RS Ibu dan  Anak Griya Medika Batam; RS Ibu dan Anak Frisdhy Angel; RS Jasmine; RS Keluarga Husada Batam; RS Mutiara Aini; RS Santa Elisabeth Sei Lekop; RS Umum Awal Bros Batam; RS Umum Budi Kemuliaan Batam; RS Umum Camatha Sahidya; RS Umum Charis Medika; RS Umum Daerah Embung Fatimah Kota Batam; RS Umum Graha Hermine; RS Umum Harapan Bunda Batam; RS Umum Santa Elisabeth Batam; RS Umum Santa Elisabeth Batam Kota; RS Umum Soedarsono Darmosoewito"
+  },
+  {
+    "province_upper": "KEPULAUAN RIAU",
+    "kab_upper": "KOTA TANJUNG PINANG",
+    "facility_names": "RS Umum Daerah Kota Tanjung Pinang; RS Umum Daerah Raja Ahmad Tabib; Rumkital dr. Midiyato Suratani"
+  },
+  {
+    "province_upper": "KEPULAUAN RIAU",
+    "kab_upper": "LINGGA",
+    "facility_names": "RS Umum Daerah Dabo Kabupaten Lingga; RS Umum Daerah Encik Mariyam"
+  },
+  {
+    "province_upper": "KEPULAUAN RIAU",
+    "kab_upper": "NATUNA",
+    "facility_names": "RS Umum Daerah Natuna; RSAU dr. Yuniati Wisma Karyani"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "KOTA BANDAR LAMPUNG",
+    "facility_names": "RS Belleza Kedaton Bandar Lampung; RS Bhayangkara Polda Lampung; RS Hermina Lampung; RS Ibu dan Anak Bunda Asy Syifa; RS Ibu dan Anak Mutiara Putri; RS Ibu dan Anak Puri Betik Hati; RS Ibu dan Anak Restu Bunda; RS Ibu dan Anak Santa Anna; RS Khusus Mata Permana Sari; RS Mata Lampung Eye Center (LEC); RS Tk. IV 02.07.04; RS Umum Advent Bandar Lampung; RS Umum Bintang Amin; RS Umum Bumi Waras; RS Umum Daerah Dr H Abdul Moeloek; RS Umum Daerah Dr. A. Dadi Tjokrodipo; RS Umum Graha Husada; RS Umum Imanuel Way Halim; RS Umum Urip Sumoharjo"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "KOTA METRO",
+    "facility_names": "RS Azizah; RS Ibu dan Anak Anugerah Medical Center Metro; RS Ibu dan Anak Asih Kota Metro; RS Umum  Mardi Waluyo; RS Umum Daerah Ahmad Yani Metro; RS Umum Daerah Sumbersari Bantul; RS Umum Islam Metro; RS Umum Muhammadiyah Metro; RS Umum Permata Hati Metro"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "LAMPUNG BARAT",
+    "facility_names": "RS Ibu dan Anak Bunda; RS Umum Daerah Alimuddin Umar"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "LAMPUNG SELATAN",
+    "facility_names": "RS Airan Raya; RS Ibu Anak Hidayah Ibu; RS Natar Medika; RS Siti Khodijah; RS Umum Daerah Bandar Negara Husada; RS Umum Daerah Dr. H. Bob Bazar, SKM"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "LAMPUNG TENGAH",
+    "facility_names": "RS Artha Bunda; RS Ibu Anak Puri Adhya Paramita; RS Ibu Anak Puti Bungsu; RS Umum Az - Zahra; RS Umum Daerah Demang Sepulau Raya; RS Umum Harapan Bunda; RS Umum Islam Asy-Syifaa Bandar Jaya; RS Umum Kartini; RS Umum Mitra Mulia Husada; RS Umum Yukum Medical Centre"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "LAMPUNG TIMUR",
+    "facility_names": "RS AKA Medika Sribhawono; RS Ibu dan Anak Ibunda; RS Ibu dan Anak Mawar; RS Umum Daerah Sukadana; RS Umum Permata Hati"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "LAMPUNG UTARA",
+    "facility_names": "RS Candimas Medical Center; RS Maria Regina; RS Medika Insani; RS Umum Daerah May Jen HM Ryacudu; RS Umum HI. Muhammad Yusuf; RS Umum Handayani"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "MESUJI",
+    "facility_names": "RS Mesuji Healthcare Center; RS Umum Daerah Ragab Begawe Caram"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "PESAWARAN",
+    "facility_names": "RS Jiwa Daerah Provinsi Lampung; RS Umum Daerah Pesawaran; RS Umum Gladish Medical Center"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "PESISIR BARAT",
+    "facility_names": "RS Umum Daerah KH. Muhammad Thohir KRUI"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "PRINGSEWU",
+    "facility_names": "RS Ibu dan Anak Harapan Bunda; RS Ibu dan Anak Mutiara Hati; RS Umum Daerah Pringsewu; RS Umum Mitra Husada; RS Umum Surya Asih; RS Wisma Rini"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "TANGGAMUS",
+    "facility_names": "RS Panti Secanti; RS Umum Daerah Batin Mangunang"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "TULANG BAWANG",
+    "facility_names": "RS Griya Medika Dompet Dhuafa; RS Umum Daerah Menggala Tulang Bawang; RS Umum Mutiara Bunda; RS Umum Penawar Medika"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "TULANG BAWANG BARAT",
+    "facility_names": "RS Ibu dan Anak Ummi Athayya; RS Umum Asy-Syifa Medika; RS Umum Daerah Tulang Bawang Barat"
+  },
+  {
+    "province_upper": "LAMPUNG",
+    "kab_upper": "WAY KANAN",
+    "facility_names": "RS Umum Daerah Zainal Abidin Pagar Alam; RS Umum Haji Kamino"
+  },
+  {
+    "province_upper": "MALUKU",
+    "kab_upper": "BURU",
+    "facility_names": "RS Umum Daerah Kab. Buru"
+  },
+  {
+    "province_upper": "MALUKU",
+    "kab_upper": "BURU SELATAN",
+    "facility_names": "RS Pratama Raja Latubau Soel Negeri Fogi; RS Umum Daerah dr. Salim Alkatiri"
+  },
+  {
+    "province_upper": "MALUKU",
+    "kab_upper": "KEPULAUAN ARU",
+    "facility_names": "RS Umum Daerah Cendrawasih Dobo"
+  },
+  {
+    "province_upper": "MALUKU",
+    "kab_upper": "KEPULAUAN TANIMBAR",
+    "facility_names": "RS Fatima Saumlaki; RS Umum Daerah Dr. P. P. Magretti Saumlaki"
+  },
+  {
+    "province_upper": "MALUKU",
+    "kab_upper": "KOTA AMBON",
+    "facility_names": "RS Al Fatah; RS Bhayangkara Ambon; RS Hative Passo; RS Siloam Ambon; RS Sumber Hidup GPM; RS TNI AL dr. FX. Soehardjo; RS Tk. II Prof. dr. J. A. Latumeten; RS Umum Bakti Rahayu; RS Umum Dr. M. Haulussy Ambon; RS Umum Pusat Dr. Johannes Leimena Ambon; RSKD Provinsi Maluku"
+  },
+  {
+    "province_upper": "MALUKU",
+    "kab_upper": "KOTA TUAL",
+    "facility_names": "RS Umum Daerah Maren H. Noho Renuat Kota Tual"
+  },
+  {
+    "province_upper": "MALUKU",
+    "kab_upper": "MALUKU BARAT DAYA",
+    "facility_names": "RS Umum Daerah Tiakur"
+  },
+  {
+    "province_upper": "MALUKU",
+    "kab_upper": "MALUKU TENGAH",
+    "facility_names": "RS Umum Daerah Banda; RS Umum Daerah dr. Ishak Umarella; RS Umum Masohi; RS Umum Saparua"
+  },
+  {
+    "province_upper": "MALUKU",
+    "kab_upper": "MALUKU TENGGARA",
+    "facility_names": "RS Hati Kudus Langgur; RS Umum Karel Sadsuitubun"
+  },
+  {
+    "province_upper": "MALUKU",
+    "kab_upper": "SERAM BAGIAN BARAT",
+    "facility_names": "RS Pratama Wasala; RS Umum Piru"
+  },
+  {
+    "province_upper": "MALUKU",
+    "kab_upper": "SERAM BAGIAN TIMUR",
+    "facility_names": "RS Umum Daerah Bula"
+  },
+  {
+    "province_upper": "MALUKU UTARA",
+    "kab_upper": "HALMAHERA BARAT",
+    "facility_names": "RS Umum Daerah Jailolo"
+  },
+  {
+    "province_upper": "MALUKU UTARA",
+    "kab_upper": "HALMAHERA SELATAN",
+    "facility_names": "RS Pratama Bisui Kab. Halmahera Selatan; RS Umum Daerah  Labuha; RS Umum Obi"
+  },
+  {
+    "province_upper": "MALUKU UTARA",
+    "kab_upper": "HALMAHERA TENGAH",
+    "facility_names": "RS Umum Daerah Weda"
+  },
+  {
+    "province_upper": "MALUKU UTARA",
+    "kab_upper": "HALMAHERA TIMUR",
+    "facility_names": "RS Umum Daerah Maba"
+  },
+  {
+    "province_upper": "MALUKU UTARA",
+    "kab_upper": "HALMAHERA UTARA",
+    "facility_names": "RS Bethesda GMIH Tobelo; RS Umum Daerah Tobelo"
+  },
+  {
+    "province_upper": "MALUKU UTARA",
+    "kab_upper": "KEPULAUAN SULA",
+    "facility_names": "RS Umum Daerah Sanana"
+  },
+  {
+    "province_upper": "MALUKU UTARA",
+    "kab_upper": "KOTA TERNATE",
+    "facility_names": "RS Bhayangkara Tk. IV Ternate; RS Ibu dan Anak Andina; RS Islam PKU Muhammadiyah Maluku Utara; RS Prima Ternate; RS Tk. IV 16.07.01 TNI AD Ternate; RS Umum Daerah Dr. H. Chasan Boesoirie Ternate; RS Umum Daerah Kota Ternate; RS Umum Dharma Ibu Ternate"
+  },
+  {
+    "province_upper": "MALUKU UTARA",
+    "kab_upper": "KOTA TIDORE KEPULAUAN",
+    "facility_names": "RS Jiwa Sofifi; RS Umum Daerah Kota Tidore Kepulauan; RS Umum Sofifi"
+  },
+  {
+    "province_upper": "MALUKU UTARA",
+    "kab_upper": "PULAU MOROTAI",
+    "facility_names": "RS Umum Daerah Ir. Soekarno Kab. Pulau Morotai"
+  },
+  {
+    "province_upper": "MALUKU UTARA",
+    "kab_upper": "PULAU TALIABU",
+    "facility_names": "RS Umum Daerah Bobong"
+  },
+  {
+    "province_upper": "NUSA TENGGARA BARAT",
+    "kab_upper": "BIMA",
+    "facility_names": "RS Umum Bima; RS Umum Daerah Sondosia Kab. Bima"
+  },
+  {
+    "province_upper": "NUSA TENGGARA BARAT",
+    "kab_upper": "DOMPU",
+    "facility_names": "RS Umum Daerah Manggelewa; RS Umum Dompu"
+  },
+  {
+    "province_upper": "NUSA TENGGARA BARAT",
+    "kab_upper": "KOTA BIMA",
+    "facility_names": "RS PKU Muhammadiyah Bima; RS Tk. IV Sultan Abdul Kahir II Bima; RS Umum Daerah Kota Bima; RS dr. Agung"
+  },
+  {
+    "province_upper": "NUSA TENGGARA BARAT",
+    "kab_upper": "KOTA MATARAM",
+    "facility_names": "RS Angkatan Darat REM Wira Bhakti Mataram; RS Bhayangkara Mataram; RS Bio Medika; RS Harapan Keluarga; RS Ibu dan Anak Permata Hati; RS Ibu dan Anak Tresna; RS Islam Siti Hajar; RS Jiwa Mutiara Sukma; RS Mata Nusa Tenggara Barat; RS Metro Medika; RS Risa Sentra Medika; RS Umum Daerah Kota Mataram; RS Umum Daerah Provinsi NTB; RS Umum Khatolik Saint Antonius  Ampenan; RS Universitas Mataram; Siloam Hospitals Mataram"
+  },
+  {
+    "province_upper": "NUSA TENGGARA BARAT",
+    "kab_upper": "LOMBOK BARAT",
+    "facility_names": "RS Umum Daerah Awet Muda Narmada; RS Umum Daerah Patut Patuh Patju"
+  },
+  {
+    "province_upper": "NUSA TENGGARA BARAT",
+    "kab_upper": "LOMBOK TENGAH",
+    "facility_names": "RS Cahaya Medika; RS Ibu dan Anak Bhumi Bunda; RS Islam Yatofa; RS Mandalika Provinsi Nusa Tenggara Barat; RS Umum Adikarsa; RS Umum Praya"
+  },
+  {
+    "province_upper": "NUSA TENGGARA BARAT",
+    "kab_upper": "LOMBOK TIMUR",
+    "facility_names": "RS Ibu dan Anak Kuncup Bunga; RS Ibu dan Anak Permata Hati Lombok Timur; RS Islam Namira; RS Islam S. Anggoro; RS Lotim Medical Center; RS Umum Daerah Dr. R. Soedjono Selong; RS Umum Daerah Lombok Timur; RS Umum Daerah Patuh Karya; RS Umum Daerah Selaparang"
+  },
+  {
+    "province_upper": "NUSA TENGGARA BARAT",
+    "kab_upper": "LOMBOK UTARA",
+    "facility_names": "RS Umum Kab. Lombok Utara"
+  },
+  {
+    "province_upper": "NUSA TENGGARA BARAT",
+    "kab_upper": "SUMBAWA",
+    "facility_names": "RS Abdul Malik Fadjar; RS H. L. Manambai Abdulkadir; RS Umum Sumbawa"
+  },
+  {
+    "province_upper": "NUSA TENGGARA BARAT",
+    "kab_upper": "SUMBAWA BARAT",
+    "facility_names": "RS Umum Daerah Asy-Syifa Sumbawa Barat"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "ALOR",
+    "facility_names": "RS Daerah Kalabahi; RS Umum Kelas D Pratama Mola"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "BELU",
+    "facility_names": "RS Katholik Marianum Halilulik; RS Sito Husada; RS Tk. IV 09.07.04 Atambua; RS Umum Daerah MGR Gabriel Manek"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "ENDE",
+    "facility_names": "RS St Antonius Jopu; RS Umum Daerah Ende"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "FLORES TIMUR",
+    "facility_names": "RS Pratama Adonara; RS Umum Daerah dr. Hendrikus Fernandez Larantuka"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "KOTA KUPANG",
+    "facility_names": "RS Bhayangkara; RS Ibu dan Anak Dedari; RS Jiwa Naimata; RS Siloam Kupang; RS St. Carolus Borromeus; RS TNI AL Lantamal VII Kupang; RS Tk. III Wirasakti Kupang; RS Umum Daerah S. K. Lerik; RS Umum Kartini Kupang; RS Umum Leona Kupang; RS Umum Mamami; RS Umum Prof. Dr. WZ Johanes; RS Umum Pusat dr. Ben Mboi"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "KUPANG",
+    "facility_names": "RS Umum Daerah Naibonat; RS Umum Leona Noelbakti"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "LEMBATA",
+    "facility_names": "RS  Bukit Lewoleba; RS Damian Lembata; RS Umum Daerah Lewoleba"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "MALAKA",
+    "facility_names": "RS Umum Penyangga Perbatasan Betun"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "MANGGARAI",
+    "facility_names": "RS  ST Rafael Cancar; RS Pratama Reo; RS Umum Daerah Ruteng"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "MANGGARAI BARAT",
+    "facility_names": "RS Siloam Labuan Bajo; RS Umum Santo Yoseph Labuan bajo"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "MANGGARAI TIMUR",
+    "facility_names": "RS Pratama Watunggong; RS Umum Daerah Borong"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "NAGEKEO",
+    "facility_names": "RS Umum Daerah Aeramo Kabupaten Nagekeo; RSUD Pratama Raja"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "NGADA",
+    "facility_names": "RS Umum Bajawa"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "ROTE NDAO",
+    "facility_names": "RS Umum Daerah Rote Ndao Ba'a"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "SABU RAIJUA",
+    "facility_names": "RS Pratama Raijua; RS Umum Daerah Sabu Raijua"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "SIKKA",
+    "facility_names": "RS St Elizabeth Lela; RS Umum Dr TC Hillers Maumere; RS Umum St. Gabriel Kewapante Sikka"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "SUMBA BARAT",
+    "facility_names": "RS Kristen Lende Moripa; RS Umum Hobakalla; RS Umum Waikabubak"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "SUMBA BARAT DAYA",
+    "facility_names": "RS Karitas Weetabula; RS Umum Daerah Reda Bolo"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "SUMBA TENGAH",
+    "facility_names": "RS Umum Daerah Waibakul"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "SUMBA TIMUR",
+    "facility_names": "RS Ibu dan Anak Mitra Ananda; RS Kristen Lindimara; RS Pratama Umbu Hunga Meha Nggongi; RS Umum Daerah Waingapu; RS Umum Imanuel Sumba"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "TIMOR TENGAH SELATAN",
+    "facility_names": "RS Pratama Kualin; RS Umum Muder Ignacia; RS Umum Soe"
+  },
+  {
+    "province_upper": "NUSA TENGGARA TIMUR",
+    "kab_upper": "TIMOR TENGAH UTARA",
+    "facility_names": "RS Umum Bunda Pembantu Abadi Naob; RS Umum Daerah Kefamenanu; RS Umum Leona"
+  },
+  {
+    "province_upper": "PAPUA",
+    "kab_upper": "BIAK NUMFOR",
+    "facility_names": "RS Angkatan Laut dr. R Gandhi AT; RS Umum Biak"
+  },
+  {
+    "province_upper": "PAPUA",
+    "kab_upper": "JAYAPURA",
+    "facility_names": "RS Umum Daerah Yowari Sentani"
+  },
+  {
+    "province_upper": "PAPUA",
+    "kab_upper": "KEEROM",
+    "facility_names": "RS Umum Daerah Kwaingga Kabupaten Keerom"
+  },
+  {
+    "province_upper": "PAPUA",
+    "kab_upper": "KEPULAUAN YAPEN",
+    "facility_names": "RS Umum Daerah Serui"
+  },
+  {
+    "province_upper": "PAPUA",
+    "kab_upper": "KOTA JAYAPURA",
+    "facility_names": "RS Bhayangkara Jayapura; RS Dian Harapan; RS Jiwa Abepura; RS Provita Jayapura; RS TNI Angkatan Darat Marthen Indey Jayapura; RS TNI Angkatan Laut dr. Soedibjo Sardadi; RS Umum Abepura; RS Umum Daerah Ramela Muara Tami; RS Umum Jayapura"
+  },
+  {
+    "province_upper": "PAPUA",
+    "kab_upper": "MAMBERAMO RAYA",
+    "facility_names": "RS Umum Daerah Kawera"
+  },
+  {
+    "province_upper": "PAPUA",
+    "kab_upper": "SARMI",
+    "facility_names": "RS Hendrik Fintay Kabupaten Sarmi"
+  },
+  {
+    "province_upper": "PAPUA",
+    "kab_upper": "SUPIORI",
+    "facility_names": "RS Umum Daerah Supiori"
+  },
+  {
+    "province_upper": "PAPUA",
+    "kab_upper": "WAROPEN",
+    "facility_names": "RS Umum Daerah Rumah Rodo Fabo"
+  },
+  {
+    "province_upper": "PAPUA BARAT",
+    "kab_upper": "FAKFAK",
+    "facility_names": "RS Umum Daerah Fakfak"
+  },
+  {
+    "province_upper": "PAPUA BARAT",
+    "kab_upper": "KAIMANA",
+    "facility_names": "RS Umum Daerah Kaimana"
+  },
+  {
+    "province_upper": "PAPUA BARAT",
+    "kab_upper": "MANOKWARI",
+    "facility_names": "RS AL dr. Azhar Zahir Manokwari; RS Bhayangkara Lodewijk Mandatjan; RS Divari Medical Center; RS Pratama Warmare; RS Tk.IV 18.07.02 J. A. Dimara; RS Umum Daerah Manokwari; RS Umum Daerah Provinsi Papua Barat"
+  },
+  {
+    "province_upper": "PAPUA BARAT",
+    "kab_upper": "MANOKWARI SELATAN",
+    "facility_names": "RS Umum Elia Waran"
+  },
+  {
+    "province_upper": "PAPUA BARAT",
+    "kab_upper": "TELUK BINTUNI",
+    "facility_names": "RS Umum Daerah Teluk Bintuni"
+  },
+  {
+    "province_upper": "PAPUA BARAT",
+    "kab_upper": "TELUK WONDAMA",
+    "facility_names": "RS Umum Daerah Dr. Alberth H. Torey"
+  },
+  {
+    "province_upper": "PAPUA BARAT DAYA",
+    "kab_upper": "KOTA SORONG",
+    "facility_names": "RS Angkatan Laut dr. R. Oetojo; RS Kasih Herlina; RS Mutiara; RS Pertamina Sorong; RS Tk. IV dr. Aryoko; RS Umum Daerah Sele Be Solu"
+  },
+  {
+    "province_upper": "PAPUA BARAT DAYA",
+    "kab_upper": "MAYBRAT",
+    "facility_names": "RS Umum Pratama Type D Kab. Maybrat"
+  },
+  {
+    "province_upper": "PAPUA BARAT DAYA",
+    "kab_upper": "RAJA AMPAT",
+    "facility_names": "RS Umum Daerah Raja Ampat"
+  },
+  {
+    "province_upper": "PAPUA BARAT DAYA",
+    "kab_upper": "SORONG",
+    "facility_names": "RS Umum Daerah Kabupaten Sorong"
+  },
+  {
+    "province_upper": "PAPUA BARAT DAYA",
+    "kab_upper": "SORONG SELATAN",
+    "facility_names": "RS Umum Daerah Scholoo Keyen"
+  },
+  {
+    "province_upper": "PAPUA BARAT DAYA",
+    "kab_upper": "TAMBRAUW",
+    "facility_names": "RS Umum Kelas D Pratama Kab. Tambrauw"
+  },
+  {
+    "province_upper": "PAPUA PEGUNUNGAN",
+    "kab_upper": "LANNY JAYA",
+    "facility_names": "RS Umum Daerah Tiom"
+  },
+  {
+    "province_upper": "PAPUA PEGUNUNGAN",
+    "kab_upper": "MAMBERAMO TENGAH",
+    "facility_names": "RS Umum Daerah Lukas Enembe Kab. Memberamo Tengah"
+  },
+  {
+    "province_upper": "PAPUA PEGUNUNGAN",
+    "kab_upper": "NDUGA",
+    "facility_names": "RS Pratama Elvrida Sara"
+  },
+  {
+    "province_upper": "PAPUA PEGUNUNGAN",
+    "kab_upper": "PEGUNUNGAN BINTANG",
+    "facility_names": "RS Umum Daerah Oksibil"
+  },
+  {
+    "province_upper": "PAPUA PEGUNUNGAN",
+    "kab_upper": "TOLIKARA",
+    "facility_names": "RS Umum Daerah Karubaga"
+  },
+  {
+    "province_upper": "PAPUA PEGUNUNGAN",
+    "kab_upper": "YAHUKIMO",
+    "facility_names": "RS Umum Daerah Dekai"
+  },
+  {
+    "province_upper": "PAPUA PEGUNUNGAN",
+    "kab_upper": "YALIMO",
+    "facility_names": "RS Umum Daerah Er Dabi"
+  },
+  {
+    "province_upper": "PAPUA SELATAN",
+    "kab_upper": "ASMAT",
+    "facility_names": "RS Umum Daerah Perpetua J. Safanpo"
+  },
+  {
+    "province_upper": "PAPUA SELATAN",
+    "kab_upper": "BOVEN DIGOEL",
+    "facility_names": "RS Bergerak Kab. Boven Digoel; RS Umum Daerah Boven Digoel"
+  },
+  {
+    "province_upper": "PAPUA SELATAN",
+    "kab_upper": "MAPPI",
+    "facility_names": "RS Umum Daerah Kabupaten Mappi"
+  },
+  {
+    "province_upper": "PAPUA SELATAN",
+    "kab_upper": "MERAUKE",
+    "facility_names": "RS Bunda pengharapan Merauke; RS TNI Angkatan Laut Merauke; RS Tk. IV 17.07.01 Jenderal LB Moerdani; RS Umum Merauke"
+  },
+  {
+    "province_upper": "PAPUA TENGAH",
+    "kab_upper": "DEIYAI",
+    "facility_names": "RS Umum Daerah Pratama Waghete"
+  },
+  {
+    "province_upper": "PAPUA TENGAH",
+    "kab_upper": "DOGIYAI",
+    "facility_names": "RS Umum Daerah Pratama Dogiyai"
+  },
+  {
+    "province_upper": "PAPUA TENGAH",
+    "kab_upper": "INTAN JAYA",
+    "facility_names": "RS Umum Daerah Kabupaten Intan Jaya"
+  },
+  {
+    "province_upper": "PAPUA TENGAH",
+    "kab_upper": "MIMIKA",
+    "facility_names": "RS Bhayangkara Dhira Brata Cartenz; RS Kasih Herlina; RS Mitra Masyarakat Timika; RS TNI AD Tk. IV Timika; RS Umum Daerah Kabupaten Mimika"
+  },
+  {
+    "province_upper": "PAPUA TENGAH",
+    "kab_upper": "NABIRE",
+    "facility_names": "RS Umum Nabire"
+  },
+  {
+    "province_upper": "PAPUA TENGAH",
+    "kab_upper": "PANIAI",
+    "facility_names": "RS Umum Daerah Paniai"
+  },
+  {
+    "province_upper": "PAPUA TENGAH",
+    "kab_upper": "PUNCAK",
+    "facility_names": "RS Umum Daerah Ilaga"
+  },
+  {
+    "province_upper": "PAPUA TENGAH",
+    "kab_upper": "PUNCAK JAYA",
+    "facility_names": "RS Umum Daerah Mulia"
+  },
+  {
+    "province_upper": "RIAU",
+    "kab_upper": "BENGKALIS",
+    "facility_names": "RS Pertamina Hulu Rokan; RS Umum  Mutia Sari; RS Umum  Permata Hati; RS Umum  Thursina; RS Umum Daerah  Bengkalis; RS Umum Daerah  Kec.Mandau"
+  },
+  {
+    "province_upper": "RIAU",
+    "kab_upper": "INDRAGIRI HILIR",
+    "facility_names": "RS Ibu dan Anak Bunda Puja; RS Umum Daerah  Puri Husada Tembilahan; RS Umum Daerah  Raja Musa; RS Umum Daerah  Tengku Sulung"
+  },
+  {
+    "province_upper": "RIAU",
+    "kab_upper": "INDRAGIRI HULU",
+    "facility_names": "RS Ibu dan Anak  Safira; RS Muizzah; RS Umum  Kasih Ibu Rengat; RS Umum Daerah  Indrasari Rengat"
+  },
+  {
+    "province_upper": "RIAU",
+    "kab_upper": "KAMPAR",
+    "facility_names": "RS Ibu Anak  Bunda Anisyah; RS Ibu Anak  Husada Bunda; RS Ibu Anak  Norfa Husada; RS Nurlima; RS Umum  Mesra; RS Umum  Tandun; RS Umum Daerah  Bangkinang; RS Umum Pelita"
+  },
+  {
+    "province_upper": "RIAU",
+    "kab_upper": "KEPULAUAN MERANTI",
+    "facility_names": "RS Umum Daerah  Kabupaten Kepulauan Meranti"
+  },
+  {
+    "province_upper": "RIAU",
+    "kab_upper": "KOTA DUMAI",
+    "facility_names": "Naray Hospital; RS Awal Bros Dumai; RS Bhayangkara Dumai; RS Graha Yasmine; RS Pertamina Dumai; RS Umum Daerah  Kota Dumai"
+  },
+  {
+    "province_upper": "RIAU",
+    "kab_upper": "KOTA PEKANBARU",
+    "facility_names": "Aulia Hospital; RS  Eria; RS Angkatan Udara dr. Sukirman Lanud Roesmin Nurjadin; RS Awal Bros A. Yani; RS Bhayangkara Tk. III Kota Pekanbaru; RS Daerah Madani Kota Pekanbaru; RS Hermina Pekanbaru; RS Ibu Anak  Budhi Mulia; RS Ibu dan Anak  Zainab; RS Ibu dan Anak Andini; RS Ibu dan Anak Annisa; RS Ibu dan Anak Hermina Rumbai; RS Jiwa Tampan; RS Khusus  Mata SMEC Pekanbaru; RS Khusus Mata Pekanbaru Eye Center; RS Prof. Dr. Tabrani; RS Santa Maria Pekanbaru; RS Tk. IV Pekanbaru; RS Umum  Awal Bros Panam; RS Umum  Awal Bros Pekanbaru; RS Umum  Bina Kasih; RS Umum  Eka Hospital Pekanbaru; RS Umum  Islam Ibnu Sina; RS Umum  Lancang Kuning; RS Umum  Pekanbaru Medical Center; RS Umum  Prima Pekanbaru; RS Umum  Sansani; RS Umum  Syafira; RS Umum  Universitas Riau; RS Umum Daerah  Arifin Achmad; RS Umum Daerah  Petala Bumi"
+  },
+  {
+    "province_upper": "RIAU",
+    "kab_upper": "KUANTAN SINGINGI",
+    "facility_names": "RS Ibu dan Anak Milano; RS Umum Daerah Teluk Kuantan"
+  },
+  {
+    "province_upper": "RIAU",
+    "kab_upper": "PELALAWAN",
+    "facility_names": "RS Umum  Amalia Medika; RS Umum  Efarina; RS Umum  Medicare Sorek; RS Umum Daerah  Selasih Riau"
+  },
+  {
+    "province_upper": "RIAU",
+    "kab_upper": "ROKAN HILIR",
+    "facility_names": "RS Ibu dan Anak Athaya Medika; RS Ibunda; RS Umum  Indah; RS Umum Awal Bros Bagan Batu; RS Umum Cahaya; RS Umum Daerah  Dr. RM. Pratomo Bagansiapiapi"
+  },
+  {
+    "province_upper": "RIAU",
+    "kab_upper": "ROKAN HULU",
+    "facility_names": "RS Doa Ibunda; RS Ibu dan Anak Harapan Medika; RS Umum  Awal Bros Ujung Batu; RS Umum  Surya Insani; RS Umum Azzahra; RS Umum Daerah  Rokan Hulu"
+  },
+  {
+    "province_upper": "RIAU",
+    "kab_upper": "SIAK",
+    "facility_names": "RS Umum Daerah Minas; RS Umum Daerah Tengku Rafi'an Siak Sri Indrapura; RS Umum Daerah Tualang"
+  },
+  {
+    "province_upper": "SULAWESI BARAT",
+    "kab_upper": "MAJENE",
+    "facility_names": "RS Pratama Salutambung; RS Umum Daerah Kabupaten Majene"
+  },
+  {
+    "province_upper": "SULAWESI BARAT",
+    "kab_upper": "MAMASA",
+    "facility_names": "RS Banua Mamase; RS Umum Daerah Kondosapata Kab. Mamasa"
+  },
+  {
+    "province_upper": "SULAWESI BARAT",
+    "kab_upper": "MAMUJU",
+    "facility_names": "RS Bhayangkara Tk. IV Polda Sulbar; RS Ibu dan Anak Mutiara Ibu; RS Tk. III Punggawa Malolo; RS Umum Daerah Kabupaten Mamuju; RS Umum Daerah Provinsi Sulawesi Barat; RS Umum Mitra Manakarra"
+  },
+  {
+    "province_upper": "SULAWESI BARAT",
+    "kab_upper": "MAMUJU TENGAH",
+    "facility_names": "RS Umum Daerah Kabupaten Mamuju Tengah"
+  },
+  {
+    "province_upper": "SULAWESI BARAT",
+    "kab_upper": "PASANGKAYU",
+    "facility_names": "RS Umum Daerah Pasangkayu"
+  },
+  {
+    "province_upper": "SULAWESI BARAT",
+    "kab_upper": "POLEWALI MANDAR",
+    "facility_names": "RS Ibu dan Anak Mifta; RS Umum Daerah Hajjah Andi Depu; RS Umum Daerah Wonomulyo"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "BANTAENG",
+    "facility_names": "RS Ibu dan Anak Pelangi Medica; RS Umum Daerah Banyorang; RS Umum Daerah Prof. Dr. H. Anwar Makkatutu"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "BARRU",
+    "facility_names": "RS Umum Daerah La Patarai"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "BONE",
+    "facility_names": "RS Hamuna; RS Hapsah; RS Tk. IV DR. M. Yasin Bone; RS Umum Daerah Datu Pancaitana; RS Umum Daerah La Mappapenning; RS Umum Daerah Tenriawaru Bone"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "BULUKUMBA",
+    "facility_names": "RS Ibu dan Anak Yasira; RS Umum Daerah H.A. Sulthan Daeng Radja; RS Umum Daerah Kelas D Pratama Tanete"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "ENREKANG",
+    "facility_names": "RS Umum Daerah Massenrempulu Enrekang; RS Umum Hj. Puang Sabbe"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "GOWA",
+    "facility_names": "RS PKU Muhammadiyah Unismuh Makassar; RS Umum Daerah Syehk Yusuf Gowa; RS Umum Thalia Irham; RS Umum Yapika"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "JENEPONTO",
+    "facility_names": "RS Umum Daerah Lanto Daeng Pasewang; RS Umum Daerah Rumbia"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "KEPULAUAN SELAYAR",
+    "facility_names": "RS Pratama Jampea; RS Umum Daerah KH. Hayyung Kepulauan Selayar"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "KOTA MAKASSAR",
+    "facility_names": "RS AL Jala Ammari Makassar; RS Akademis Jaury; RS Gigi dan Mulut Ladokgi TNI AL Yos Sudarso; RS Grestelina; RS Hermina Makassar; RS Hikmah; RS Ibnu Sina YW-UMI Makassar; RS Ibu dan Anak Amanat; RS Ibu dan Anak Ananda; RS Ibu dan Anak Budi Mulia; RS Ibu dan Anak Chaterine Booth; RS Ibu dan Anak Kartini; RS Ibu dan Anak Malebu Husada; RS Ibu dan Anak Masyita; RS Ibu dan Anak Paramount; RS Ibu dan Anak Permata Hati; RS Ibu dan Anak Prof. dr. H. M. Farid; RS Ibu dan Anak Sentosa; RS Ibu dan Anak Sitti Khadijah 1 Muhammadiyah; RS Islam Faisal; RS Islam Gigi dan Mulut FKG-UMI; RS Kemenkes Makassar; RS Kepolisian Bhayangkara; RS Khusus Daerah Dadi; RS Khusus Daerah Gigi dan Mulut Provinsi Sulawesi; RS Khusus Daerah Ibu dan Anak Pertiwi; RS Khusus Daerah Ibu dan Anak Siti Fatimah; RS Khusus Gigi dan Mulut Universitas Hasanuddin; RS Mata JEC ORBITA @Makassar; RS Mata Makassar; RS Mitra Husada; RS Otak & Jantung Pertamina Royal Biringkanaya; RS PKU Muhammadiyah Mamajang; RS Politeknik Ilmu Pelayaran (PIP) Makassar; RS Primaya; RS Siloam Makassar; RS Stella Maris; RS Tk. II Pelamonia; RS Umum Bahagia; RS Umum Cahaya Medika Makassar; RS Umum Daerah Daya Kota Makassar; RS Umum Daerah Haji Makassar; RS Umum Daerah Labuang Baji; RS Umum Daerah Sayang Rakyat; RS Umum Luramay; RS Umum Primaya Hertasning; RS Umum Pusat Dr. Tadjuddin Chalid Makassar; RS Umum Sandi Karsa Makassar; RS Umum Sayang Bunda; RS Umum Wisata Universitas Indonesia Timur; RS Universitas Hasanuddin; RSUP Dr. Wahidin Sudirohusodo"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "KOTA PALOPO",
+    "facility_names": "RS AT Medika; RS Dokter Palemmai Tandi; RS Mega Buana Palopo; RS Mujaisyah; RS Umum Bintang Laut Palopo; RS Umum Daerah Sawerigading; RS Umum St. Madyang"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "KOTA PARE-PARE",
+    "facility_names": "RS Dr. Hasri Ainun Habibie Parepare; RS Fatima Pare-Pare; RS Ibu dan Anak Ananda Trifa; RS Tk. IV 07.07.03 Dr. Sumantri; RS Umum Daerah Andi Makkasau Parepare"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "LUWU",
+    "facility_names": "RS Hikmah Sejahtera Belopa; RS Umum Daerah Batara Guru"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "LUWU TIMUR",
+    "facility_names": "RS Umum Daerah I Lagaligo; RS Umum Inco Sorowako"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "LUWU UTARA",
+    "facility_names": "RS Hikmah Sejahtera Sukamaju; RS Umum Daerah Andi Djemma Masamba; RS Umum Hikmah Masamba"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "MAROS",
+    "facility_names": "RS AU dr. Dody Sardjoto; RS Umum Daerah dr. La Palaloi"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "PANGKAJENE KEPULAUAN",
+    "facility_names": "RS Kelas D Pratama Sailus; RS Umum Batara Siang; RS Umum Daerah Batiling"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "PINRANG",
+    "facility_names": "RS Umum Aisyiyah St. Khadijah; RS Umum Daerah Lasinrang Pinrang; RS Umum Daerah Madising"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "SIDENRENG RAPPANG",
+    "facility_names": "RS Adinda Medical Centre; RS Umum Anugrah Pangkajene; RS Umum Daerah Arifin Numang; RS Umum Daerah Nene Mallomo"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "SINJAI",
+    "facility_names": "RS Umum Daerah Kabupaten Sinjai; RS Umum Daerah Kelas D Pratama Bulu Paccing Bikeru"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "SOPPENG",
+    "facility_names": "RS Umum Daerah Latemmamala Soppeng"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "TAKALAR",
+    "facility_names": "RS Khusus Ibu dan Anak Zainab; RS Maryam Citra Medika; RS Umum Daerah Galesong Kabupaten Takalar; RS Umum Daerah H. Padjonga Dg. Ngalle Takalar; RS Umum Daerah Pratama Takalar"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "TANA TORAJA",
+    "facility_names": "RS Fatima Makale; RS Umum Daerah Lakipadada; Rumah Sakit Sinar Kasih Toraja"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "TORAJA UTARA",
+    "facility_names": "RS Santa Teresa Marampa Rantepao; RS Umum Daerah Pongtiku; RS Umum Elim Rantepao"
+  },
+  {
+    "province_upper": "SULAWESI SELATAN",
+    "kab_upper": "WAJO",
+    "facility_names": "RS Prima Husada Sengkang; RS Umum Daerah Lamaddukkelleng Kabupaten Wajo; RS Umum Daerah Siwa"
+  },
+  {
+    "province_upper": "SULAWESI TENGAH",
+    "kab_upper": "BANGGAI",
+    "facility_names": "RS Claire Medika; RS Pratama dr. Abdul Chalik Masulili; RS Umum Daerah Kabupaten Banggai"
+  },
+  {
+    "province_upper": "SULAWESI TENGAH",
+    "kab_upper": "BANGGAI KEPULAUAN",
+    "facility_names": "RS Pratama Bilabanggai Buko Selatan; RS Umum Daerah Trikora Salakan"
+  },
+  {
+    "province_upper": "SULAWESI TENGAH",
+    "kab_upper": "BANGGAI LAUT",
+    "facility_names": "RS Umum Daerah Banggai"
+  },
+  {
+    "province_upper": "SULAWESI TENGAH",
+    "kab_upper": "BUOL",
+    "facility_names": "RS Umum Daerah Mokoyurli Buol"
+  },
+  {
+    "province_upper": "SULAWESI TENGAH",
+    "kab_upper": "DONGGALA",
+    "facility_names": "RS Umum Daerah Kabelota; RS Umum Daerah Pendau Tambu Kab Donggala"
+  },
+  {
+    "province_upper": "SULAWESI TENGAH",
+    "kab_upper": "KOTA PALU",
+    "facility_names": "RS Bhayangkara Palu; RS Budi Agung Palu; RS Ibu dan Anak Care She; RS Ibu dan Anak Nasana Pura; RS Ibu dan Anak Tinatapura; RS Samaritan Palu; RS TK. III. 13.06.01 Dr. Sindhu Trisno; RS Umum  Sis Al Jufri Palu; RS Umum Anutapura Palu; RS Umum Daerah Madani Palu; RS Umum Daerah Undata Palu; RS Umum Tadulako Palu; RS Woodward"
+  },
+  {
+    "province_upper": "SULAWESI TENGAH",
+    "kab_upper": "MOROWALI",
+    "facility_names": "RS Umum Daerah Morowali; RS Umum Daerah Salabangkapaku"
+  },
+  {
+    "province_upper": "SULAWESI TENGAH",
+    "kab_upper": "MOROWALI UTARA",
+    "facility_names": "RS Pratama Mayapuria; RS Umum Daerah Kolonodale"
+  },
+  {
+    "province_upper": "SULAWESI TENGAH",
+    "kab_upper": "PARIGI MOUTONG",
+    "facility_names": "RS Ibu dan Anak Defina; RS Umum Daerah Anuntaloko Parigi; RS Umum Daerah Buluye Napoae Moutong; RS Umum Daerah Raja Tombolotutu"
+  },
+  {
+    "province_upper": "SULAWESI TENGAH",
+    "kab_upper": "POSO",
+    "facility_names": "RS GKST Tentena; RS TK 4 Dr. Yanto, Sp.OT; RS Umum Daerah Poso"
+  },
+  {
+    "province_upper": "SULAWESI TENGAH",
+    "kab_upper": "SIGI",
+    "facility_names": "RS Umum Daerah Tora Belo"
+  },
+  {
+    "province_upper": "SULAWESI TENGAH",
+    "kab_upper": "TOJO UNA-UNA",
+    "facility_names": "RS Umum Daerah Ampana; RS Umum Daerah Pratama Togean; RS Umum Daerah Wakai"
+  },
+  {
+    "province_upper": "SULAWESI TENGAH",
+    "kab_upper": "TOLI-TOLI",
+    "facility_names": "RS Umum  Mokopido Toli-Toli; RS Umum Hj. Zubaeda Bantilan"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "BOMBANA",
+    "facility_names": "RS Umum Daerah Kabupaten Bombana"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "BUTON",
+    "facility_names": "RS Umum Daerah Kabupaten Buton"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "BUTON SELATAN",
+    "facility_names": "RS Umum Daerah Kabupaten Buton Selatan"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "BUTON TENGAH",
+    "facility_names": "RS Umum Daerah Kabupaten Buton Tengah"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "BUTON UTARA",
+    "facility_names": "RS Umum Daerah Kabupaten Buton Utara"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "KOLAKA",
+    "facility_names": "RS Antam Nikel Pomalaa; RS Benyamin Guluh Kolaka; RS Ibu dan Anak Budi Medika; RS Umum Harifa"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "KOLAKA TIMUR",
+    "facility_names": "RS Umum Daerah Kabupaten Kolaka Timur"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "KOLAKA UTARA",
+    "facility_names": "RS Umum Daerah H.M.Djafar Harun"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "KONAWE",
+    "facility_names": "RS Umum Daerah Konawe; RS Umum Setia Bunda"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "KONAWE KEPULAUAN",
+    "facility_names": "RS Umum Daerah Kabupaten Konawe Kepulauan"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "KONAWE SELATAN",
+    "facility_names": "RS Umum Daerah Konawe Selatan"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "KONAWE UTARA",
+    "facility_names": "RS Umum Daerah Kab.Konawe Utara"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "KOTA BAU-BAU",
+    "facility_names": "RS Faga Husada; RS Siloam Hospital Buton; RS Umum Daerah Kota Bau Bau"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "KOTA KENDARI",
+    "facility_names": "RS Bahteramas Provinsi Sultra; RS Bhayangkara Kendari; RS Hati Mulia; RS Jantung dan Pembuluh Darah Oputa Yi Koo Sulawesi Tenggara; RS Jiwa Kendari; RS PMI Prov. Sultra; RS Santa Anna; RS Tk. IV Dr. R. Ismoyo Kendari; RS Umum Aliyah; RS Umum Aliyah II; RS Umum Aliyah III; RS Umum Daerah Antero Hamra Kota Kendari; RS Umum Daerah Kota Kendari; RS Umum Dewi Sartika; RS Umum Tiara Sentosa"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "MUNA",
+    "facility_names": "RS Ibu dan Anak Harapan Kita; RS Umum Daerah dr. L.M Baharuddin, M. Kes Kab. Muna"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "MUNA BARAT",
+    "facility_names": "RS Umum Daerah Kabupaten Muna Barat"
+  },
+  {
+    "province_upper": "SULAWESI TENGGARA",
+    "kab_upper": "WAKATOBI",
+    "facility_names": "RS Umum Daerah Kabupaten Wakatobi"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "BOLAANG MONGONDOW",
+    "facility_names": "RS Umum Datoe Binangkang"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "BOLAANG MONGONDOW SELATAN",
+    "facility_names": "RS Umum Daerah Bolaang Mongondow Selatan"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "BOLAANG MONGONDOW TIMUR",
+    "facility_names": "RS Umum Daerah Bolaang Mongondow Timur"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "BOLAANG MONGONDOW UTARA",
+    "facility_names": "RS Umum Bintauna; RS Umum Daerah Bolaang Mongondow Utara"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "KEPULAUAN SANGIHE",
+    "facility_names": "RS Daerah Liun Kendage; RS Umum Liung Paduli"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "KEPULAUAN SIAU TAGULANDANG BIARO",
+    "facility_names": "RS Umum Daerah Lapangan Sawang Kab. Sitaro; RS Umum Daerah Tagulandang"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "KEPULAUAN TALAUD",
+    "facility_names": "RS Bergerak Kab.Kep.Talaud; RS Umum Daerah Talaud"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "KOTA BITUNG",
+    "facility_names": "RS Budi Mulia Bitung; RS Umum Daerah Kota Bitung; RS Umum Daerah Manembo-Nembo Bitung; Rumkital dr. Wahyu Slamet Bitung"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "KOTA KOTAMOBAGU",
+    "facility_names": "RS Ibu dan Anak Kasih Fatimah Kotamobagu; RS Kinapit; RS Monompia; RS Umum Daerah Kota Kotamobagu"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "KOTA MANADO",
+    "facility_names": "RS Advent Manado; RS Bhayangkara Manado; RS Gigi dan Mulut Universitas Sam Ratulangi; RS Hermina Manado; RS Ibu dan Anak Kasih Ibu; RS Ibu dan Anak Kirana Manado; RS Islam Sitti Maryam; RS Khusus Daerah Gigi dan Mulut Kota Manado; RS Khusus Infeksi Kita Waya Provinsi Sulawesi Utara; RS Mata Provinsi Sulawesi Utara; RS Pancaran Kasih; RS Permata Bunda; RS Siloam Paal Dua; RS TK. II R. W. Mongisidi; RS Umum Daerah Kota Manado; RS Umum Daerah ODSK; RS Umum Manado Medical Center; RS Umum Siloam Hospital Manado; RS. Dr. J. H. AWALOEI - MANADO; RSAU dr. Charles P. J. Suoth Lanud Sam Ratulangi; RSUP Prof. Dr. R. D. Kandou"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "KOTA TOMOHON",
+    "facility_names": "RS Bethesda GMIM Tomohon; RS Gunung Maria; RS Umum Daerah Anugerah"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "MINAHASA",
+    "facility_names": "RS Budi Setia; RS Dr. J. H. Awaloei; RS Jiwa Prof. Dr. V. L. Ratumbuysang; RS Siloam GMIM Sonder; RS Umum Daerah Dr. Sam Ratulangi Tondano; RS Umum Noongan"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "MINAHASA SELATAN",
+    "facility_names": "RS Cantia Tompasobaru; RS Kalooran; RS Umum Daerah Amurang"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "MINAHASA TENGGARA",
+    "facility_names": "RS Umum Daerah Mitra Sehat; RSU Ratatotok Buyat"
+  },
+  {
+    "province_upper": "SULAWESI UTARA",
+    "kab_upper": "MINAHASA UTARA",
+    "facility_names": "RS Hermana; RS Tonsea; RS Umum Daerah Maria Walanda Maramis; Sentra Medika Hospital Minahasa Utara"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "AGAM",
+    "facility_names": "RS Ibu dan Anak Rezki Bunda; RS Umum Daerah Lubuk Basung"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "DHARMASRAYA",
+    "facility_names": "RS Umum Daerah Sungai Dareh; RS Umum Daerah Sungai Rumbai"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "KEPULAUAN MENTAWAI",
+    "facility_names": "RS Umum Daerah Kep. Mentawai"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "KOTA BUKITTINGGI",
+    "facility_names": "RS Islam Ibnu Sina Bukittinggi; RS Otak DR. Drs. M. Hatta Bukittinggi; RS Tk. IV Bukittinggi; RS Umum Daerah Dr. Achmad Mochtar; RS Umum Daerah Kota Bukittinggi; RS Umum Madina"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "KOTA PADANG",
+    "facility_names": "RS Bhayangkara Padang; RS Gigi dan Mulut Universitas Andalas; RS Ibu dan Anak Cicik; RS Ibu dan Anak Lenggogeni; RS Ibu dan Anak Mutiara Bunda; RS Ibu dan Anak Restu Ibu; RS Ibu dan Anak Siti Hawa; RS Islam Siti Rahmah; RS Jiwa Prof. Dr. Hasan Basri Saanin Datuk Tan Par; RS Jiwa dr. Yaunin; RS Khusus Bedah Kartika Docta; RS Khusus Bedah Ropanasuri; RS Khusus Gigi dan Mulut Baiturrahmah; RS Khusus Mata Padang Eye Center; RS Khusus Mata Regina Eye Center; RS Tk. III Reksodiwiryo Padang; RS Umum Aisyiyah Padang; RS Umum Bunda Padang; RS Umum Daerah dr. Rasidin Padang; RS Umum Hermina Padang; RS Umum Islam Ibnu Sina; RS Umum Naili DBS; RS Umum Semen Padang Hospital; RS Umum Yos Sudarso; RS. Universitas Andalas; RSUP Dr. M. Djamil"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "KOTA PADANG PANJANG",
+    "facility_names": "RS Umum Daerah Padang Panjang; RS Umum Ibnu Sina Padang Panjang"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "KOTA PARIAMAN",
+    "facility_names": "RS Ibu dan Anak Citra Aguswar Medical Center; RS Umum Aisyiyah Pariaman; RS Umum Daerah Dr Sadikin Kota Pariaman; RS Umum Daerah Pariaman; RS Umum Tamar Medical Centre"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "KOTA PAYAKUMBUH",
+    "facility_names": "RS Ibu dan Anak Annisa Payakumbuh; RS Ibu dan Anak Sukma Bunda; RS Umum Daerah Dr. Adnaan WD; RS Umum Ibnu Sina Kota Payakumbuh"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "KOTA SAWAH LUNTO",
+    "facility_names": "RS Umum Daerah Sawah Lunto"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "KOTA SOLOK",
+    "facility_names": "RS Ibu Dan Anak Ananda; RS Ibu dan Anak Permata Bunda Solok; RS Tk. IV 01.07.06 Solok; RS Umum Daerah Mohammad Natsir; RS Umum Daerah Serambi Madinah Kota Solok"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "LIMA PULUH KOTA",
+    "facility_names": "RS Umum Daerah dr. Achmad Darwis"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "PADANG PARIAMAN",
+    "facility_names": "RS Paru Sumatera Barat; RS Umum Daerah Padang Pariaman"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "PASAMAN",
+    "facility_names": "RS Islam Ibnu Sina Panti Yarsi; RS Umum Daerah Tuanku Imam Bonjol; RS Umum Daerah Tuanku Rao"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "PASAMAN BARAT",
+    "facility_names": "RS Ibu dan Anak AL-Ihsan; RS Umum Daerah Pasaman Barat; RS Umum Daerah Ujung Gading; RS Umum Islam Ibnu Sina"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "PESISIR SELATAN",
+    "facility_names": "RS Khusus Ibu dan Anak Permata Hati; RS Umum BKM; RS Umum Daerah Dr. Muhammad Zein Painan; RS Umum Daerah Tapan"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "SIJUNJUNG",
+    "facility_names": "RS Khusus Ibu dan Anak Haryanda; RS Umum Daerah Ahmad Syafi'I Ma'arif; RS Umum Daerah Kamang Baru"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "SOLOK",
+    "facility_names": "RS Umum Daerah Arosuka Solok"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "SOLOK SELATAN",
+    "facility_names": "RS Umum Daerah Batang Sangir; RS Umum Daerah Muara Labuh"
+  },
+  {
+    "province_upper": "SUMATERA BARAT",
+    "kab_upper": "TANAH DATAR",
+    "facility_names": "RS Ibu dan Anak Fadhila Batusangkar; RS Ibu dan Anak Sayang Ibu; RS Umum Daerah Prof. Dr. M.A. Hanafiah; RS Umum Harapan Ibunda"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "BANYUASIN",
+    "facility_names": "RS Bunda Medika Jakabaring; RS Hermina OPI Jakabaring; RS Umum Daerah Banyuasin; RS Umum Daerah Pratama Makarti Jaya; RS Umum Daerah Sukajadi; RS Umum Pusat Dr. Rivai Abdullah"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "EMPAT LAWANG",
+    "facility_names": "RS Pratama Pendopo; RS Umum Daerah Kabupaten Empat Lawang"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "KOTA LUBUK LINGGAU",
+    "facility_names": "RS AR Bunda Kota Lubuk Linggau; RS Ibu dan Anak Ananda Lubuk Linggau; RS Ibu dan Anak Dwi Sari; RS Siloam Silampari; RS Umum Daerah Petanang; RS Umum Daerah Siti Aisyah Kota Lubuk Linggau"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "KOTA PAGAR ALAM",
+    "facility_names": "RS Umum Daerah Basemah Kota Pagar Alam"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "KOTA PALEMBANG",
+    "facility_names": "Charitas Hospital Kenten; RS Bhayangkara M. Hasan Palembang; RS Hermina Palembang; RS Ibu dan Anak Az-Zahra Palembang; RS Ibu dan Anak Bunda Noni; RS Ibu dan Anak Mama; RS Ibu dan Anak Marissa Palembang; RS Ibu dan Anak Rika Amelia; RS Ibu dan Anak Trinanda Palembang; RS Islam Siti Khadijah; RS Jiwa Ernaldi Bahar Provinsi Sumatera Selatan; RS Khusus Gigi dan Mulut Palembang Provinsi Sumate; RS Khusus Mata Masyarakat Provinsi Sumatera Selatan; RS Muhammadiyah Palembang; RS Musi Medika Cendikia; RS Pelabuhan Palembang; RS Permata Palembang; RS Siloam Sriwijaya Palembang; RS Umum Ar-Rasyid Palembang; RS Umum Bunda Palembang; RS Umum Charitas Hospital Palembang; RS Umum Daerah Gandus Palembang; RS Umum Daerah Palembang Bari; RS Umum Daerah Siti Fatimah Provinsi Sumatera Sela; RS Umum Graha Mandiri; RS Umum Myria Palembang; RS Umum Pertamina Palembang; RS Umum Pusat Dr. Mohammad Hoesin Palembang; RS Umum Pusri Palembang; RS Umum Sriwijaya; RS Umum YK Madira Palembang; RS Umum dr. AK. Gani Kota Palembang"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "KOTA PRABUMULIH",
+    "facility_names": "RS AR Bunda Kota Prabumulih; RS Pertamina Kota Prabumulih; RS Umum Daerah Kota Prabumulih; RS Umum Fadhilah Kota Prabumulih"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "LAHAT",
+    "facility_names": "RS Ibu dan Anak Adellia Graha Medika; RS Tk. IV Lahat; RS Umum Daerah Lahat"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "MUARA ENIM",
+    "facility_names": "RS Ibu dan Anak Karunia Indah Medika; RS Umum Bukit Asam Medika; RS Umum Daerah Gelumbang; RS Umum Daerah Lubai Ulu; RS Umum Daerah Semende Darat Laut; RS Umum Daerah dr. H. M. Rabain Muara Enim; RS Umum Trijaya Medical Center"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "MUSI BANYUASIN",
+    "facility_names": "RS Umum Daerah Bayung Lincir; RS Umum Daerah Sekayu; RS Umum Daerah Sungai Lilin"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "MUSI RAWAS",
+    "facility_names": "RS Umum Daerah Dr. Sobirin Kabupaten Musi Rawas; RS Umum Daerah Muara Beliti"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "MUSI RAWAS UTARA",
+    "facility_names": "RS Umum Daerah Rupit Kabupaten Musi Rawas Utara"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "OGAN ILIR",
+    "facility_names": "RS Ar-Royyan; RS Umum Daerah Kabupaten Ogan Ilir; RS Umum Mahyuzahra"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "OGAN KOMERING ILIR",
+    "facility_names": "RS Umum Daerah Kayuagung; RS Umum Daerah Tugu Jaya"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "OGAN KOMERING ULU",
+    "facility_names": "RS Ibu dan Anak AGDA; RS Ibu dan Anak Amanna; RS Ibu dan Anak Graha Kurnia; RS Ibu dan Anak Prima Qonita; RS Khusus Bedah Dokter Maulana AK; RS Umum Daerah Dr. Ibnu Sutowo Baturaja; RS Umum Dr. Noesmir Baturaja; RS Umum Santo Antonio"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "OGAN KOMERING ULU SELATAN",
+    "facility_names": "RS Umum Daerah Muara Dua"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "OGAN KOMERING ULU TIMUR",
+    "facility_names": "Charitas Hospital Belitang; RS Islam At-Taqwa Gumawang; RS Umum Daerah Martapura; RS Umum Daerah Ogan Komering Ulu Timur"
+  },
+  {
+    "province_upper": "SUMATERA SELATAN",
+    "kab_upper": "PENUKAL ABAB LEMATANG ILIR",
+    "facility_names": "RS Pratama Tanah Abang; RS Umum Daerah Talang Ubi"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "ASAHAN",
+    "facility_names": "RS Sri Pamela Sei Dadap; RS Umum Bunda Mulia; RS Umum Daerah H. Abdul Manan Simatupang; RS Umum Ibu Kartini; RS Umum Lina; RS Umum Permata Hati; RS Umum Setio Husodo; RS Umum Utama; RS Umum Wira Husada"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "BATU BARA",
+    "facility_names": "RS Sapta Medika; RS Umum Bidadari Batubara; RS Umum Daerah Batu Bara; RS Umum Kasih Permata Dara; RS Umum Lasmi Kartika"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "DAIRI",
+    "facility_names": "RS Umum Daerah Sidikalang; RS Umum Serenapita"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "DELI SERDANG",
+    "facility_names": "RS Dhillon; RS Grandmed; RS Ibu dan Anak Maharani; RS Ibu dan Anak Pramaliesa; RS Jiwa Bina Karsa Tuntungan; RS Umum Citra Medika; RS Umum Daerah Bangun Purba; RS Umum Daerah Drs. H. Amri Tambunan; RS Umum Dr. Gerhard L. Tobing; RS Umum Full Bethesda; RS Umum Haji Medan; RS Umum Hidayah; RS Umum Kasih Insani; RS Umum Keliat; RS Umum Mahawira Prima Indonesia; RS Umum Mitra Guray Petumbukan; RS Umum Mitra Medika; RS Umum Mitra Sehat; RS Umum Pancur Batu; RS Umum Patar Asih; RS Umum Rahmad Hidayah; RS Umum Sari Mutiara Lubuk Pakam; RS Umum Sembiring Deli Tua; RS Umum Sinar Husni; RS Umum Yoshua"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "HUMBANG HASUNDUTAN",
+    "facility_names": "RS Umum Daerah Dolok Sanggul"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "KARO",
+    "facility_names": "RS Ibu dan Anak Mina Husada; RS Umum Amanda; RS Umum Daerah Kabupaten Karo; RS Umum Efarina Etaham; RS Umum Kusta Lau Simomo"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "KOTA BINJAI",
+    "facility_names": "OG Hospital; RS Ibu dan Anak Grand Fatimah; RS Tk. IV 01.07.02 Binjai; RS Umum AL Fuadi; RS Umum Artha Medica; RS Umum Bidadari; RS Umum Daerah Dr. R. M. Djoelham Binjai; RS Umum Latersia; RS Umum Raskita; RS Umum Ratu Mas; RS Umum Sylvani"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "KOTA GUNUNGSITOLI",
+    "facility_names": "RS Umum Bethesda Gunungsitoli"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "KOTA MEDAN",
+    "facility_names": "RS AL Dr. Komang Makes Belawan; RS Bhayangkara Tingkat II; RS Columbia Asia Medan; RS Gigi dan Mulut Prima; RS Ibu Dan Anak Artha Mahinrus; RS Ibu dan Anak Badrul Aini; RS Ibu dan Anak Murni Teguh Rosiva; RS Ibu dan Anak Stella Maris; RS Jiwa Bina Karsa Medan; RS Jiwa Prof. Dr. Muhammad Ildrem; RS Khusus Bedah Accuplast; RS Khusus Bedah Setia Budi; RS Khusus Gigi dan Mulut Univ. Sumatera Utara; RS Khusus Ginjal Rasyida; RS Khusus Mata Medan Baru Medical Centre; RS Khusus Mata Mencirim Tujuh-Tujuh; RS Khusus Mata Prima Vision; RS Khusus Mata Provinsi Sumatera Utara; RS Khusus Mata SMEC; RS Khusus Paru Sumatera Utara; RS SUFINA AZIZ; RS Tk. II Putri Hijau Medan; RS Umum Advent Medan; RS Umum Bahagia Medan; RS Umum Bandung; RS Umum Bina Kasih; RS Umum Bunda Thamrin; RS Umum Daerah Dr. Pirngadi; RS Umum Daerah H. Bachtiar Djafar; RS Umum Deli; RS Umum Delima Medan; RS Umum Eshmun; RS Umum Estomihi; RS Umum Hermina Medan; RS Umum Imelda Pekerja Indonesia; RS Umum Islam Malahayati; RS Umum Madani; RS Umum Martha Friska; RS Umum Martha Friska Multatuli; RS Umum Materna; RS Umum Methodist; RS Umum Mitra Medika; RS Umum Mitra Medika Amplas; RS Umum Mitra Medika Premiere; RS Umum Mitra Sejati; RS Umum Muhammadiyah Sumatera Utara; RS Umum Murni Teguh Memorial Hospital; RS Umum Murni Teguh Methodist Susanna Wesley; RS Umum Prima Husada Cipta Medan; RS Umum Prof. Dr. Boloni; RS Umum Pusat H. Adam Malik; RS Umum Royal Prima Marelan; RS Umum Santa Elisabeth Medan; RS Umum Sarah; RS Umum Siloam Dhirga Surya; RS Umum Sri Ratu; RS Umum Sundari; RS Umum Tere Margareth; RS Umum Universitas Sumatera Utara; RS Umum Vina Estetica; RS Umum Wahyu; RS Umum Wulan Windy; RSAU Dr. Abdul Malik"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "KOTA PADANG SIDEMPUAN",
+    "facility_names": "RS Metta Medika; RS TNI Tk. IV 01.07.03; RS Umum Daerah Padang Sidempuan; RS Umum Inanta"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "KOTA PEMATANG SIANTAR",
+    "facility_names": "RS Efarina Etaham Pematang Siantar; RS Mata Siantar; RS Murni Teguh Horas Insani; RS Murni Teguh Pematang Siantar; RS Rasyida Siantar; RS Tk. IV 01.07.01; RS Umum Daerah Dr. Djasamen Saragih; RS Umum Harapan; RS Umum Tiara Kasih Sejati; RS Umum Vita Insani"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "KOTA SIBOLGA",
+    "facility_names": "RS Metta Medika II; RS Umum Daerah Dr. FL Tobing Sibolga; RS Umum Metta Medika"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "KOTA TANJUNG BALAI",
+    "facility_names": "RS Umum Daerah Dr. Tengku Mansyur; RS Umum Hadi Husada"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "KOTA TEBING TINGGI",
+    "facility_names": "RS Bhayangkara Tk.III Kota Tebing Tinggi; RS Chevani; RS Umum Daerah Dr. H. Kumpulan Pane; RS Umum Natama; RS Umum Sri Pamela; RS Umum Universitas Prima Indonesia"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "LABUHAN BATU",
+    "facility_names": "RS Dokter Takdir; RS Umum Citra Medika; RS Umum Daerah Rantau Prapat; RS Umum Hartati Medical Centre; RS Umum Karya Bakti Ujung Bandar"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "LABUHAN BATU SELATAN",
+    "facility_names": "RS Sri Pamela Torgamba; RS Umum Daerah Kota Pinang; RS Umum Nuraini"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "LABUHAN BATU UTARA",
+    "facility_names": "RS Sri Pamela Membang Muda; RS Tiga Bersaudara; RS Umum Daerah  Aek Kanopan; RS Umum Flora"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "LANGKAT",
+    "facility_names": "RS Umum Daerah Tanjung Pura; RS Umum Delia; RS Umum Mahkota Bidadari; RS Umum PTP II Tg Selamat; RS Umum Pertamina Pangkalan Brandan; RS Umum Putri Bidadari; RS Umum Wampu Norita"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "MANDAILING NATAL",
+    "facility_names": "RS Umum Armina Madina Panyabungan; RS Umum Daerah Panyabungan; RS Umum Daerah dr. Husni Thamrin; RS Umum Permata Madina Panyabungan"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "NIAS",
+    "facility_names": "RS Umum Daerah dr. M. Thomsen Nias"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "NIAS BARAT",
+    "facility_names": "RS Pratama Kab. Nias Barat; RS Pratama Lologolu Soguna Ba Zato"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "NIAS SELATAN",
+    "facility_names": "RS Umum Daerah Lukas Hilisimaetano; RS Umum Daerah Nias Selatan; RS Umum Stella Maris"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "NIAS UTARA",
+    "facility_names": "RS Umum Daerah Tafaeri"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "PADANG LAWAS",
+    "facility_names": "RS Umum Daerah Sibuhuan; RS Umum Permata Madina Sibuhuan"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "PADANG LAWAS UTARA",
+    "facility_names": "RS Umum Daerah Gunung Tua"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "PAKPAK BHARAT",
+    "facility_names": "RS Umum Daerah Salak"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "SAMOSIR",
+    "facility_names": "RS Umum Daerah Dr. Hadrianus Sinaga"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "SERDANG BEDAGAI",
+    "facility_names": "RS Umum Daerah Sultan Sulaiman Syariful Alamsyah; RS Umum Melati; RS Umum Melati Desa Pon; RS Umum Pabatu; RS Umum Sawit Indah Perbaungan; RS Umum Trianda"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "SIMALUNGUN",
+    "facility_names": "RS Umum Balimbingan PTP 4; RS Umum Daerah Parapat; RS Umum Daerah Perdagangan; RS Umum Daerah Tuan Rondahaim; RS Umum Karya Husada; RS Umum Laras Kabupaten Simalungun"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "TAPANULI SELATAN",
+    "facility_names": "RS Bhayangkara Tk. IV  Batangtoru; RS Umum Daerah Pintu Padang; RS Umum Daerah Tapanuli Selatan"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "TAPANULI TENGAH",
+    "facility_names": "RS Umum Daerah Pandan"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "TAPANULI UTARA",
+    "facility_names": "RS Umum Daerah Tarutung; RS Umum Sint Lucia"
+  },
+  {
+    "province_upper": "SUMATERA UTARA",
+    "kab_upper": "TOBA SAMOSIR",
+    "facility_names": "RS Umum Daerah Porsea; RS Umum HKBP Balige"
+  },
+  {
+    "province_upper": "YOGYAKARTA",
+    "kab_upper": "BANTUL",
+    "facility_names": "RS Bedah Adelia; RS Ibu Anak Ummi Khasanah; RS Khusus Bedah Ring Road Selatan; RS Khusus Ibu dan Anak Kahyangan; RS Paru Respira; RS Rajawali Citra; RS Umum Daerah Panembahan Senopati; RS Umum Daerah Saras Adyatma; RS Umum Griya Mahardika Yogyakarta; RS Umum Nur Hidayah; RS Umum Permata Husada; RS Umum Rachma Husada; RS Umum Santa Elisabeth; RS Universitas Islam Indonesia; RSPAU Dr.  Suhardi Harjolukito; RSU PKU Muhammadiyah Bantul"
+  },
+  {
+    "province_upper": "YOGYAKARTA",
+    "kab_upper": "GUNUNG KIDUL",
+    "facility_names": "RS Bethesda Wonosari; RS Ibu dan anak Allaudya; RS Islam Gunungkidul; RS Umum Daerah Saptosari; RS Umum Daerah Wonosari; RS Umum Nur Rohmah; RS Umum PKU Muhammadiyah Wonosari; RS Umum Panti Rahayu; RS Umum Pelita Husada"
+  },
+  {
+    "province_upper": "YOGYAKARTA",
+    "kab_upper": "KOTA YOGYAKARTA",
+    "facility_names": "RS  Mata Dr. Yap; RS AMC Muhammadiyah; RS Bethesda Lempuyangwangi; RS Bethesda Yogyakarta; RS Gigi dan Mulut Universitas Muhammadiyah Yogyakarta; RS Happy Land Medical Centre; RS Islam Hidayatullah Yogyakarta; RS Khusus Ibu dan Anak  PKU Muhammadiyah Kotagede; RS Khusus Ibu dan Anak Permata Bunda; RS Khusus Ibu dan Anak Rachmi; RS Khusus Jiwa Puri Nirmala; RS Ludira Husada Tama; RS PKU Muhammadiyah Yogyakarta; RS Pratama Kota Yogyakarta; RS Siloam Yogyakarta; RS Tk. III 04.06.03 Dr. Soetarto; RS Umum Daerah Kota Yogyakarta; RS Umum Panti Rapih"
+  },
+  {
+    "province_upper": "YOGYAKARTA",
+    "kab_upper": "KULON PROGO",
+    "facility_names": "RS Umum Daerah Nyi Ageng Serang; RS Umum Daerah Wates; RS Umum Kharisma Paramedika; RS Umum PKU Muhammadiyah Nanggulan; RS Umum Pura Raharja Medika; RS Umum Queen Latifa; RS Umum Rizki Amalia; RS Umum Rizki Amalia Medika; RSU Santo Yusup Boro"
+  },
+  {
+    "province_upper": "YOGYAKARTA",
+    "kab_upper": "SLEMAN",
+    "facility_names": "Charitas Hospital Klepu; RS Akademik Universitas Gadjah Mada; RS At-Turots Al-Islamy; RS Gigi dan Mulut UGM Prof. Soedomo; RS Ibu Anak Arvita Bunda; RS Islam Yayasan PDHI; RS Jih; RS Jiwa Grhasia; RS Khusus Bedah An-Nur; RS Khusus Ibu Anak Sadewa; RS PKU Muhammadiyah Sleman; RS Queen Latifa; RS Umum Bhayangkara POLDA DIY; RS Umum Bunga Bangsa Medika; RS Umum Condong Catur; RS Umum Daerah Prambanan; RS Umum Daerah Sleman; RS Umum Gramedika 10; RS Umum Hermina Yogya; RS Umum Mitra Paramedika; RS Umum Mitra Sehat; RS Umum PKU Muhammadiyah Gamping; RS Umum Panti Nugroho; RS Umum Panti Rini; RS Umum Puri Husada Yogyakarta; RS Umum Sakina Idaman; RS Universitas Ahmad Dahlan; RSUP Dr. Sardjito"
+  }
+]

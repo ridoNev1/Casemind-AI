@@ -2,6 +2,12 @@ from flask import jsonify, request
 
 from . import blueprint
 from ...auth import jwt_required
+from ...services.audit_copilot import (
+    ClaimNotFound,
+    FeedbackValidationError,
+    generate_summary,
+    record_feedback,
+)
 from ...services.risk_scoring import get_high_risk_claims
 
 
@@ -24,6 +30,8 @@ def high_risk_claims():
         "facility_class": request.args.get("facility_class"),
         "start_date": request.args.get("start_date"),
         "end_date": request.args.get("end_date"),
+        "discharge_start": request.args.get("discharge_start"),
+        "discharge_end": request.args.get("discharge_end"),
     }
     result = get_high_risk_claims(filters)
 
@@ -38,6 +46,8 @@ def high_risk_claims():
         "facility_class",
         "start_date",
         "end_date",
+        "discharge_start",
+        "discharge_end",
     }
     applied_filters = {key: value for key, value in filters.items() if key in filter_keys and value}
 
@@ -54,3 +64,30 @@ def high_risk_claims():
             },
         }
     )
+
+
+@blueprint.route("/<claim_id>/summary")
+@jwt_required
+def claim_summary(claim_id: str):
+    """Generate structured audit summary for a specific claim."""
+    try:
+        payload = generate_summary(claim_id)
+    except ClaimNotFound as exc:
+        return jsonify({"error": str(exc)}), 404
+    return jsonify({"data": payload})
+
+
+@blueprint.route("/<claim_id>/feedback", methods=["POST"])
+@jwt_required
+def claim_feedback(claim_id: str):
+    """Persist auditor feedback for the given claim."""
+    reviewer = getattr(request, "user", None)
+    payload = request.get_json(silent=True) or {}
+    try:
+        outcome = record_feedback(claim_id, reviewer, payload)
+    except ClaimNotFound as exc:
+        return jsonify({"error": str(exc)}), 404
+    except FeedbackValidationError as exc:
+        return jsonify({"error": str(exc)}), 400
+
+    return jsonify({"data": outcome.to_dict()}), 201

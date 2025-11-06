@@ -28,13 +28,6 @@ PIC: Rido Maulana (user)
    (Pastikan tidak ada sesi DuckDB lain yang mengunci `instance/analytics.duckdb`.)
 3. Training utama dilakukan secara lokal — lihat `ml/training/local_training_guide.md` untuk prosedur lengkap (load data, training Isolation Forest, ekspor artefak, refresh cache).
 
-## Next Steps (awal)
-
-- Definisikan feature schema/validation serta hashing `patient_key`. *(TBD — belum diimplementasi)*
-
-
----
-
 ## Pembaruan — 14 Nov 2025
 
 ### Pencapaian
@@ -50,3 +43,8 @@ PIC: Rido Maulana (user)
 - Endpoint `GET /claims/high-risk` mengekspose payload terstruktur: `data[]` + `meta` (`total`, `page`, `page_size`, `model_version`, `ruleset_version`, `filters`), mendukung filter lanjutan (`severity`, `service_type`, `min_risk_score`, `min_ml_score`) tanpa menghitung ulang skor.
 - CLI `python -m ml.pipelines.refresh_ml_scores` tersedia untuk regenerasi cache (menulis ke Parquet + tabel DuckDB `claims_ml_scores`) sekaligus mencatat QC snapshot (`instance/logs/`).
 - `requirements.txt` diperbarui dengan dependensi notebook/training (`matplotlib`, `seaborn`, `scikit-learn`, `joblib`).
+
+> Lihat `docs/dev_checkpoint/todo.md` untuk backlog ML selanjutnya.
+
+### Pembaruan — 6 Nov 2025
+- Tambah modul schema validator (`ml/common/schema.py`) dan opsi `validate=True` pada `DataLoader.load_claims_normalized` untuk memastikan kolom wajib tersedia sebelum training/inference.

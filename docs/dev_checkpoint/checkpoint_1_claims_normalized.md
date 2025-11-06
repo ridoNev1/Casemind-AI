@@ -35,9 +35,9 @@ PIC: Rido Maulana (user)
    SELECT province_name, COUNT(*) FROM claims_normalized GROUP BY 1;
    ```
 
-## Next Steps
+## Pembaruan — 15 Nov 2025
 
-- Validasi hasil transform (label fasilitas/wilayah) dan tambahkan referensi ICD/metadata tambahan bila diperlukan – status: provinsi sudah dilengkapi lewat `province_lookup_stage`, perlu cek apakah perlu memasukkan nama fasilitas/ICD tambahan.
-- Tambahkan hashing dengan salt untuk `patient_key`.
-- Logging ETL run (`etl_runs` table) + metadata field `ruleset_version`.
-- Integrasikan pipeline ini ke service risk scoring (gantikan data mock).
+- `transform.sql` kini melakukan hashing + salt untuk `patient_key`/`family_key` menggunakan konfigurasi `hashing.*`.
+- Flag `duplicate_pattern` (≤3 hari, DX & prosedur identik) dihitung langsung di ETL dan diteruskan ke `claims_scored`.
+- `config.yaml` diperbarui untuk menyimpan salt hashing sehingga dapat dirotasi via konfigurasi.
+- Dokumentasi pipeline (`README.md`) diperbarui; pipeline juga menambahkan kolom deskriptif diagnosis (`dx_primary_label`, `dx_primary_group`, `dx_secondary_labels`) serta agregasi nama fasilitas per kabupaten/provinsi (`region_facility_names*`) sehingga API menampilkan label yang informatif. Backlog lain lihat `docs/dev_checkpoint/todo.md`.

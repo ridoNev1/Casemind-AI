@@ -169,3 +169,9 @@ Data:
 - **Versi rules**: `RULESET_v1` (simpan di hasil & audit log).
 - **Safety**: tidak menentukan “fraud pasti”; output = **indikasi untuk ditinjau**.
 - **Logging wajib**: `claim_id, risk_score, flags[], RULESET_VERSION, generated_at`.
+
+## 6) Implementasi Backend (Patch 1.1)
+- Endpoint `GET /claims/{id}/summary` menghasilkan ringkasan deterministik mengikuti template di atas (6 bagian + follow-up question) sembari menunggu integrasi LLM eksternal.
+- Endpoint `POST /claims/{id}/feedback` menyimpan keputusan auditor (`approved|partial|rejected`, `correction_ratio`, `notes`) ke tabel `audit_outcomes`.
+- Response summary menyertakan metadata skor (`risk_score`, `rule_score`, `ml_score_normalized`), flag aktif, peer stats, serta `latest_feedback` bila ada.
+- `app/services/audit_copilot.py` menjadi referensi utama implementasi backend; siap diganti ke call LLM (OpenAI/Bedrock) ketika kredensial tersedia.

@@ -1,6 +1,9 @@
 ---
 duckdb_path: instance/analytics.duckdb
 ruleset_version: RULESET_v1
+hashing:
+  patient_salt: bpjs-demo-patient-salt
+  family_salt: bpjs-demo-family-salt
 sources:
   fkrtl: resource/private_bpjs_data/raw_cleaned/202203_fkrtl.csv
   diagnosa_sekunder: resource/private_bpjs_data/raw_cleaned/202205_diagnosissekunder.csv

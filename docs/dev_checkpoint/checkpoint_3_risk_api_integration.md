@@ -14,14 +14,29 @@ PIC: Rido Maulana (user)
 
 - **Service** `app/services/risk_scoring.py`
   - Memuat skor dari cache (`instance/data/claims_ml_scores.parquet` + tabel DuckDB `claims_ml_scores`), fallback ke scoring realtime jika perlu.
-  - Menghitung flag rules (`short_stay_high_cost`, `severity_mismatch`, `high_cost_full_paid`) dan final `risk_score = max(rule_score, ml_score_normalized)`.
+  - Menghitung flag rules (`short_stay_high_cost`, `severity_mismatch`, `duplicate_pattern`, `high_cost_full_paid`) dan final `risk_score = max(rule_score, ml_score_normalized)`.
   - Menerapkan filter lanjutan (`severity`, `service_type`, `facility_class`, `start_date`, `end_date`, `min_risk_score`, `max_risk_score`, `min_ml_score`) dan pagination (`page`, `page_size`).
   - Menulis log QC di `instance/logs/ml_scores_qc_*.json` setiap cache di-refresh.
+  - Respons kini menyertakan `facility_id`, `facility_name`, dan `facility_match_quality` (`exact`, `regional`, `unmatched`); filter tambahan `discharge_start`/`discharge_end` tersedia untuk menyaring tanggal pulang.
+- **ETL** `pipelines/claims_normalized/transform.sql`
+  - Join master RS menghasilkan mapping `facility_id` satu-ke-satu (prioritas kecocokan class/type/ownership) sekaligus tetap menyimpan agregasi regional untuk fallback.
+  - Kolom `dx_primary_label` diisi ulang bila kosong menggunakan referensi ICD-10 CSV internal.
 
 - **API Endpoint** `GET /claims/high-risk`
   - Sekarang mengembalikan struktur `{"data": [...], "meta": {...}}` dengan metadata (`total`, `page`, `page_size`, `model_version`, `ruleset_version`, `filters`).
-  - Parameter query baru terdokumentasi: `page`, `page_size`/`limit`, `severity`, `service_type`, `min_risk_score`, `max_risk_score`, `min_ml_score`, `refresh_cache`.
+  - Parameter query baru terdokumentasi: `page`, `page_size`/`limit`, `severity`, `service_type`, `facility_class`, `start_date`, `end_date`, `discharge_start`, `discharge_end`, `min_risk_score`, `max_risk_score`, `min_ml_score`, `refresh_cache`.
   - OpenAPI (`app/api/docs/spec.py`) diperbarui untuk mencerminkan skema terbaru + contoh filter yang valid.
+- **API Endpoint** `GET /claims/{id}/summary` & `POST /claims/{id}/feedback`
+  - Copilot summary menampilkan 6 bagian ringkasan + pertanyaan tindak lanjut berbasis flag/risk.
+  - Endpoint feedback menyimpan keputusan auditor (`approved|partial|rejected`) beserta `correction_ratio` dan catatan.
+  - Schema OpenAPI + Swagger sudah memuat contoh payload dan response.
+- **Analytics & Reports**
+  - `app/services/analytics.py` dan `app/api/analytics/routes.py` kini mengambil casemix provinsi langsung dari DuckDB (`claims_scored`).
+  - `app/services/reports.py` / `/reports/severity-mismatch` & `/reports/duplicates` menggunakan resep SQL nyata (z-score > P90, window ≤3 hari).
+  - Endpoint baru `/reports/tariff-insight` menampilkan agregasi gap tarif per fasilitas + casemix dengan filter province/facility/severity.
+- **Agentic Copilot**
+  - Service baru `app/services/audit_copilot.py` mempersiapkan summary deterministik, utility format, serta integrasi skor ML/rule.
+  - Tabel baru `audit_outcomes` (`app/models/audit_outcome.py`) menyimpan feedback auditor yang dikaitkan ke user dan klaim.
 
 - **DataLoader Enhancements** (`ml/common/data_access.py`)
   - Mendukung filter aman ketika membaca `claims_normalized`.
@@ -32,6 +47,11 @@ PIC: Rido Maulana (user)
 
 - **CLI Refresh** `python -m ml.pipelines.refresh_ml_scores`
   - Menjalankan scoring penuh, menyimpan ke Parquet + tabel `claims_ml_scores`, dan menulis QC snapshot.
+  - Metadata refresh otomatis masuk ke tabel `ml_model_versions` (timestamp, ringkasan QC, Top-K insight via kolom `top_k_snapshot`).
+- **Metadata & Audit Trail**
+  - Modul utilitas `ml.common.metadata` memastikan tabel `ruleset_versions`, `etl_runs`, dan `ml_model_versions` tersedia di DuckDB.
+  - ETL `build_claims_normalized.py` mencatat jumlah baris + ruleset version ke `etl_runs`.
+  - Refresh ML mencatat versi model, rows scored, metrik Top-K, serta snapshot insight (top provinsi/flags) ke metadata table.
 - **CLI QC Summary** `python -m ml.pipelines.qc_summary`
   - Menghasilkan ringkasan agregat dari log QC (`instance/logs/ml_scores_qc_summary.json`).
 - **Script scheduler** `ops/scripts/refresh_ml_scores.sh`
@@ -68,16 +88,8 @@ PIC: Rido Maulana (user)
   - Detail klaim Top-K untuk audit manual.
 - Gunakan log ini untuk memonitor drift atau perbandingan antar-run.
 
-## Next Steps
+> Catatan backlog lanjutan dipusatkan di `docs/dev_checkpoint/todo.md`.
 
-1. **ETL & Rules**
-   - Tambahkan hashing + salt `patient_key` di `claims_normalized` untuk memenuhi pedoman anonymisasi.
-   - Hitung flag `duplicate_pattern` (kunjungan ≤3 hari; diagnosis/procedure sama) dan integrasikan ke `claims_scored` serta `risk_scoring.py` dengan bobot 0.6.
-2. **Reporting**
-   - Implementasikan query DuckDB agar service `/reports/severity-mismatch` dan `/reports/duplicates` tidak lagi dummy.
-3. **Ruleset & Metadata**
-   - Siapkan storage versi ruleset/model (mis. tabel `ruleset_versions` di DuckDB) untuk mencatat parameter RULESET_v1 & riwayat perubahan.
-4. **Operasional & Monitoring**
-   - Integrasikan cron/CI agar `ops/scripts/refresh_ml_scores.sh` berjalan otomatis setelah ETL.
-   - Bangun visualisasi/alert berbasis `ml_scores_qc_summary.json` (heatmap provinsi, proporsi flags) dan lengkapi dashboard agar auditor dapat memantau tren tanpa skrip manual.
-   - Sinkronkan kebutuhan filter tambahan (mis. tanggal discharge, klasifikasi fasilitas) dengan tim UI dan update API bila diperlukan.
+### Pembaruan — 6 Nov 2025
+- Notebook `notebooks/qc_dashboard.ipynb` menyediakan visualisasi heatmap Top-K provinsi, tren risk score & LOS ≤ 1, serta contoh logika alert berbasis `ml_scores_qc_summary.json`.
+- Endpoint analitik baru `/analytics/qc-status` mengembalikan status QC (OK/alert) beserta metrik & ambang agar FE/ops dapat menampilkan banner peringatan.

@@ -56,6 +56,17 @@ def get_high_risk_claims(filters: Mapping[str, Any]) -> dict[str, Any]:
                 "claim_id": row.claim_id,
                 "province_name": row.province_name,
                 "dx_primary_code": row.dx_primary_code,
+                "dx_primary_label": getattr(row, "dx_primary_label", None),
+                "dx_primary_group": getattr(row, "dx_primary_group", None),
+                "dx_secondary_codes": _to_optional_list(getattr(row, "dx_secondary_codes", None)),
+                "dx_secondary_labels": _to_optional_list(getattr(row, "dx_secondary_labels", None)),
+                "facility_id": _to_optional_str(getattr(row, "facility_id", None)),
+                "facility_name": _to_optional_title(getattr(row, "facility_name", None)),
+                "facility_match_quality": _to_optional_str(getattr(row, "facility_match_quality", None)),
+                "facility_names_region": getattr(row, "region_facility_names", None),
+                "facility_ownership_names_region": getattr(row, "region_ownership_names", None),
+                "facility_type_names_region": getattr(row, "region_facility_type_names", None),
+                "facility_class_names_region": getattr(row, "region_facility_class_names", None),
                 "severity_group": row.severity_group,
                 "service_type": getattr(row, "service_type", None),
                 "facility_class": getattr(row, "facility_class", None),
@@ -69,6 +80,7 @@ def get_high_risk_claims(filters: Mapping[str, Any]) -> dict[str, Any]:
                     "p90": _to_optional_float(row.peer_p90),
                 },
                 "flags": row.flags,
+                "duplicate_pattern": bool(getattr(row, "duplicate_pattern", False)),
                 "rule_score": _to_optional_float(row.rule_score),
                 "ml_score": _to_optional_float(row.ml_score),
                 "ml_score_normalized": _to_optional_float(row.ml_score_normalized),
@@ -107,6 +119,11 @@ def _compute_rule_enrichment(df: pd.DataFrame) -> pd.DataFrame:
     payment_ratio = df["bpjs_payment_ratio"].fillna(0)
     cost_zscore = df["cost_zscore"].fillna(0)
 
+    if "duplicate_pattern" not in df.columns:
+        df["duplicate_pattern"] = False
+
+    duplicate_pattern = df["duplicate_pattern"].fillna(False).astype(bool)
+
     df["short_stay_high_cost"] = (los <= 1) & (df["amount_claimed"] > peer_p90)
     df["severity_mismatch"] = (df["severity_group"] == "ringan") & (df["amount_claimed"] > peer_p90)
     df["high_cost_full_paid"] = (payment_ratio >= 0.95) & (cost_zscore > 2)
@@ -115,6 +132,7 @@ def _compute_rule_enrichment(df: pd.DataFrame) -> pd.DataFrame:
         "short_stay_high_cost": df["short_stay_high_cost"],
         "severity_mismatch": df["severity_mismatch"],
         "high_cost_full_paid": df["high_cost_full_paid"],
+        "duplicate_pattern": duplicate_pattern,
     }
     flag_names = list(flag_columns.keys())
     flag_matrix = np.column_stack([flag_columns[name].astype(bool).values for name in flag_names])
@@ -127,6 +145,7 @@ def _compute_rule_enrichment(df: pd.DataFrame) -> pd.DataFrame:
         "short_stay_high_cost": 0.8,
         "severity_mismatch": 0.7,
         "high_cost_full_paid": 0.5,
+        "duplicate_pattern": 0.6,
     }
     rule_score = np.zeros(len(df))
     for flag, weight in weights.items():
@@ -158,6 +177,18 @@ def _to_optional_int(value: Any) -> int | None:
         return int(value)
     except (TypeError, ValueError):
         return None
+
+
+def _to_optional_str(value: Any) -> str | None:
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return None
+    text = str(value).strip()
+    return text if text else None
+
+
+def _to_optional_title(value: Any) -> str | None:
+    text = _to_optional_str(value)
+    return text.title() if text else text
 
 
 def _load_or_compute_scores(loader: DataLoader, scorer: MLScorer, force_refresh: bool = False) -> pd.DataFrame:
@@ -242,6 +273,17 @@ def _apply_advanced_filters(df: pd.DataFrame, filters: Mapping[str, Any]) -> pd.
             mask &= admit_series <= end_date
         result = result[mask]
 
+    discharge_start = _parse_date(filters.get("discharge_start"))
+    discharge_end = _parse_date(filters.get("discharge_end"))
+    if (discharge_start or discharge_end) and "discharge_dt" in result.columns:
+        discharge_series = pd.to_datetime(result["discharge_dt"], errors="coerce")
+        mask = pd.Series(True, index=result.index)
+        if discharge_start:
+            mask &= discharge_series >= discharge_start
+        if discharge_end:
+            mask &= discharge_series <= discharge_end
+        result = result[mask]
+
     return result
 
 
@@ -267,9 +309,9 @@ def _parse_date(value: Any) -> pd.Timestamp | None:
         return None
 
 
-def _log_qc_snapshot(raw_df: pd.DataFrame, scores: pd.DataFrame, top_k: int | None = None) -> None:
+def _log_qc_snapshot(raw_df: pd.DataFrame, scores: pd.DataFrame, top_k: int | None = None) -> dict[str, Any] | None:
     if raw_df.empty or scores.empty:
-        return
+        return None
 
     scored_df = raw_df.merge(scores, on="claim_id", how="left")
     scored_df = _compute_rule_enrichment(scored_df)
@@ -289,6 +331,8 @@ def _log_qc_snapshot(raw_df: pd.DataFrame, scores: pd.DataFrame, top_k: int | No
         "cost_zscore_top_k_mean": _to_optional_float(top_df["cost_zscore"].mean()),
         "los_le_1_ratio": _to_optional_float((scored_df["los"] <= 1).mean()),
         "los_le_1_ratio_top_k": _to_optional_float((top_df["los"] <= 1).mean() if len(top_df) else None),
+        "risk_score_top_k_mean": _to_optional_float(top_df["risk_score"].mean() if len(top_df) else None),
+        "ml_score_top_k_mean": _to_optional_float(top_df["ml_score_normalized"].mean() if len(top_df) else None),
     }
 
     top_records = top_df[
@@ -301,6 +345,7 @@ def _log_qc_snapshot(raw_df: pd.DataFrame, scores: pd.DataFrame, top_k: int | No
             "ml_score_normalized",
             "amount_claimed",
             "los",
+            "duplicate_pattern",
             "flags",
         ]
     ].to_dict(orient="records")
@@ -314,6 +359,7 @@ def _log_qc_snapshot(raw_df: pd.DataFrame, scores: pd.DataFrame, top_k: int | No
     log_dir.mkdir(parents=True, exist_ok=True)
     log_path = log_dir / f"ml_scores_qc_{timestamp}.json"
     log_path.write_text(json.dumps(log_payload, indent=2))
+    return log_payload
 
 
 def _build_response(
@@ -332,3 +378,13 @@ def _build_response(
         "model_version": model_version,
         "ruleset_version": ruleset_version,
     }
+
+
+def _to_optional_list(value: Any) -> list[Any] | None:
+    if value is None:
+        return None
+    if isinstance(value, (list, tuple)):
+        return list(value)
+    if isinstance(value, np.ndarray):
+        return value.tolist()
+    return [value]

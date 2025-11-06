@@ -23,9 +23,9 @@ Tujuan utama patch 1.1:
 - Lokasi pipeline: `pipelines/claims_normalized/`.  
 - Tahapan:
   1. **Staging**: membaca CSV FKRTL/metadata ke DuckDB.  
-  2. **Transform**: menghitung LOS, amount gap, `peer_key`, `peer_mean/p90/std`, `cost_zscore`. Menambah label fasilitas, severity, service type.  
+  2. **Transform**: hash + salt `patient_key`/`family_key`, menghitung LOS, amount gap, `peer_key`, `peer_mean/p90/std`, `cost_zscore`, serta flag `duplicate_pattern`. Menambah label fasilitas, severity, service type.  
   3. **Output**: menulis ke DuckDB (`instance/analytics.duckdb`) dan Parquet (`instance/data/claims_normalized.parquet`).
-- **Pekerjaan lanjut**: hash + salt `patient_key`, hitung `duplicate_pattern`, log ETL run (`etl_runs`).
+- **Pekerjaan lanjut**: log ETL run (`etl_runs`) + metadata ruleset.
 
 ### 2.2 Training Lokal Isolation Forest
 - Notebook utama: `ml/training/notebooks/deteksi_anomali_unsupervised.ipynb`.
@@ -53,25 +53,22 @@ Tujuan utama patch 1.1:
 
 ### 2.4 API Risk Engine
 - Service utama: `app/services/risk_scoring.py`  
-  - Memuat klaim (via `DataLoader`), menggabungkan skor ML + rules (`short_stay`, `severity_mismatch`, `high_cost_full_paid`, *todo* `duplicate_pattern`).  
+  - Memuat klaim (via `DataLoader`), menggabungkan skor ML + rules (`short_stay`, `severity_mismatch`, `duplicate_pattern`, `high_cost_full_paid`).  
   - Menyediakan filter: `province`, `dx`, `severity`, `service_type`, `facility_class`, `start_date`, `end_date`, `min_risk_score`, `max_risk_score`, `min_ml_score`, pagination, `refresh_cache`.  
   - Response: `{"items": [...], "total": ..., "page": ..., "page_size": ..., "model_version": ..., "ruleset_version": ...}`.
-- Endpoint `/claims/high-risk` (JWT protected) memanfaatkan service di atas. Swagger (`app/api/docs/spec.py`) telah diperbarui.
+- Endpoint `/claims/high-risk` (JWT protected), laporan DuckDB riil (`/reports/severity-mismatch`, `/reports/duplicates`), agregasi `/analytics/casemix`, serta copilot/feedback (`/claims/{id}/summary`, `/claims/{id}/feedback`). Swagger (`app/api/docs/spec.py`) telah diperbarui.
 
 ---
 
 ## 3. Komponen Agentic AI
 
 ### 3.1 Audit Copilot (LLM Komunikasi)
-- Endpoint yang direncanakan: `GET /claims/{id}/summary`.  
-- Fungsi:
-  1. Mengambil klaim detail (`claims_normalized`, dx sekunder, peer stats, flags, skor).  
-  2. Membentuk payload JSON menurut resep LLM (lihat `resource/docs_teknis/ml-llm-recipes.md`).  
-  3. Memanggil LLM untuk membuat ringkasan audit (indikasi + pertanyaan tindak lanjut).  
-  4. Cache hasil per `claim_id` & versi model/rules.
+- Endpoint `GET /claims/{id}/summary` menyusun ringkasan audit deterministik (6 bagian + follow-up question) berdasarkan resep di `resource/docs_teknis/ml-llm-recipes.md`.  
+- Payload memuat identitas klaim, ringkasan biaya, peer stats, alasan flag, risk highlight, dan daftar pertanyaan tindak lanjut.  
+- Saat ini menggunakan template heuristik; siap diganti ke LLM generatif + cache ketika kredensial tersedia.
 
 ### 3.2 Feedback Loop (LLM Pembelajar)
-- Auditor memberikan feedback melalui endpoint (misal `POST /claims/{id}/feedback`) untuk menyimpan `audit_outcome` (`decision`, `correction_ratio`, `notes`).  
+- Auditor memberikan feedback melalui `POST /claims/{id}/feedback` yang menyimpan `audit_outcomes` (`decision`, `correction_ratio`, `notes`, reviewer).  
 - Data label disimpan untuk:
   - Tuning bobot rules (mis. severity mismatch) jika banyak false positive.  
   - Training model supervised (ketika label cukup) dengan metrik `PR-AUC`, `Precision@K`, dll.  
@@ -103,8 +100,8 @@ Tujuan utama patch 1.1:
 5. **Auditor Workflow**:  
    - Login (JWT).  
    - `/claims/high-risk` → klaim prioritas (filter/pagination).  
-   - Klik klaim → (future) `/claims/{id}/summary` untuk ringkasan LLM.  
-   - Catatan audit (feedback) dikirim ke backend.  
+   - Klik klaim → `/claims/{id}/summary` untuk ringkasan copilot (6 bagian + pertanyaan tindak lanjut).  
+   - Kirim catatan audit via `POST /claims/{id}/feedback` (decision, correction ratio, notes).  
 6. **Monitoring**:  
    - Baca `ml_scores_qc_summary.json` → dashboard/alert.  
    - Validator agent menandai pergeseran pola.  
@@ -114,10 +111,17 @@ Tujuan utama patch 1.1:
 
 ## 5. Perubahan Utama (Patch 1.1)
 
+- Hash + salt `patient_key` + `family_key` di ETL dan tambah flag `duplicate_pattern` dengan bobot rules 0.6.  
+- Ganti mock analytics (`/reports/*`, `/analytics/casemix`) dengan query DuckDB riil.  
+- Tambah copilot summary + feedback endpoint (`GET /claims/{id}/summary`, `POST /claims/{id}/feedback`) dan model `audit_outcomes`.  
+- Script ETL kini dapat otomatis memicu refresh skor ML (`--refresh-ml` / config `post_refresh_ml`), mempermudah jadwal cron/CI.  
+- Endpoint baru `/analytics/qc-status` mengekspose status QC + ambang alert untuk konsumsi FE/ops.  
+- Tambah playbook verifikasi periodik (`docs/ops/qc_verification.md`) untuk sampling manual & interpretasi QC summary.
+- ETL memperkaya label diagnosis (`dx_primary_label`, `dx_primary_group`, `dx_secondary_labels`) agar siap tampil di API/FE tanpa lookup tambahan.
+- Join master rumah sakit kini menghasilkan `facility_id`, `facility_name`, dan status kecocokan (`facility_match_quality` = exact/regional/unmatched) per klaim; agregasi regional tetap dipertahankan sebagai fallback.
+- Laporan tarif baru `/reports/tariff-insight` menyajikan gap klaim vs pembayaran per fasilitas + casemix dengan filter province/facility/severity/service_type/dx_group.
 - Hapus `ml/training/colab_guidelines.md`; ganti dengan `ml/training/local_training_guide.md`.  
-- Tambah `docs/ops/runbook_risk_scoring.md` (SLA, refresh, rollback).  
-- Tambah `docs/ops/data_simulation.md` (LLM generator klaim).  
-- Update `app/services/risk_scoring.py` dan `/claims/high-risk` agar caching ML + filter lanjutan berjalan.  
+- Tambah `docs/ops/runbook_risk_scoring.md` (SLA, refresh, rollback) dan `docs/ops/data_simulation.md` (LLM generator klaim).  
 - Update README & checkpoint (C2/C3) sesuai perubahan.
 
 ---
@@ -125,28 +129,24 @@ Tujuan utama patch 1.1:
 ## 6. Backlog & Aksi Lanjutan
 
 ### 6.1 ETL & Rules
-- Hash + salt `patient_key`.  
-- Hitung `duplicate_pattern` (kunjungan ≤3 hari) dan integrasikan ke rule scoring (bobot 0.6).  
-- Log ETL run ke tabel `etl_runs`.
+- ✅ Logging ETL run (`etl_runs`) + penyimpanan metadata ruleset/Top‑K kini otomatis saat pipeline dijalankan (`ml/common/metadata.py`).  
+- Evaluasi bobot rules setelah ada feedback auditor (tuning berkala).
 
 ### 6.2 Reporting
-- Implementasikan data nyata untuk `/reports/severity-mismatch` dan `/reports/duplicates`.  
-- Perbaiki `app/services/analytics.py` untuk casemix/analytics real.
+- Kembangkan dashboard (heatmap provinsi, tren flag) berbasis `ml_scores_qc_summary.json`/Parquet.
 
 ### 6.3 Metadata Ruleset/Model
-- Simpan versi ruleset (`ruleset_versions`) dan model (`ml_model_versions`) di DuckDB atau config.  
-- Automasi catatan saat refresh cache (timestamp, versi, parameter).
+- ✅ Versi ruleset (`ruleset_versions`) dan model (`ml_model_versions`) tersimpan di DuckDB (termasuk snapshot Top‑K melalui kolom `top_k_snapshot`).  
+- ✅ Automasi catatan saat refresh cache (timestamp, versi, parameter) aktif melalui script `build_claims_normalized.py` + `refresh_ml_scores.py`.
 
 ### 6.4 Operasional
 - Hubungkan `ops/scripts/refresh_ml_scores.sh` ke cron/CI setelah ETL (mis. jam 02:00).  
-- Bangun visualisasi dari `ml_scores_qc_summary.json` (heatmap, tren flag); buat dashboard (mis. Jupyter + Plotly atau BI tool).  
 - Tambahkan notifikasi (Slack/email) bila validator mendeteksi anomali.  
 - Koordinasikan filter tambahan (tanggal discharge, kelas RS) dengan tim UI; update API bila diperlukan.
 
 ### 6.5 LLM & Feedback
-- Implementasikan endpoint ringkasan audit (`/claims/{id}/summary`), cacherequest, dan styling prompt.  
-- Buat endpoint penyimpanan feedback auditor (`audit_outcome`).  
-- Siapkan pipeline supervised (saat label tersedia) dan integrasikan ke risk engine.
+- Integrasikan LLM provider (OpenAI/Bedrock) + caching respon; saat ini summary deterministik template-based.  
+- Gunakan feedback auditor untuk evaluasi berkala + siapkan pipeline supervised (saat label tersedia) dan integrasikan ke risk engine.
 
 ---
 
@@ -163,4 +163,4 @@ Tujuan utama patch 1.1:
 
 ---
 
-Dengan patch 1.1, backend Casemind AI kini memiliki pipeline end-to-end yang produktif: data masuk via ETL, dikonversi menjadi skor rules + ML, disajikan lewat API, disiapkan untuk ringkasan LLM, serta siap menerima feedback auditor. Simulasi klaim dan runbook operasional membantu memastikan sistem dapat diuji secara realtime dan dipantau dengan baik. Pekerjaan lanjutan pada daftar backlog akan membawa engine ke level operasional penuh (hashing, duplicate flag, reporting, supervised learning, dan integrasi agentic AI lengkap).
+Dengan patch 1.1, backend Casemind AI kini memiliki pipeline end-to-end yang produktif: data masuk via ETL, dikonversi menjadi skor rules + ML, disajikan lewat API, disiapkan untuk ringkasan copilot, serta siap menerima feedback auditor. Simulasi klaim dan runbook operasional membantu memastikan sistem dapat diuji secara realtime dan dipantau dengan baik. Fokus lanjutan berada pada pencatatan metadata, dashboard/validator otomatis, serta integrasi LLM generatif dan supervised learning berbasis feedback.
