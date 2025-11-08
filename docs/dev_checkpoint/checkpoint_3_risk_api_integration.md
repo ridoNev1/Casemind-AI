@@ -35,7 +35,7 @@ PIC: Rido Maulana (user)
   - `app/services/reports.py` / `/reports/severity-mismatch` & `/reports/duplicates` menggunakan resep SQL nyata (z-score > P90, window ≤3 hari).
   - Endpoint baru `/reports/tariff-insight` menampilkan agregasi gap tarif per fasilitas + casemix dengan filter province/facility/severity.
 - **Agentic Copilot**
-  - Service baru `app/services/audit_copilot.py` mempersiapkan summary deterministik, utility format, serta integrasi skor ML/rule.
+  - Service `app/services/audit_copilot.py` mempersiapkan summary deterministik; jika `OPEN_AI_API_KEY` tersedia akan memanggil OpenAI (`gpt-4o-mini`, cache di `instance/cache/copilot/`) untuk menghasilkan ringkasan generatif tambahan dengan prompt versi v1.
   - Tabel baru `audit_outcomes` (`app/models/audit_outcome.py`) menyimpan feedback auditor yang dikaitkan ke user dan klaim.
 
 - **DataLoader Enhancements** (`ml/common/data_access.py`)
@@ -89,6 +89,15 @@ PIC: Rido Maulana (user)
 - Gunakan log ini untuk memonitor drift atau perbandingan antar-run.
 
 > Catatan backlog lanjutan dipusatkan di `docs/dev_checkpoint/todo.md`.
+
+### Pembaruan — 7 Nov 2025
+
+- **Kolom finansial baru (FKL47/48) sudah aktif end-to-end**: ETL `build_claims_normalized.py` dijalankan ulang, sehingga `amount_claimed/amount_paid/gap` di DuckDB + Parquet mengikuti angka rupiah resmi.
+- **Artefak ML iso_v2** kini menjadi sumber tunggal: setelah retraining notebook, `python -m ml.pipelines.refresh_ml_scores --top-k 50` menulis ulang tabel `claims_ml_scores` (verifikasi DuckDB menunjukkan seluruh 1.176.438 baris memakai `model_version='iso_v2'`).
+- **Smoke test API** — `GET /claims/high-risk?service_type=RITL&severity=berat&facility_class=RS%20Kelas%20C&start_date=2022-11-01&end_date=2022-11-30&discharge_start=2022-11-05&discharge_end=2022-11-15&page_size=5` mengembalikan payload di mana `meta.model_version` dan setiap item `model_version` = `iso_v2`, serta nilai klaim sudah sesuai rupiah.
+- **Audit Copilot** — `GET /claims/18591122V003624/summary` kini melaporkan `ml_score_normalized≈0.71` + `model_version=iso_v2`, sementara blok LLM mencatat ringkasan generatif baru (`cached=false`, provider OpenAI `gpt-4o-mini`). Respons ini dicatat sebagai referensi regresi manual untuk memastikan cache LLM dibersihkan setelah data berubah.
+- **Chat UI Rencana** — FE akan memanfaatkan summary tersebut sebagai header ruang chat; history percakapan disediakan via `GET/POST /claims/{id}/chat` (persist di Postgres) sehingga agent `langchain-openai` dapat mempertahankan konteks. Detail interaksi list → chat → feedback terdokumentasi di `docs/dev_checkpoint/chat_copilot_workflow.md`.
+- **Feedback Utilization Plan** — dataset monitoring + outline eksperimen supervised (saat label cukup) terdokumentasi di `docs/dev_checkpoint/feedback_utilization_plan.md`; ini jadi referensi siklus pembelajaran berikutnya.
 
 ### Pembaruan — 6 Nov 2025
 - Notebook `notebooks/qc_dashboard.ipynb` menyediakan visualisasi heatmap Top-K provinsi, tren risk score & LOS ≤ 1, serta contoh logika alert berbasis `ml_scores_qc_summary.json`.

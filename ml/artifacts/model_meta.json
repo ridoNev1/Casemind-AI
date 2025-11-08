@@ -1,6 +1,6 @@
 {
   "model_name": "isolation_forest",
-  "model_version": "iso_v1",
+  "model_version": "iso_v2",
   "trained_on": "claims_normalized",
   "train_rows": 1176438,
   "contamination": 0.03,
@@ -94,7 +94,7 @@
     "service_type_RITL",
     "service_type_RJTL"
   ],
-  "prepared_by": "Rido & Ryan",
-  "train_timestamp": "2025-11-04T17:59:15.834667Z",
+  "prepared_by": "<nama>",
+  "train_timestamp": "2025-11-07T07:18:20.133378Z",
   "colab_notebook": "deteksi_anomali_unsupervised.ipynb"
 }

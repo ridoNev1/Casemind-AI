@@ -1,30 +1,20 @@
 # Development TODO
 
-Terakhir diperbarui: 6 Nov 2025  
+Terakhir diperbarui: 7 Nov 2025  
 PIC: Rido Maulana (user)
 
-## ETL & Rules
-- ✅ Map ID faskes unik + isi ulang label ICD yang kosong (pipeline kini menambah `facility_id`, `facility_name`, `facility_match_quality` = exact/regional/unmatched, serta fallback label ICD resmi).
-- ✅ Catat metadata run ETL (`etl_runs`) termasuk versi ruleset/model setiap eksekusi.
-- ✅ Integrasikan pipeline ETL dengan service risk scoring (otomasi refresh setelah build).
+---
 
-## Metadata & Logging
-- ✅ Tabel `ruleset_versions` + `etl_runs` + `ml_model_versions` otomatis terisi saat ETL / refresh ML (menyimpan juga `top_k_snapshot` untuk insight audit).
-- ✅ Dokumentasikan strategi verifikasi periodik (sampling manual + QC summary).
+## Backlog Inti (Hackathon Scope)
+- Finalize agentic AI copilot workflow (LLM summary + chat history + feedback loop) sesuai requirement hackathon dan siapkan demo script (curl + penjelasan flow auditor → copilot → feedback). Deliverable: endpoint `GET/POST /claims/{id}/chat`, integrasi `langchain-openai`, FE chat panel, serta narasi demo (lihat `docs/dev_checkpoint/chat_copilot_workflow.md`).
+- ✅ Rancang rencana pemanfaatan feedback auditor: definisikan struktur dataset monitoring & outline eksperimen supervised (lihat `docs/dev_checkpoint/feedback_utilization_plan.md`).
 
-## ML & Artefak
-- ✅ Definisikan schema/validation fitur (numeric/kategorikal) agar konsisten antara ETL, training, dan inference.
-- Lengkapi hashing/anonymisation pipeline bila ada sumber data tambahan.
+---
 
-## Operasional & Monitoring
-- ✅ Jadwalkan refresh ML otomatis via opsi `--refresh-ml` (integrasi dengan script ETL).
-- ✅ Bangun dashboard berbasis `ml_scores_qc_summary.json` (heatmap provinsi, proporsi flag, tren LOS).
-- ✅ Sediakan endpoint `/analytics/qc-status` untuk FE (alert validator/ops tinggal konsumsi endpoint ini).
+## Nice to Have / Post-Hackathon
 
-## Product & API Enhancements
-- ✅ Tambah filter tanggal pulang (`discharge_start`/`discharge_end`) pada `/claims/high-risk`.
-- ✅ Tambahkan endpoint reporting lanjutan (`/reports/tariff-insight`) sesuai prioritas auditor.
+### Data Governance & Integrasi
+- Lengkapi hashing/anonymisation pipeline bila ada sumber data tambahan agar PII tetap terlindungi saat pipeline diperluas.
 
-## Copilot & Feedback
-- Integrasikan provider LLM (OpenAI/Bedrock) beserta caching hasil agar summary dapat generatif.
-- Manfaatkan catatan auditor sebagai dataset monitoring dan mulai eksperimen model supervised begitu label mencukupi.
+### Copilot & Pembelajaran
+- (dipindah ke Backlog Inti)

@@ -25,15 +25,15 @@ Tujuan utama patch 1.1:
   1. **Staging**: membaca CSV FKRTL/metadata ke DuckDB.  
   2. **Transform**: hash + salt `patient_key`/`family_key`, menghitung LOS, amount gap, `peer_key`, `peer_mean/p90/std`, `cost_zscore`, serta flag `duplicate_pattern`. Menambah label fasilitas, severity, service type.  
   3. **Output**: menulis ke DuckDB (`instance/analytics.duckdb`) dan Parquet (`instance/data/claims_normalized.parquet`).
-- **Pekerjaan lanjut**: log ETL run (`etl_runs`) + metadata ruleset.
+- **Status metadata**: pencatatan `etl_runs`, `ruleset_versions`, dan `ml_model_versions` sudah otomatis via helper `ml/common/metadata.py`.
 
 ### 2.2 Training Lokal Isolation Forest
 - Notebook utama: `ml/training/notebooks/deteksi_anomali_unsupervised.ipynb`.
 - Fitur mengikuti `ml/training/config/features.yaml`.  
 - Pipeline: scaling numerik, one-hot kategori, training `IsolationForest`.  
 - Artefak:
-  - `ml/artifacts/isolation_forest_iso_v1.pkl`
-  - `ml/artifacts/scaler_iso_v1.pkl`
+  - `ml/artifacts/isolation_forest_iso_v2.pkl`
+  - `ml/artifacts/scaler_iso_v2.pkl`
   - `ml/artifacts/feature_columns.json`
   - `ml/artifacts/model_meta.json` (versi, prepared_by, timestamp, catatan).
 - Panduan detail: `ml/training/local_training_guide.md`.
@@ -65,7 +65,8 @@ Tujuan utama patch 1.1:
 ### 3.1 Audit Copilot (LLM Komunikasi)
 - Endpoint `GET /claims/{id}/summary` menyusun ringkasan audit deterministik (6 bagian + follow-up question) berdasarkan resep di `resource/docs_teknis/ml-llm-recipes.md`.  
 - Payload memuat identitas klaim, ringkasan biaya, peer stats, alasan flag, risk highlight, dan daftar pertanyaan tindak lanjut.  
-- Saat ini menggunakan template heuristik; siap diganti ke LLM generatif + cache ketika kredensial tersedia.
+- Default-nya menampilkan template deterministik; jika `OPEN_AI_API_KEY` tersedia maka service otomatis memanggil OpenAI `gpt-4o-mini` (melalui `langchain-openai`) dan menyimpan cache ringkasan generatif di `instance/cache/copilot/`.
+- FE akan menyajikan ringkasan ini sebagai **header chat room** sebelum percakapan agentic dimulai. Pesan chat dipersist di Postgres (`GET/POST /claims/{id}/chat`) agar bot memiliki memori lintas sesi. Desain lengkap tercatat di `docs/dev_checkpoint/chat_copilot_workflow.md`.
 
 ### 3.2 Feedback Loop (LLM Pembelajar)
 - Auditor memberikan feedback melalui `POST /claims/{id}/feedback` yang menyimpan `audit_outcomes` (`decision`, `correction_ratio`, `notes`, reviewer).  
@@ -97,11 +98,12 @@ Tujuan utama patch 1.1:
 2. **Training (jika update)**: jalankan notebook lokal → simpan artefak.  
 3. **Refresh Skor**: `python -m ml.pipelines.refresh_ml_scores --top-k 50` + `qc_summary`.  
 4. **API Running**: `flask --app wsgi.py run` → endpoint `/claims/high-risk`.  
-5. **Auditor Workflow**:  
-   - Login (JWT).  
-   - `/claims/high-risk` → klaim prioritas (filter/pagination).  
-   - Klik klaim → `/claims/{id}/summary` untuk ringkasan copilot (6 bagian + pertanyaan tindak lanjut).  
-   - Kirim catatan audit via `POST /claims/{id}/feedback` (decision, correction ratio, notes).  
+5. **Auditor Workflow (Chat UI)**:  
+   - Login (JWT) lalu buka daftar `/claims/high-risk`.  
+   - Pilih klaim → FE membuka chat room khusus claim_id dan memanggil `/claims/{id}/summary` untuk header + `GET /claims/{id}/chat` untuk history.  
+   - Auditor berdialog dengan bot (LLM) di pane chat: pertanyaan lanjutan diterjemahkan menjadi call analytics/reports relevan via agent LangChain.  
+   - Setiap bubble dikirim ke backend (`POST /claims/{id}/chat`) agar percakapan tersimpan.  
+   - Kirim keputusan via panel feedback di chat (memanggil `POST /claims/{id}/feedback`); entri feedback ditampilkan kembali ke thread.
 6. **Monitoring**:  
    - Baca `ml_scores_qc_summary.json` → dashboard/alert.  
    - Validator agent menandai pergeseran pola.  
@@ -120,6 +122,7 @@ Tujuan utama patch 1.1:
 - ETL memperkaya label diagnosis (`dx_primary_label`, `dx_primary_group`, `dx_secondary_labels`) agar siap tampil di API/FE tanpa lookup tambahan.
 - Join master rumah sakit kini menghasilkan `facility_id`, `facility_name`, dan status kecocokan (`facility_match_quality` = exact/regional/unmatched) per klaim; agregasi regional tetap dipertahankan sebagai fallback.
 - Laporan tarif baru `/reports/tariff-insight` menyajikan gap klaim vs pembayaran per fasilitas + casemix dengan filter province/facility/severity/service_type/dx_group.
+- Copilot summary memanfaatkan OpenAI (`gpt-4o-mini`, via `OPEN_AI_API_KEY`) dengan caching per klaim (`instance/cache/copilot/`); respon tetap menyediakan fallback deterministik bila kredensial belum ada.
 - Hapus `ml/training/colab_guidelines.md`; ganti dengan `ml/training/local_training_guide.md`.  
 - Tambah `docs/ops/runbook_risk_scoring.md` (SLA, refresh, rollback) dan `docs/ops/data_simulation.md` (LLM generator klaim).  
 - Update README & checkpoint (C2/C3) sesuai perubahan.
@@ -145,8 +148,8 @@ Tujuan utama patch 1.1:
 - Koordinasikan filter tambahan (tanggal discharge, kelas RS) dengan tim UI; update API bila diperlukan.
 
 ### 6.5 LLM & Feedback
-- Integrasikan LLM provider (OpenAI/Bedrock) + caching respon; saat ini summary deterministik template-based.  
-- Gunakan feedback auditor untuk evaluasi berkala + siapkan pipeline supervised (saat label tersedia) dan integrasikan ke risk engine.
+- ✅ Integrasi OpenAI + caching respon selesai; fallback template deterministik tetap tersedia jika kredensial kosong.  
+- TODO: dokumentasikan mekanisme invalidasi cache / bump prompt version dan gunakan feedback auditor untuk evaluasi berkala + eksperimen supervised (ketika label cukup) lalu integrasikan ke risk engine (lihat `docs/dev_checkpoint/feedback_utilization_plan.md`).
 
 ---
 

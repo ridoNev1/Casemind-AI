@@ -5,9 +5,12 @@ from ...auth import jwt_required
 from ...services.audit_copilot import (
     ClaimNotFound,
     FeedbackValidationError,
+    _ensure_claim_exists,
     generate_summary,
     record_feedback,
 )
+from ...services.chat_agent import generate_chat_reply
+from ...services.chat_history import append_chat_message, list_chat_messages
 from ...services.risk_scoring import get_high_risk_claims
 
 
@@ -91,3 +94,52 @@ def claim_feedback(claim_id: str):
         return jsonify({"error": str(exc)}), 400
 
     return jsonify({"data": outcome.to_dict()}), 201
+
+
+@blueprint.route("/<claim_id>/chat", methods=["GET"])
+@jwt_required
+def claim_chat_history(claim_id: str):
+    """Return persisted chat messages for a claim."""
+    try:
+        _ensure_claim_exists(claim_id)
+    except ClaimNotFound as exc:
+        return jsonify({"error": str(exc)}), 404
+
+    history = list_chat_messages(claim_id)
+    return jsonify({"data": history})
+
+
+@blueprint.route("/<claim_id>/chat", methods=["POST"])
+@jwt_required
+def claim_chat_interact(claim_id: str):
+    """Record auditor question and return copilot reply."""
+    try:
+        _ensure_claim_exists(claim_id)
+    except ClaimNotFound as exc:
+        return jsonify({"error": str(exc)}), 404
+
+    payload = request.get_json(silent=True) or {}
+    message = (payload.get("message") or "").strip()
+    if not message:
+        return jsonify({"error": "message tidak boleh kosong"}), 400
+
+    user = getattr(request, "user", None)
+    sender = getattr(user, "email", None) or "auditor"
+    user_msg = append_chat_message(
+        claim_id=claim_id,
+        sender=sender,
+        role="user",
+        content=message,
+        metadata={"origin": "auditor"},
+    )
+
+    reply_text, llm_meta = generate_chat_reply(claim_id, message)
+    bot_msg = append_chat_message(
+        claim_id=claim_id,
+        sender="copilot",
+        role="assistant",
+        content=reply_text,
+        metadata=llm_meta,
+    )
+
+    return jsonify({"data": {"user_message": user_msg, "bot_message": bot_msg}})

@@ -27,8 +27,8 @@ hingga integrasi agentic AI (audit copilot, validator, simulasi klaim).
 - Fitur mengacu ke `ml/training/config/features.yaml` (numerik + kategori baseline).
 - Validasi schema tersedia via `ml/common/schema.py` (`DataLoader.load_claims_normalized(..., validate=True)`) untuk memastikan kolom wajib sebelum training/inference.
 - Artefak disimpan ke `ml/artifacts/`:
-  - `isolation_forest_iso_v1.pkl`
-  - `scaler_iso_v1.pkl`
+  - `isolation_forest_iso_v2.pkl`
+  - `scaler_iso_v2.pkl`
   - `feature_columns.json`
   - `model_meta.json` (metadata training).
 
@@ -59,11 +59,12 @@ hingga integrasi agentic AI (audit copilot, validator, simulasi klaim).
 
 ### 1.5 Agentic AI
 
-- **Audit Copilot (LLM komunikasi)** – endpoint `GET /claims/{id}/summary` menghasilkan ringkasan deterministik + follow-up question sesuai resep LLM.
-- **Feedback Loop** – endpoint `POST /claims/{id}/feedback` menyimpan hasil audit ke tabel `audit_outcomes` sebagai label tuning.
+- **Chat-based Audit Copilot** – auditor memilih klaim dari `/claims/high-risk`, lalu masuk ke ruang chat yang menampilkan ringkasan `GET /claims/{id}/summary`, thread LLM Q&A, history dari Postgres (`GET /claims/{id}/chat`), dan panel feedback dalam satu layar. Agent LLM diorkestrasi dengan `langchain-openai` + tools (`peer_detail_tool`, `flag_explainer_tool`, `tariff_insight_tool`) sehingga bisa menarik data peer/flag/tarif sesuai pertanyaan auditor. Detail layout/flow: `docs/dev_checkpoint/chat_copilot_workflow.md`.
+- **Feedback Loop** – endpoint `POST /claims/{id}/feedback` menyimpan hasil audit ke tabel `audit_outcomes` sebagai label tuning, juga ditampilkan kembali pada thread chat.
 - **Validator Agent** – baca `ml_scores_qc_summary.json`, pantau tren Top-K, trigger alert bila terjadi drift.
 - **Data Simulation** – agen LLM menghasilkan klaim sintetis tiap 10–30 detik (`docs/ops/data_simulation.md`) untuk uji streaming.
 - **QC Dashboard** – notebook `notebooks/qc_dashboard.ipynb` memvisualkan heatmap provinsi, tren risk score, dan flag Top-K serta contoh ambang alert.
+- **Feedback Monitoring Plan** – view/tabel `claims_feedback_monitor` + outline eksperimen supervised dijelaskan di `docs/dev_checkpoint/feedback_utilization_plan.md`.
 
 ---
 
@@ -76,6 +77,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env  # isi variabel yang dibutuhkan
+# Wajib: set OPEN_AI_API_KEY=<token OpenAI> agar chat copilot/LLM summary berfungsi.
 ```
 
 ### 2.2 Jalankan ETL
@@ -106,6 +108,21 @@ flask --app wsgi.py run
 
 Contoh call: `GET /claims/high-risk?service_type=RITL&severity=sedang&page_size=5`
 (Authorization `Bearer <token>`).
+
+### 2.6 Uji Chat Copilot
+
+```bash
+# ambil history (biasanya kosong saat awal)
+curl -H "Authorization: Bearer <token>" \
+     http://127.0.0.1:5000/claims/<claim_id>/chat
+
+# kirim pertanyaan dan terima jawaban copilot
+curl -X POST -H "Authorization: Bearer <token>" -H "Content-Type: application/json" \
+     -d '{"message":"Jelaskan klaim ini kenapa dianggap fraud?"}' \
+     http://127.0.0.1:5000/claims/<claim_id>/chat
+```
+
+Respons `POST` mengembalikan bubble auditor + copilot lengkap dengan metadata model; gunakan claim ID dari endpoint `/claims/high-risk`.
 
 ### 2.6 Simulasi Klaim (opsional)
 

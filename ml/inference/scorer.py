@@ -11,8 +11,8 @@ import pandas as pd
 from ml.common.data_access import DataLoader
 
 ARTIFACT_DIR = Path("ml/artifacts")
-MODEL_FILE = ARTIFACT_DIR / "isolation_forest_iso_v1.pkl"
-SCALER_FILE = ARTIFACT_DIR / "scaler_iso_v1.pkl"
+MODEL_FILE = ARTIFACT_DIR / "isolation_forest_iso_v2.pkl"
+SCALER_FILE = ARTIFACT_DIR / "scaler_iso_v2.pkl"
 FEATURE_COLUMNS_FILE = ARTIFACT_DIR / "feature_columns.json"
 MODEL_META_FILE = ARTIFACT_DIR / "model_meta.json"
 

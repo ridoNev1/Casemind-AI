@@ -34,8 +34,8 @@ Notebook sudah dipaketkan dengan langkah berikut:
 5. Menyatukan skor ke DataFrame dan menghitung `ml_score_normalized`.
 6. Quality check (Top 3% summary: biaya, cost_zscore, proporsi LOS ≤ 1).
 7. Ekspor artefak ke `ml/artifacts/`:
-   - `isolation_forest_iso_v1.pkl`
-   - `scaler_iso_v1.pkl`
+   - `isolation_forest_iso_v2.pkl`
+   - `scaler_iso_v2.pkl`
    - `feature_columns.json`
    - `model_meta.json`
 

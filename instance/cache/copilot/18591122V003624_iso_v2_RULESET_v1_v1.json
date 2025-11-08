@@ -1,0 +1,6 @@
+{
+  "summary": "### Ringkasan Audit Klaim\n\n1. **Identitas Singkat**: \n   - Diagnosa: Maternal care due to uterine scar from previous surgery (O34)\n   - Kelas RS: RS Kelas C\n   - Wilayah: Kalimantan Selatan, Hulu Sungai Tengah\n   - Length of Stay (LOS): 4 hari\n\n2. **Ringkasan Biaya**: \n   - Claimed: Rp 10.020.000\n   - Paid: Rp 10.020.000\n   - Gap: Rp 0\n\n3. **Perbandingan Peer**: \n   - Peer Key: O34|berat|RS Kelas C|KALIMANTAN SELATAN, P90: Rp 10.020.000, z-score: 1.57.\n\n4. **Alasan Flag**: \n   - Tidak ada flag.\n\n5. **Potensi Risiko**: \n   - Indikasi risiko terdeteksi dengan skor risiko 0.71.\n\n6. **Pertanyaan Tindak Lanjut untuk Auditor**: \n   - Apakah dokumentasi pendukung (resume medis, SEP, log tindakan) sudah lengkap?\n   - Apakah terdapat catatan audit sebelumnya terhadap klaim serupa dari Faskes yang sama?\n   - Perlu koordinasi lanjut dengan tim verifikator klinis terkait temuan ini?",
+  "model": "gpt-4o-mini",
+  "generated_at": "2025-11-07T08:01:44.491674+00:00",
+  "prompt_version": "v1"
+}

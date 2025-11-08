@@ -1,12 +1,15 @@
 from __future__ import annotations
 
+import json
+import math
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
 
 import pandas as pd
-
 from flask import current_app
+import numpy as np
 
 from ml.common.data_access import DataLoader
 from ml.inference.scorer import MLScorer
@@ -48,6 +51,241 @@ DEFAULT_QUESTIONS = [
 ]
 
 ALLOWED_DECISIONS = {"approved", "partial", "rejected"}
+PROMPT_VERSION = "v1"
+
+
+def _slugify(value: str) -> str:
+    return "".join(ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in value)
+
+
+def _get_llm_config() -> dict[str, Any]:
+    provider = (current_app.config.get("COPILOT_LLM_PROVIDER") or "openai").lower()
+    api_key = current_app.config.get("OPENAI_API_KEY")
+    if provider != "openai" or not api_key:
+        return {}
+
+    cache_setting = current_app.config.get("COPILOT_CACHE_DIR")
+    if cache_setting:
+        cache_dir = Path(cache_setting)
+        if not cache_dir.is_absolute():
+            project_root = Path(current_app.root_path).resolve().parent
+            cache_dir = project_root / cache_dir
+    else:
+        cache_dir = Path(current_app.instance_path) / "cache" / "copilot"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+
+    return {
+        "provider": provider,
+        "api_key": api_key,
+        "model": current_app.config.get("COPILOT_LLM_MODEL", "gpt-4o-mini"),
+        "temperature": float(current_app.config.get("COPILOT_LLM_TEMPERATURE", 0.2)),
+        "max_tokens": int(current_app.config.get("COPILOT_LLM_MAX_TOKENS", 400)),
+        "cache_dir": cache_dir,
+    }
+
+
+def _build_llm_payload(
+    claim_id: str,
+    row: pd.Series,
+    flags: list[str],
+    questions: list[str],
+    risk_score: float,
+    rule_score: Any,
+    ml_score: Any,
+    ml_score_normalized: Any,
+) -> dict[str, Any]:
+    def _safe_float(value: Any) -> float | None:
+        if value is None or pd.isna(value):
+            return None
+        return float(value)
+
+    def _safe_int(value: Any) -> int | None:
+        if value is None or pd.isna(value):
+            return None
+        return int(value)
+
+    def _safe_date(value: Any) -> str | None:
+        if value is None or pd.isna(value):
+            return None
+        try:
+            return pd.to_datetime(value).strftime("%Y-%m-%d")
+        except Exception:
+            return str(value)
+
+    dx_secondary = row.get("dx_secondary_codes")
+    if isinstance(dx_secondary, list):
+        dx_secondary_list = [str(code) for code in dx_secondary]
+    elif isinstance(dx_secondary, pd.Series):
+        dx_secondary_list = [str(code) for code in dx_secondary.tolist()]
+    elif isinstance(dx_secondary, (np.ndarray, tuple, set)):
+        dx_secondary_list = [str(code) for code in list(dx_secondary)]
+    elif dx_secondary is None or (isinstance(dx_secondary, float) and math.isnan(dx_secondary)):
+        dx_secondary_list = []
+    elif isinstance(dx_secondary, str):
+        dx_secondary_list = [dx_secondary]
+    else:
+        dx_secondary_list = [str(dx_secondary)]
+
+    return {
+        "claim_id": claim_id,
+        "dx": {
+            "code": row.get("dx_primary_code"),
+            "name": row.get("dx_primary_label") or row.get("dx_primary_code"),
+        },
+        "facility": {
+            "class": row.get("facility_class"),
+            "ownership": row.get("facility_ownership"),
+            "province": row.get("province_name"),
+            "district": row.get("district_name"),
+        },
+        "episode": {
+            "admit": _safe_date(row.get("admit_dt")),
+            "discharge": _safe_date(row.get("discharge_dt")),
+            "los": _safe_int(row.get("los")),
+        },
+        "finance": {
+            "claimed": _safe_float(row.get("amount_claimed")),
+            "paid": _safe_float(row.get("amount_paid")),
+            "gap": _safe_float(row.get("amount_gap")),
+        },
+        "peer": {
+            "key": row.get("peer_key"),
+            "p90": _safe_float(row.get("peer_p90")),
+            "z": _safe_float(row.get("cost_zscore")),
+        },
+        "risk": {
+            "risk_score": risk_score,
+            "rule_score": _safe_float(rule_score),
+            "ml_score": _safe_float(ml_score),
+            "ml_score_normalized": _safe_float(ml_score_normalized),
+        },
+        "flags": flags,
+        "dx_secondary": dx_secondary_list,
+        "questions_seed": questions,
+    }
+
+
+def _generate_llm_summary(
+    claim_id: str,
+    payload: dict[str, Any],
+    model_version: str,
+    ruleset_version: str,
+) -> dict[str, Any]:
+    cfg = _get_llm_config()
+    if not cfg:
+        return {"enabled": False, "summary": None}
+
+    cache_file = (
+        cfg["cache_dir"]
+        / f"{_slugify(claim_id)}_{_slugify(model_version)}_{_slugify(ruleset_version)}_{PROMPT_VERSION}.json"
+    )
+    if cache_file.exists():
+        try:
+            cached = json.loads(cache_file.read_text())
+            return {
+                "enabled": True,
+                "summary": cached.get("summary"),
+                "provider": cfg["provider"],
+                "model": cached.get("model", cfg["model"]),
+                "cached": True,
+                "generated_at": cached.get("generated_at"),
+                "prompt_version": cached.get("prompt_version", PROMPT_VERSION),
+            }
+        except Exception:
+            cache_file.unlink(missing_ok=True)
+
+    try:
+        from openai import OpenAI
+    except ImportError as exc:
+        current_app.logger.warning("OpenAI client tidak tersedia: %s", exc)
+        return {
+            "enabled": True,
+            "summary": None,
+            "provider": cfg["provider"],
+            "model": cfg["model"],
+            "cached": False,
+            "generated_at": None,
+            "prompt_version": PROMPT_VERSION,
+            "error": "openai-client-missing",
+        }
+
+    client = OpenAI(api_key=cfg["api_key"])
+    payload_json = json.dumps(payload, ensure_ascii=False, indent=2)
+    system_prompt = (
+        "Anda adalah asisten audit klaim kesehatan BPJS. Gunakan hanya informasi yang diberikan. "
+        "Jawab ringkas, akurat, dan dalam bahasa Indonesia."
+    )
+    user_prompt = (
+        "Susun ringkasan audit untuk klaim berikut, 6 bagian:\n"
+        "1) Identitas singkat (diagnosa, kelas RS, wilayah, LOS).\n"
+        "2) Ringkasan biaya (claimed, paid, gap).\n"
+        "3) Perbandingan peer (peer_key, P90, z-score) satu kalimat.\n"
+        "4) Alasan flag (sebut nama flag + penjelasan singkat per flag, atau \"Tidak ada flag\" jika kosong).\n"
+        "5) Potensi risiko (gunakan kata 'indikasi').\n"
+        "6) 3-5 pertanyaan tindak lanjut untuk auditor.\n\n"
+        f"Data:\n{payload_json}"
+    )
+
+    try:
+        completion = client.responses.create(
+            model=cfg["model"],
+            input=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ],
+            temperature=cfg["temperature"],
+            max_output_tokens=cfg["max_tokens"],
+        )
+        summary_text = getattr(completion, "output_text", None)
+        if summary_text is None:
+            pieces: list[str] = []
+            for item in getattr(completion, "output", []) or []:
+                for content in getattr(item, "content", []) or []:
+                    text_obj = getattr(content, "text", None)
+                    value = None
+                    if hasattr(text_obj, "value"):
+                        value = text_obj.value
+                    elif isinstance(text_obj, str):
+                        value = text_obj
+                    if value:
+                        pieces.append(str(value))
+            summary_text = "".join(pieces).strip() if pieces else None
+        if summary_text:
+            summary_text = summary_text.strip()
+        generated_at = datetime.now(tz=timezone.utc).isoformat()
+        cache_file.write_text(
+            json.dumps(
+                {
+                    "summary": summary_text,
+                    "model": cfg["model"],
+                    "generated_at": generated_at,
+                    "prompt_version": PROMPT_VERSION,
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return {
+            "enabled": True,
+            "summary": summary_text,
+            "provider": cfg["provider"],
+            "model": cfg["model"],
+            "cached": False,
+            "generated_at": generated_at,
+            "prompt_version": PROMPT_VERSION,
+        }
+    except Exception as exc:
+        current_app.logger.warning("Gagal menghasilkan ringkasan LLM untuk %s: %s", claim_id, exc)
+        return {
+            "enabled": True,
+            "summary": None,
+            "provider": cfg["provider"],
+            "model": cfg["model"],
+            "cached": False,
+            "generated_at": None,
+            "prompt_version": PROMPT_VERSION,
+            "error": str(exc),
+        }
 
 
 class ClaimNotFound(Exception):
@@ -203,6 +441,25 @@ def generate_summary(claim_id: str) -> dict[str, Any]:
     if len(questions) > 5:
         questions = questions[:5]
 
+    llm_payload = _build_llm_payload(
+        claim_id=claim_id,
+        row=row,
+        flags=flags,
+        questions=questions,
+        risk_score=risk_score,
+        rule_score=rule_score,
+        ml_score=ml_score,
+        ml_score_normalized=ml_score_normalized,
+    )
+    llm_result = _generate_llm_summary(
+        claim_id=claim_id,
+        payload=llm_payload,
+        model_version=model_version or "unknown",
+        ruleset_version=ruleset_version or "unknown",
+    )
+    generative_summary = llm_result.get("summary")
+    llm_meta = {k: v for k, v in llm_result.items() if k != "summary"}
+
     sections = [
         {"title": "Identitas singkat", "content": ident_text},
         {"title": "Ringkasan biaya", "content": cost_text},
@@ -233,7 +490,9 @@ def generate_summary(claim_id: str) -> dict[str, Any]:
         "flags": flags,
         "sections": sections,
         "narrative": narrative,
+        "generative_summary": generative_summary,
         "follow_up_questions": questions,
+        "llm": llm_meta,
         "peer": {
             "key": peer_key,
             "p90": None if pd.isna(peer_p90) else float(peer_p90),

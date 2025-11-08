@@ -322,6 +322,94 @@ def build_spec(config: Mapping[str, str], server_url: str) -> dict:
                     },
                 }
             },
+            "/claims/{claim_id}/chat": {
+                "get": {
+                    "summary": "Retrieve chat history for a claim",
+                    "tags": ["Claims"],
+                    "security": [{"bearerAuth": []}],
+                    "parameters": [
+                        {
+                            "name": "claim_id",
+                            "in": "path",
+                            "required": True,
+                            "schema": {"type": "string"},
+                            "description": "Identifier of the claim whose chat thread is requested",
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "Chat history ordered ascending by creation time",
+                            "content": {
+                                "application/json": {
+                                    "schema": {"$ref": "#/components/schemas/ChatHistoryResponse"}
+                                }
+                            },
+                        },
+                        "401": {
+                            "description": "Unauthorized",
+                            "content": {
+                                "application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}
+                            },
+                        },
+                        "404": {
+                            "description": "Claim not found",
+                            "content": {
+                                "application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}
+                            },
+                        },
+                    },
+                },
+                "post": {
+                    "summary": "Send a chat message and receive copilot reply",
+                    "tags": ["Claims"],
+                    "security": [{"bearerAuth": []}],
+                    "parameters": [
+                        {
+                            "name": "claim_id",
+                            "in": "path",
+                            "required": True,
+                            "schema": {"type": "string"},
+                            "description": "Identifier of the claim being discussed",
+                        }
+                    ],
+                    "requestBody": {
+                        "required": True,
+                        "content": {
+                            "application/json": {
+                                "schema": {"$ref": "#/components/schemas/ChatMessageRequest"}
+                            }
+                        },
+                    },
+                    "responses": {
+                        "200": {
+                            "description": "Auditor message stored and copilot reply generated",
+                            "content": {
+                                "application/json": {
+                                    "schema": {"$ref": "#/components/schemas/ChatInteractionResponse"}
+                                }
+                            },
+                        },
+                        "400": {
+                            "description": "Missing or invalid message payload",
+                            "content": {
+                                "application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}
+                            },
+                        },
+                        "401": {
+                            "description": "Unauthorized",
+                            "content": {
+                                "application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}
+                            },
+                        },
+                        "404": {
+                            "description": "Claim not found",
+                            "content": {
+                                "application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}
+                            },
+                        },
+                    },
+                },
+            },
             "/reports/severity-mismatch": {
                 "get": {
                     "summary": "Severity mismatch report",
@@ -610,7 +698,7 @@ def build_spec(config: Mapping[str, str], server_url: str) -> dict:
                                 "total": {"type": "integer", "example": 1176438},
                                 "page": {"type": "integer", "example": 1},
                                 "page_size": {"type": "integer", "example": 50},
-                                "model_version": {"type": "string", "example": "iso_v1"},
+                                "model_version": {"type": "string", "example": "iso_v2"},
                                 "ruleset_version": {"type": "string", "example": "RULESET_v1"},
                                 "filters": {
                                     "type": "object",
@@ -670,7 +758,7 @@ def build_spec(config: Mapping[str, str], server_url: str) -> dict:
                         },
                         "duplicate_pattern": {"type": "boolean", "example": True},
                         "peer": {"$ref": "#/components/schemas/PeerStats"},
-                        "model_version": {"type": "string", "example": "iso_v1"},
+                        "model_version": {"type": "string", "example": "iso_v2"},
                         "ruleset_version": {"type": "string", "example": "RULESET_v1"},
                     },
                     "required": [
@@ -709,7 +797,7 @@ def build_spec(config: Mapping[str, str], server_url: str) -> dict:
                     "properties": {
                         "claim_id": {"type": "string", "example": "318510322V002489"},
                         "generated_at": {"type": "string", "format": "date-time"},
-                        "model_version": {"type": "string", "example": "iso_v1"},
+                        "model_version": {"type": "string", "example": "iso_v2"},
                         "ruleset_version": {"type": "string", "example": "RULESET_v1"},
                         "risk_score": {"type": "number", "format": "float", "example": 0.92},
                         "rule_score": {"type": "number", "format": "float", "nullable": True},
@@ -726,10 +814,16 @@ def build_spec(config: Mapping[str, str], server_url: str) -> dict:
                             "items": {"$ref": "#/components/schemas/SummarySection"},
                         },
                         "narrative": {"type": "string"},
+                        "generative_summary": {
+                            "type": "string",
+                            "nullable": True,
+                            "description": "Ringkasan generatif dari LLM (jika tersedia).",
+                        },
                         "follow_up_questions": {
                             "type": "array",
                             "items": {"type": "string"},
                         },
+                        "llm": {"$ref": "#/components/schemas/CopilotLLMInfo"},
                         "peer": {
                             "type": "object",
                             "properties": {
@@ -782,6 +876,19 @@ def build_spec(config: Mapping[str, str], server_url: str) -> dict:
                         "content": {"type": "string"},
                     },
                     "required": ["title", "content"],
+                },
+                "CopilotLLMInfo": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": {"type": "boolean", "example": True},
+                        "provider": {"type": "string", "nullable": True, "example": "openai"},
+                        "model": {"type": "string", "nullable": True, "example": "gpt-4o-mini"},
+                        "cached": {"type": "boolean", "nullable": True, "example": False},
+                        "generated_at": {"type": "string", "format": "date-time", "nullable": True},
+                        "prompt_version": {"type": "string", "example": "v1"},
+                        "error": {"type": "string", "nullable": True},
+                    },
+                    "required": ["enabled"],
                 },
                 "SeverityMismatchResponse": {
                     "type": "object",
@@ -965,6 +1072,56 @@ def build_spec(config: Mapping[str, str], server_url: str) -> dict:
                         "count": {"type": "integer", "example": 32},
                     },
                     "required": ["name", "count"],
+                },
+                "ChatMessage": {
+                    "type": "object",
+                    "properties": {
+                        "id": {"type": "string", "format": "uuid"},
+                        "claim_id": {"type": "string", "example": "18591122V003624"},
+                        "sender": {"type": "string", "example": "ridolaurent021123@gmail.com"},
+                        "role": {"type": "string", "example": "user"},
+                        "content": {"type": "string"},
+                        "metadata": {
+                            "type": "object",
+                            "description": "Additional attributes such as origin or LLM metadata",
+                        },
+                        "created_at": {"type": "string", "format": "date-time"},
+                    },
+                    "required": ["id", "claim_id", "sender", "role", "content", "created_at"],
+                },
+                "ChatHistoryResponse": {
+                    "type": "object",
+                    "properties": {
+                        "data": {
+                            "type": "array",
+                            "items": {"$ref": "#/components/schemas/ChatMessage"},
+                        }
+                    },
+                    "required": ["data"],
+                },
+                "ChatMessageRequest": {
+                    "type": "object",
+                    "properties": {
+                        "message": {
+                            "type": "string",
+                            "example": "Jelaskan klaim ini kenapa dianggap fraud?",
+                        }
+                    },
+                    "required": ["message"],
+                },
+                "ChatInteractionResponse": {
+                    "type": "object",
+                    "properties": {
+                        "data": {
+                            "type": "object",
+                            "properties": {
+                                "user_message": {"$ref": "#/components/schemas/ChatMessage"},
+                                "bot_message": {"$ref": "#/components/schemas/ChatMessage"},
+                            },
+                            "required": ["user_message", "bot_message"],
+                        }
+                    },
+                    "required": ["data"],
                 },
                 "AuditFeedbackRequest": {
                     "type": "object",

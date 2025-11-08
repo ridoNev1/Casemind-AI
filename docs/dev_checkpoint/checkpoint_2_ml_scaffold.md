@@ -32,9 +32,9 @@ PIC: Rido Maulana (user)
 
 ### Pencapaian
 - Notebook `ml/training/notebooks/deteksi_anomali_unsupervised.ipynb` kini menjalankan alur penuh: memuat data via `DataLoader`, mengambil fitur sesuai `ml/training/config/features.yaml`, melakukan scaling numerik terpisah, encoding kategori, lalu melatih `IsolationForest` (200 trees, contamination 3%).
-- Artefak baseline `iso_v1` tersimpan di `ml/artifacts/`:
-  - `isolation_forest_iso_v1.pkl`
-  - `scaler_iso_v1.pkl`
+- Artefak terbaru `iso_v2` tersimpan di `ml/artifacts/`:
+  - `isolation_forest_iso_v2.pkl`
+  - `scaler_iso_v2.pkl`
   - `feature_columns.json`
   - `model_meta.json` (sudah diisi `prepared_by` = Rido Maulana).
 - Quality check: Top 3% klaim (berdasarkan `ml_score`) memiliki `amount_claimed` ±3× populasi dan `cost_zscore` ≈ 1.1; proporsi LOS ≤ 1 turun → sinyal klaim high-cost terangkat sesuai ekspektasi.
