@@ -31,10 +31,17 @@ SWAGGER_TEMPLATE = """
 """
 
 
+def _external_url(endpoint: str) -> str:
+    """Return absolute URL respecting X-Forwarded-Proto (https on Railway)."""
+    scheme = request.headers.get("X-Forwarded-Proto", request.scheme)
+    return url_for(endpoint, _external=True, _scheme=scheme)
+
+
 @blueprint.route("/openapi.json")
 def openapi_json():
     """Serve the OpenAPI specification."""
-    server_url = request.host_url.rstrip("/")
+    scheme = request.headers.get("X-Forwarded-Proto", request.scheme)
+    server_url = f"{scheme}://{request.host.rstrip('/')}"
     spec = build_spec(current_app.config, server_url)
     return jsonify(spec)
 
@@ -42,7 +49,7 @@ def openapi_json():
 @blueprint.route("/swagger")
 def swagger_ui():
     """Render a minimal Swagger UI powered by CDN assets."""
-    spec_url = url_for("docs.openapi_json", _external=True)
+    spec_url = _external_url("docs.openapi_json")
     title = current_app.config.get("API_TITLE", "Casemind Claims API - Docs")
     return render_template_string(SWAGGER_TEMPLATE, spec_url=spec_url, title=title)
 
