@@ -30,7 +30,8 @@ class DataLoader:
         config_path: Path = PIPELINE_CONFIG_PATH,
     ) -> None:
         self._config = self._load_config(config_path)
-        self.duckdb_path = duckdb_path or self._config.get("duckdb_path")
+        env_duckdb = os.getenv("DUCKDB_PATH")
+        self.duckdb_path = duckdb_path or env_duckdb or self._config.get("duckdb_path")
         output_cfg = self._config.get("output", {})
         self.parquet_dir = Path(output_cfg.get("parquet_dir", "instance/data"))
         self.table_name = output_cfg.get("table_name", "claims_normalized")
