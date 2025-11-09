@@ -208,8 +208,24 @@ def _get_ruleset_version() -> str:
         return "RULESET_v1"
 
 
+def _is_na(value: Any) -> bool:
+    if value is None:
+        return True
+    try:
+        return bool(pd.isna(value))
+    except TypeError:
+        return False
+
+
+def _sanitize_json_value(value: Any) -> Any:
+    if _is_na(value):
+        return None
+    return value
+
+
 def _to_optional_float(value: Any) -> float | None:
-    if value is None or pd.isna(value):
+    value = _sanitize_json_value(value)
+    if value is None:
         return None
     try:
         return float(value)
@@ -218,7 +234,8 @@ def _to_optional_float(value: Any) -> float | None:
 
 
 def _to_optional_int(value: Any) -> int | None:
-    if value is None or pd.isna(value):
+    value = _sanitize_json_value(value)
+    if value is None:
         return None
     try:
         return int(value)
@@ -227,7 +244,8 @@ def _to_optional_int(value: Any) -> int | None:
 
 
 def _to_optional_str(value: Any) -> str | None:
-    if value is None or (isinstance(value, float) and pd.isna(value)):
+    value = _sanitize_json_value(value)
+    if value is None:
         return None
     text = str(value).strip()
     return text if text else None
@@ -430,8 +448,11 @@ def _build_response(
 def _to_optional_list(value: Any) -> list[Any] | None:
     if value is None:
         return None
-    if isinstance(value, (list, tuple)):
-        return list(value)
-    if isinstance(value, np.ndarray):
-        return value.tolist()
-    return [value]
+    if isinstance(value, (list, tuple, np.ndarray)):
+        cleaned = [_sanitize_json_value(v) for v in list(value)]
+        cleaned = [val for val in cleaned if val is not None]
+        return cleaned or []
+    single = _sanitize_json_value(value)
+    if single is None:
+        return []
+    return [single]
