@@ -62,7 +62,7 @@ hingga integrasi agentic AI (audit copilot, validator, simulasi klaim).
 - **Chat-based Audit Copilot** – auditor memilih klaim dari `/claims/high-risk`, lalu masuk ke ruang chat yang menampilkan ringkasan `GET /claims/{id}/summary`, thread LLM Q&A, history dari Postgres (`GET /claims/{id}/chat`), dan panel feedback dalam satu layar. Agent LLM diorkestrasi dengan `langchain-openai` + tools (`peer_detail_tool`, `flag_explainer_tool`, `tariff_insight_tool`) sehingga bisa menarik data peer/flag/tarif sesuai pertanyaan auditor. Detail layout/flow: `docs/dev_checkpoint/chat_copilot_workflow.md`.
 - **Feedback Loop** – endpoint `POST /claims/{id}/feedback` menyimpan hasil audit ke tabel `audit_outcomes` sebagai label tuning, juga ditampilkan kembali pada thread chat.
 - **Validator Agent** – baca `ml_scores_qc_summary.json`, pantau tren Top-K, trigger alert bila terjadi drift.
-- **Data Simulation** – agen LLM menghasilkan klaim sintetis tiap 10–30 detik (`docs/ops/data_simulation.md`) untuk uji streaming.
+- **Data Simulation** – agen LLM menghasilkan klaim sintetis tiap 10–30 detik (`docs/ops/data_simulation.md`) untuk uji streaming. Gunakan CLI `python -m ops.simulation.run_simulator --duration 300 --interval 10 --max-claims 50` untuk menambah klaim sintetis secara terkontrol.
 - **QC Dashboard** – notebook `notebooks/qc_dashboard.ipynb` memvisualkan heatmap provinsi, tren risk score, dan flag Top-K serta contoh ambang alert.
 - **Feedback Monitoring Plan** – view/tabel `claims_feedback_monitor` + outline eksperimen supervised dijelaskan di `docs/dev_checkpoint/feedback_utilization_plan.md`.
 
