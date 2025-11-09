@@ -4,6 +4,7 @@ from collections.abc import Mapping
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+import os
 
 import json
 import numpy as np
@@ -18,14 +19,14 @@ SCORES_CACHE_FILENAME = "claims_ml_scores.parquet"
 SCORES_CACHE_TABLE = "claims_ml_scores"
 QC_LOG_DIRNAME = "instance/logs"
 QC_TOP_K = 50
+MAX_FETCH_ROWS = int(os.getenv("CLAIMS_MAX_QUERY_ROWS", "200000"))
 
 
 def get_high_risk_claims(filters: Mapping[str, Any]) -> dict[str, Any]:
     loader = DataLoader()
     scorer = MLScorer()
 
-    data_filters = _build_data_filters(filters)
-    df = loader.load_claims_normalized(filters=data_filters)
+    df, total_count = _fetch_filtered_claims(loader, filters)
     if df.empty:
         return _build_response([], total=0, page=1, page_size=_determine_page_size(filters), ruleset_version=_get_ruleset_version(), model_version=scorer.model_version)
 
@@ -92,7 +93,7 @@ def get_high_risk_claims(filters: Mapping[str, Any]) -> dict[str, Any]:
 
     return _build_response(
         results,
-        total=len(df),
+        total=total_count,
         page=page,
         page_size=page_size,
         ruleset_version=ruleset_version,
@@ -100,16 +101,62 @@ def get_high_risk_claims(filters: Mapping[str, Any]) -> dict[str, Any]:
     )
 
 
-def _build_data_filters(filters: Mapping[str, Any]) -> dict[str, object]:
-    province = filters.get("province")
-    dx = filters.get("dx")
+def _fetch_filtered_claims(loader: DataLoader, filters: Mapping[str, Any]) -> tuple[pd.DataFrame, int]:
+    clauses: list[str] = []
+    params: list[Any] = []
 
-    data_filters: dict[str, object] = {}
-    if province:
-        data_filters["province_name"] = province.upper()
-    if dx:
-        data_filters["dx_primary_code"] = dx.upper()
-    return data_filters
+    def add_equals(column: str, value: Any, transform=None) -> None:
+        if value is None or value == "":
+            return
+        val = transform(value) if transform else value
+        clauses.append(f"{column} = ?")
+        params.append(val)
+
+    add_equals("province_name", filters.get("province"), lambda v: str(v).upper())
+    add_equals("dx_primary_code", filters.get("dx"), lambda v: str(v).upper())
+    add_equals("facility_class", filters.get("facility_class"))
+    add_equals("LOWER(severity_group)", filters.get("severity"), lambda v: str(v).lower())
+    add_equals("UPPER(service_type)", filters.get("service_type"), lambda v: str(v).upper())
+
+    start_date = filters.get("start_date")
+    end_date = filters.get("end_date")
+    discharge_start = filters.get("discharge_start")
+    discharge_end = filters.get("discharge_end")
+
+    if start_date:
+        clauses.append("admit_dt >= ?")
+        params.append(start_date)
+    if end_date:
+        clauses.append("admit_dt <= ?")
+        params.append(end_date)
+    if discharge_start:
+        clauses.append("discharge_dt >= ?")
+        params.append(discharge_start)
+    if discharge_end:
+        clauses.append("discharge_dt <= ?")
+        params.append(discharge_end)
+
+    where_sql = f"WHERE {' AND '.join(clauses)}" if clauses else ""
+
+    count_sql = f"SELECT COUNT(*) AS total FROM {loader.table_name} {where_sql}"
+    total_df = loader.query(count_sql, params)
+    total = int(total_df["total"].iloc[0]) if not total_df.empty else 0
+    if total == 0:
+        return pd.DataFrame(), 0
+
+    limit_rows = min(total, MAX_FETCH_ROWS)
+    select_sql = f"SELECT * FROM {loader.table_name} {where_sql} LIMIT ?"
+    select_params = params + [limit_rows]
+    df = loader.query(select_sql, select_params)
+
+    if total > MAX_FETCH_ROWS:
+        current_app.logger.warning(
+            "Filtered claim dataset truncated to %s rows (total=%s). Adjust CLAIMS_MAX_QUERY_ROWS if needed.",
+            MAX_FETCH_ROWS,
+            total,
+        )
+
+    return df, total
 
 
 def _compute_rule_enrichment(df: pd.DataFrame) -> pd.DataFrame:
