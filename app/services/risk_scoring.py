@@ -40,13 +40,19 @@ def get_high_risk_claims(filters: Mapping[str, Any]) -> dict[str, Any]:
 
     df["risk_score"] = df[["rule_score", "ml_score_normalized"]].max(axis=1).fillna(0)
     df = _apply_advanced_filters(df, filters)
-    df = df.sort_values("risk_score", ascending=False)
+    df["flag_count"] = df["flags"].apply(lambda value: len(value) if isinstance(value, list) else 0)
+    df["has_flags"] = df["flag_count"] > 0
+    df = df.sort_values(
+        by=["has_flags", "flag_count", "risk_score"],
+        ascending=[False, False, False],
+    )
 
     page_size = _determine_page_size(filters)
     page = _determine_page(filters)
     start = (page - 1) * page_size
     end = start + page_size
     paged_df = df.iloc[start:end].copy()
+    paged_df = paged_df.drop(columns=["flag_count", "has_flags"], errors="ignore")
 
     ruleset_version = _get_ruleset_version()
 
