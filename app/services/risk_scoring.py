@@ -13,6 +13,7 @@ from flask import current_app
 
 from ml.common.data_access import DataLoader
 from ml.inference.scorer import MLScorer
+from ..models import AuditOutcome
 
 DEFAULT_PAGE_SIZE = 50
 SCORES_CACHE_FILENAME = "claims_ml_scores.parquet"
@@ -57,6 +58,8 @@ def get_high_risk_claims(filters: Mapping[str, Any]) -> dict[str, Any]:
     ruleset_version = _get_ruleset_version()
 
     results: list[dict[str, Any]] = []
+    latest_feedback_map = _fetch_latest_feedback_map(paged_df["claim_id"].tolist())
+
     for row in paged_df.itertuples(index=False):
         results.append(
             {
@@ -96,6 +99,7 @@ def get_high_risk_claims(filters: Mapping[str, Any]) -> dict[str, Any]:
                 "risk_score": _to_optional_float(row.risk_score),
                 "model_version": row.model_version,
                 "ruleset_version": ruleset_version,
+                "latest_feedback": latest_feedback_map.get(row.claim_id),
             }
         )
 
@@ -374,6 +378,21 @@ def _apply_advanced_filters(df: pd.DataFrame, filters: Mapping[str, Any]) -> pd.
         result = result[mask]
 
     return result
+
+
+def _fetch_latest_feedback_map(claim_ids: list[str]) -> dict[str, dict[str, Any]]:
+    if not claim_ids:
+        return {}
+    outcomes = (
+        AuditOutcome.query.filter(AuditOutcome.claim_id.in_(claim_ids))
+        .order_by(AuditOutcome.claim_id, AuditOutcome.created_at.desc())
+        .all()
+    )
+    latest_map: dict[str, dict[str, Any]] = {}
+    for outcome in outcomes:
+        if outcome.claim_id not in latest_map:
+            latest_map[outcome.claim_id] = outcome.to_dict()
+    return latest_map
 
 
 def _parse_float(value: Any) -> float | None:
