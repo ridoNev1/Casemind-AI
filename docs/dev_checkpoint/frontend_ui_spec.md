@@ -26,24 +26,20 @@ Dokumen ini menjadi acuan teknis bagi tim Frontend saat membangun dashboard audi
 2. **Halaman “High-Risk Claims”**
 
    - Layout split view:
-     - **Panel kiri**: daftar klaim (table atau list) dengan kolom `claim_id`, `facility_name`, `dx_primary_label`, `amount_claimed`, `risk_score`, flags (chips).
-     - **Panel kanan**: chat room + ringkasan klaim (lihat #3).
-   - Filter bar di atas daftar memuat parameter:
-     - `service_type` (dropdown), `severity` (dropdown), `facility_class` (dropdown), `start_date` & `end_date`, `discharge_start` & `discharge_end`, `province` (opsional).
-     - Tombol “Reset filter” & “Refresh”.
-   - Pagination: gunakan `page` dan `page_size` (default 50) sesuai response backend.
+     - **Panel kiri**: tabel klaim dengan kolom nomor, klaim, fasilitas/wilayah, severity-service, biaya, risk score, flags, badge status (Reviewed/Pending). Filter & klaim terpilih tersinkron ke URL (`?severity=sedang&service_type=RITL&page=2&selected=...`).
+     - **Panel kanan**: drawer detail + chat yang terbuka saat row diklik.
+   - Filter bar:
+     - Dropdown (severity, service type, facility class, page size) dan input tanggal (admit/discharge start-end), province, kode DX, min/max risk score, min ML score, toggle refresh cache.
+     - Tombol reset mengembalikan default (severity sedang, service RITL, 20 baris). Tombol “Sinkronisasi” memicu refetch manual.
+   - Pagination: `page` & `page_size` (20 default; 50/100 tersedia). Klik row mengubah query param `selected`.
 
 3. **Chat Room + Detail Klaim**
 
-   - **Header Summary Card** (ambil dari `GET /claims/{id}/summary`):
-     - Diagnosa, severity, service_type, LOS, biaya (claimed/paid/gap), risk_score, peer stats, flags.
-   - **Thread**: bubble auditor (kanan) & copilot (kiri). History di-load dari `GET /claims/{id}/chat`.
-   - **Input area**:
-     - Textbox + tombol kirim (`POST /claims/{id}/chat`).
-     - Quick prompt chips (lihat #5).
-   - **Feedback panel**:
-     - Form kecil (decision radio: approved/partial/rejected, correction_ratio optional, notes).
-     - Submit ke `POST /claims/{id}/feedback`. Setelah sukses, tambahkan bubble “Feedback saved”.
+   - **Drawer detail** memuat:
+     - Ringkasan dari `GET /claims/{id}/summary` (biaya, peer, flags, sections).
+     - Card “Tariff Insight” yang memanggil `/reports/tariff-insight` (facility_id + severity + service_type + province). Tampilkan gap total, avg gap, payment ratio, fallback jika data kosong.
+     - Feedback form (decision, correction_ratio, notes) → `POST /claims/{id}/feedback`, lalu summary di-invalidasi sehingga `latest_feedback` langsung ter-update dan tabel menampilkan badge Reviewed.
+   - **Chat sheet**: histori `GET /claims/{id}/chat`, input `POST /claims/{id}/chat`, quick prompt chips (hooking ke API next iteration).
 
 4. **Opsional Reports/Analytics**
    - Jika FE ingin memanfaatkan laporan tarif atau mismatch (misal menampilkan modal), gunakan endpoint `/reports/tariff-insight` atau `/reports/severity-mismatch`.
