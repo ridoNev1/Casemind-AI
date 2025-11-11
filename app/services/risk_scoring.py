@@ -76,6 +76,8 @@ def get_high_risk_claims(filters: Mapping[str, Any]) -> dict[str, Any]:
                 "cost_zscore": _to_optional_float(row.cost_zscore),
                 "los": _to_optional_int(row.los),
                 "bpjs_payment_ratio": _to_optional_float(row.bpjs_payment_ratio),
+                "admit_dt": _to_optional_date(getattr(row, "admit_dt", None)),
+                "discharge_dt": _to_optional_date(getattr(row, "discharge_dt", None)),
                 "peer": {
                     "mean": _to_optional_float(row.peer_mean),
                     "p90": _to_optional_float(row.peer_p90),
@@ -254,6 +256,22 @@ def _to_optional_str(value: Any) -> str | None:
 def _to_optional_title(value: Any) -> str | None:
     text = _to_optional_str(value)
     return text.title() if text else text
+
+
+def _to_optional_date(value: Any) -> str | None:
+    value = _sanitize_json_value(value)
+    if value is None:
+        return None
+    if isinstance(value, datetime):
+        return value.isoformat()
+    try:
+        ts = pd.to_datetime(value, errors="coerce")
+        if pd.isna(ts):
+            return None
+        return ts.isoformat()
+    except Exception:
+        text = _to_optional_str(value)
+        return text
 
 
 def _load_or_compute_scores(loader: DataLoader, scorer: MLScorer, force_refresh: bool = False) -> pd.DataFrame:
