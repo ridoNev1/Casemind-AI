@@ -1,72 +1,137 @@
-# Product Requirements Document — Casemind AI Auditor (v2)
+# Product Requirements Document — Casemind AI (Revision 21 Nov 2025)
 
-Tanggal: 10 Nov 2025  
-PIC: Rido Maulana
+**PIC:** Rido Maulana  
+**Stage:** Hackathon build → Pilot-ready FE/BE  
+**Latest Update:** Sidebar/report FE shipped, tariff insight API online, simulator CLI siap.
 
-## 1. Latar Belakang
-- Auditor BPJS harus menyeleksi jutaan klaim; proses manual lambat dan rentan salah prioritas.
-- Sistem Casemind menyatukan skor aturan + ML + copilot generatif agar auditor langsung melihat klaim berisiko tinggi.
-- Versi sebelumnya hanya menampilkan daftar klaim; versi terbaru menambahkan sinkronisasi filter ke URL, badge reviewed, feedback loop, dan insight tarif.
+---
 
-## 2. Tujuan
-1. Mempercepat identifikasi klaim tinggi risiko (time-to-first-review < 2 menit).  
-2. Mengumpulkan outcome audit (feedback) minimal 70% dari klaim prioritas.  
-3. Menyediakan insight tarif/peer di level klaim untuk memudahkan verifikasi biaya.  
-4. Menyiapkan kerangka untuk integrasi report lainnya (severity mismatch, duplication).
+## 1. Konteks & Referensi
+Casemind AI menjawab kebutuhan pengawasan klaim JKN yang disebut di:
+- ICISTECH 2021 (ketepatan kode INA-CBG memengaruhi akurasi pembayaran).  
+- IJICC 2019 (risiko upcoding/upcoding berulang di sistem JKN).  
+- ScienceDirect 2024 & JQPH 2020 (gap biaya riil vs tarif INA-CBG).  
+- SATUSEHAT FHIR + KFA + master wilayah (standar struktur Claim/ClaimResponse, referensi obat/tarif nasional).
 
-## 3. KPI
-- % klaim yang memiliki status Reviewed dalam 24 jam.  
-- Jumlah prompt chat per auditor (proxy penggunaan copilot).  
-- Jumlah insight tarif yang ditampilkan per sesi.  
-- Error rate API <2% (non-auth).  
-- Waktu load drawer detail < 2s median.
+Intinya, audit manual tidak skala untuk jutaan klaim dan tidak ada satu sumber kebenaran untuk tarif/risiko. Casemind AI menggabungkan rule engine, ML tabular, dan LLM reasoning + dokumentasi standar agar auditor memiliki *single cockpit*.
 
-## 4. Scope Fungsional
-### 4.1 Dashboard High-Risk
-- Filter lengkap: severity, service type, facility class, page size, admit/discharge date range, province, kode DX, min/max risk score, min ML score, refresh cache.
-- Semua filter + klaim terpilih disimpan di query string.
-- Tabel menampilkan flagged claim lebih dahulu, plus badge Reviewed/Pending berdasar `latest_feedback`.
+---
 
-### 4.2 Drawer Detail
-- Ringkasan klaim dari `/claims/{id}/summary` (sections, peer, flags, narrative).
-- Tariff insight card dari `/reports/tariff-insight` (gap total, avg gap, ratio, dx group).  
-- Feedback form (decision, correction ratio, notes) → `POST /claims/{id}/feedback`.
+## 2. Masalah Utama
+1. **Fraud/upcoding & klaim duplikat** – LOS 0 hari namun biaya tinggi, diagnosis ringan ditagih berat, klaim sama muncul ≤3 hari.
+2. **Mismatch tarif vs biaya riil** – RS tertentu underpaid, lainnya overpaid → sulit membuktikan tanpa agregasi nasional.
+3. **Audit manual & inkonsisten** – Verifikator tiap wilayah memakai excel berbeda; tidak ada alasan flag terstandar.
+4. **Kurang evidence untuk revisi tarif** – Data granular (severity, biaya diajukan/dibayar, peer) tidak siap pakai.
 
-### 4.3 Chat Copilot
-- `GET/POST /claims/{id}/chat` untuk histori & interaksi.  
-- Quick prompt chips (saat ini isi input; hooking langsung ke API di backlog).  
-- Loading state per bubble, scroll to latest.
+---
 
-### 4.4 Backend Enhancements
-- `/claims/high-risk` enriched with `latest_feedback` + sorting flagged>non-flagged.  
-- Tariff insight endpoint memfilter berdasar facility/severity/service/dx group.  
-- ML pipeline memuat artefak anomaly detection; risk score = max(rule_score, ml_score_normalized).
+## 3. Data Fondasi
+Sumber: sampel klaim BPJS 2015–2023 yang dianonimkan, plus referensi publik.
+- **Klaim FKRTL/FKTP/non-kapitasi**: tanggal masuk/pulang, kelas RS, diagnosis ICD-10, prosedur ICD-9, severity, tarif INA-CBG, biaya diajukan vs dibayar.
+- **Konteks peserta**: segmen (PBI/PBPU), kelas hak rawat, wilayah.
+- **Diagnosis sekunder & prosedur**: pembeda kasus kompleks vs ringan.
+- **Referensi nasional**: SATUSEHAT Claim/ClaimResponse, master faskes, master wilayah, KFA.
+- **Normalisasi**: pipeline `claims_normalized` + DuckDB, siap query peer, severity, tarif.
 
-## 5. Out of Scope (v2)
-- Feedback history log (lebih dari 1 outcome).  
-- Quick prompt hooking full + tool visualization.  
-- Report severity mismatch/duplicates di dashboard.  
-- Autoretrain model ML.
+---
 
-## 6. User Journey
-1. Login → landing di dashboard high-risk (filter default).  
-2. Auditor ubah filter (URL update).  
-3. Click klaim → drawer muncul, ringkasan + tariff insight + feedback form.  
-4. Auditor chat dengan copilot untuk verifikasi.  
-5. Submit feedback → badge di tabel berubah jadi Reviewed.  
-6. Auditor bisa share URL ke rekan (state filter tetap).
+## 4. Tujuan Produk (v2)
+1. **Triage otomatis** klaim risiko tinggi dengan alasan jelas (<2 menit time-to-first-review).
+2. **Audit insight siap pakai**: summary, tariff gap, chat copilot, feedback form dalam satu drawer.
+3. **Monitoring nasional**: severity mismatch & duplicate report untuk regulator.
+4. **Feedback loop**: tangkap keputusan auditor (approved/partial/rejected) sebagai dasar retraining ML tabular + LLM reasoning.
 
-## 7. Risiko & Mitigasi
-| Risiko | Dampak | Mitigasi |
+---
+
+## 5. KPI & Guardrail
+| KPI | Target Hackathon | Catatan |
 | --- | --- | --- |
-| Query DuckDB berat | UI lambat | LIMIT + filter + warning truncated |
-| Tariff insight kosong | Pengguna bingung | Fallback message & refresh button |
-| State URL terlalu panjang | Share link rusak | Normalisasi hanya parameter non-default |
-| Refresh cache memakan memori | API down | Hanya expose toggle, doc peringatan, CLI refresh utama |
+| Median load `/claims/high-risk` | < 2.5s | DuckDB filter + pagination + env `CLAIMS_MAX_QUERY_ROWS`. |
+| % klaim dengan `latest_feedback` <24h | ≥60% | Gunakan badge Reviewed/Pending. |
+| Chat adoption | ≥3 prompt/auditor/hari | Quick chips + sheet UX. |
+| Tariff insight coverage | ≥70% klaim terpilih punya kartu | fallback copy bila kosong. |
+| API error (non-auth) | <2% | Observed via console + server logs. |
 
-## 8. Rencana Iterasi (Next)
-- Tambah report severity mismatch/duplicate ke section cards.  
-- Quick prompt hooking ke copilot API + spinner per bubble.  
-- Feedback history log + filter Reviewed di tabel.  
-- Accordion/tab di drawer jika report makin banyak.
+Guardrail: jangan trigger refresh ML score via API (CLI only); simulator LLM dibatasi env `SIM_*` agar tidak memenuhi disk/ram.
 
+---
+
+## 6. Ruang Lingkup Fungsional
+### 6.1 High-Risk Claims Console (FE `/`)
+- Filter sinkron ke URL: severity, service_type, facility_class, page_size, admit/discharge range, province, dx, min/max risk, min ML, refresh toggle.
+- Tabel menampilkan klaim dengan kolom #, klaim, fasilitas, severity/service, biaya, skor ML/rule, badge Reviewed/Pending (dari `latest_feedback`).
+- Sorting default: flagged claims (ada `flags`) + skor tertinggi → sisanya.
+
+### 6.2 Detail Drawer + Chat
+- `GET /claims/{id}/summary` → sections, peer, flags, `latest_feedback` hydration.
+- Tariff insight card (`GET /reports/tariff-insight` param facility/province/severity/service/dx). Fallback copy + refresh button.
+- Feedback form (`decision`, `correction_ratio`, optional notes) → `POST /claims/{id}/feedback`, invalidasi summary, update badge.
+- Chat sheet: `GET/POST /claims/{id}/chat`, suggestion chips, spinner per bubble.
+
+### 6.3 Reports Page (`/reports`)
+- Summary cards + tables untuk `/reports/severity-mismatch` dan `/reports/duplicates` dengan limit selector dan refresh.
+- Tujuan: memberi konteks kebijakan (wilayah/RS mana outlier) tanpa meninggalkan dashboard utama.
+
+### 6.4 Data Simulation CLI (Operator)
+- `python -m ops.simulation.run_simulator --duration ...` untuk injeksi klaim sintetis (opsional LLM). Digunakan untuk demo volume.
+- Dokumentasi di `docs/ops/data_simulation.md`; referensi command juga dicantumkan di PRD ini.
+
+---
+
+## 7. Experience Flow
+1. **Login** (React Hook Form + Zod + Zustand). Token disimpan di storage, guard Auth memblokir halaman lain.
+2. **Landing High-Risk**: default severity `sedang`, service `RITL`, page_size 20.
+3. **Filter** → query string update; bisa dibagikan.
+4. **Pilih klaim** → Drawer: summary, tariff insight, feedback form. Chat sheet bisa dibuka untuk percakapan AI.
+5. **Submit feedback** → badge berubah Reviewed; data siap untuk tim governance.
+6. **Buka Reports** → insight mismatch/duplicate; bisa kembali ke dashboard.
+
+---
+
+## 8. Arsitektur & Integrasi
+- **Backend**: Flask + DuckDB; endpoints: `/claims/high-risk`, `/claims/{id}/summary`, `/claims/{id}/chat`, `/claims/{id}/feedback`, `/reports/*`.
+- **Risk Engine**: rule score (flags: short_stay_high_cost, duplicate_pattern, dll) + ML anomaly score (`ml_score_normalized`). `risk_score = max(rule_score, ml_score_norm)`.
+- **Chat Copilot**: LangChain + OpenAI (gpt-4o-mini) memanggil tools peer/tariff/flag. Caching metadata di DB.
+- **FE**: Next.js App Router, shadcn UI, TanStack Query, Zustand auth store, Axios API client (JWT header). Layout: sidebar + sheet.
+- **Simulasi**: CLI men-sample klaim nyata, mutate, optionally LLM (SIM_FORCE_LLM). Log di `instance/logs/simulation_runs.jsonl`.
+
+---
+
+## 9. Compliance & Privacy
+- Data sudah dianonimkan (tidak ada NIK/nama). Analisis berbasis episode, bukan individu.
+- Output hanya skor + alasan + insight; keputusan akhir tetap di auditor/regulator.
+- Menyamai struktur SATUSEHAT Claim agar mudah dipetakan jika integrasi nasional diperlukan.
+
+---
+
+## 10. Stakeholder & Kebutuhan
+| Stakeholder | Kebutuhan | Fitur yang Menjawab |
+| --- | --- | --- |
+| Auditor BPJS/NCC | Daftar klaim prioritas + alasan | Dashboard + drawer + chat |
+| P2JK / Kendali Biaya | Insight mismatch & tarif | Reports page + tariff card |
+| Tim tarif INA-CBG | Evidence under/over paid | Tariff insight + normalized dataset |
+| RS/Dinkes | Transparansi posisi terhadap peer | Dashboard + future sharing |
+| Tim Integrasi SATUSEHAT | Struktur data standar | Normalization layer + docs |
+
+---
+
+## 11. Roadmap Lanjutan
+1. **Audit Workflow Portal**: tiket otomatis, history feedback, filter Reviewed/Pending, export CSV.
+2. **Tariff Recalibration Engine**: aggregator LOS/severity/biaya per RS kelas & diagnosis → rekomendasi tariff gap.
+3. **LLM Labeling Engine**: fine-tune reasoning + clinical pathway knowledge untuk auto-label (approved/partial/reject) sebagai pseudo-feedback sebelum feedback manusia cukup.
+4. **Reports tambahan**: analytics severity vs cost, duplicates timeline, suspected facility ranking.
+5. **Autosim + Scheduler**: cron simulation + incremental ML scoring tanpa OOM.
+
+---
+
+## 12. Deliverables Hackathon (✅ = sudah, 🔄 = in-progress)
+- ✅ `/claims/high-risk` FE dengan filter URL, badge Reviewed, sorting flagged → highest risk.
+- ✅ Drawer summary + tariff insight card + feedback form + chat sheet.
+- ✅ `/reports` page dengan severity mismatch + duplicate table.
+- ✅ Docs & simulator CLI instructions (`docs/ops/data_simulation.md`).
+- 🔄 Quick prompt hooking ke jalur audit (opsional low priority).  
+- 🔄 Feedback history & reviewed filter toggle (backlog).
+
+---
+
+Dengan PRD ini, tim FE/BE memiliki acuan terkini untuk melanjutkan pengerjaan (reports tambahan, audit workflow, integrasi ML). Seluruh referensi kebijakan/standar disertakan untuk menjaga keselarasan dengan mandat SATUSEHAT & BPJS.
