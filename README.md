@@ -11,7 +11,7 @@ hingga integrasi agentic AI (audit copilot, validator, simulasi klaim).
 1. Folder `/docs`
 2. Folder `/resource`
 3. FE repo : https://github.com/ridoNev1/casemind-fe.git
-4. Credential ada di dokumen presentasi
+4. Credential akses live aplikasi ada di dokumen presentasi
 
 ## 1. Arsitektur & Alur Sistem
 
